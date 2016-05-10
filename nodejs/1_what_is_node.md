@@ -12,11 +12,11 @@ Define las interfaces y el entorno, utilidades comunes que un sistema operativo 
 
 Además de ejecutar scripts, posee un gestor de paquetes denominado [npm] que lo usaremos reiteradamente a lo largo de nuestro proceso de desarrollo.
 
-Durante la edición del presente documento, la versión trabajaremos será la ++**4.4.0 [LTS][enLTS]**++ que es la que se recomienda en la página oficial.
+Durante la edición del presente documento, la versión con la que trabajaremos será la **4.4.0 [LTS][enLTS]** que es la que se recomienda en la página oficial.
 
 >**LTS:** son las abreviaturas de *"Long Term Support"* (soporte a largo plazo) utilizadas para indicar que una versión o edición de un software tendrá soporte (actualizaciones, correción de errores) durante un período de tiempo *(fuente: Wikipedia).*
 
-Podemos acceder a la amplia documentación de la [API 4.4.0 LTS][docApiNode].
+Podemos acceder a la amplia documentación de la [API 4.4.4 LTS][docApiNode].
 
 ##Características de Node.js
 Para conocer las características que tiene Node.js por defecto (sin requerir indicadores de tiempo de ejecución) clicar [aquí][linkECMAScript].  
