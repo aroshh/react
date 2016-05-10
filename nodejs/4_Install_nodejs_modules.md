@@ -1,4 +1,3 @@
-![logo_aitex.png](images/logo_aitex.png "Logotipo de Aitex" "width:70px;float:right")
 #Módulos para Node.js
 ##Instalando módulos
 
@@ -26,9 +25,9 @@ La sintaxis de instalación es la siguiente:
 - Módulos como herramienta global: `> npm install -g [nombreDelModulo]`
 
 > **Por lo que se refiere a [nombreDelModulo]**, si el módulo está en...
-> - ++nuestro sistema de archivos++, deberemos poner la ubicación del mismo.
-> - el repositorio de paquetes ++npm++, sólo hay que poner el nombre.
-> - ++GitHub++, se tiene que poner la dirección precedida de la palabra "git:" (formato del protocolo).
+> - nuestro sistema de archivos, deberemos poner la ubicación del mismo.
+> - el repositorio de paquetes **npm**, sólo hay que poner el nombre.
+> - GitHub, se tiene que poner la dirección precedida de la palabra "git:" (formato del protocolo).
 
 ---
 
@@ -36,7 +35,7 @@ La sintaxis de instalación es la siguiente:
 
 >Para ello la sintaxis utilizada es la siguiente:`> npm install express`
 
->Nos mostrará la versión, y qué elementos lo integran. Además se creará en nuestro ejemplo de proyecto, la carpeta "node_modules" dentro de la cuál encontraremos la carpeta correspondiente a nuestro módulo "express" que hemos instalado de forma local, ==si hubiéramos utilizado el comando **"-g"** se hubiera guardado en la ruta por defecto establecida== en la configuración global, para así utilizar dicho módulo como herramienta desde cualquier módulo.  
+>Nos mostrará la versión, y qué elementos lo integran. Además se creará en nuestro ejemplo de proyecto, la carpeta "node_modules" dentro de la cuál encontraremos la carpeta correspondiente a nuestro módulo "express" que hemos instalado de forma local, si hubiéramos utilizado el comando **"-g"** se hubiera guardado en la ruta por defecto establecida en la configuración global, para así utilizar dicho módulo como herramienta desde cualquier módulo.  
 
 >![modulo_express.png](images/modulo_express.png "Primer módulo: express")
 
@@ -46,7 +45,7 @@ La sintaxis de instalación es la siguiente:
 
 **Ejemplo en Visual Studio:**  
 
->Una vez creado nuestro proyecto, iremos a "npm" y mediante el menú contextual indicaremos ++"la instalación de nuevos paquetes"++ (o pulsando la combinación de teclas **"CTRL+K, G"**), acto seguido se procederá a descargar (si es por primera vez, alrededor de 145 MB) o actualizar la lista con la información de los paquetes existentes y actualizar la base de datos para mostrarnos los paquetes o módulos disponibles.
+>Una vez creado nuestro proyecto, iremos a "npm" y mediante el menú contextual indicaremos **"la instalación de nuevos paquetes"** (o pulsando la combinación de teclas **"CTRL+K, G"**), acto seguido se procederá a descargar (si es por primera vez, alrededor de 145 MB) o actualizar la lista con la información de los paquetes existentes y actualizar la base de datos para mostrarnos los paquetes o módulos disponibles.
 
 >![nodejs_visual_studio.png](images/nodejs_visual_studio.png)
 
