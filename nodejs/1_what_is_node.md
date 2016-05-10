@@ -1,4 +1,4 @@
-![logo_aitex.png](images/logo_aitex_min.png "Logotipo de Aitex" "float:right")
+![logo_aitex.png](images/logo_aitex_min.png "Logotipo de Aitex")
 #Acercamiento a Node.js
 ##¿Qué es Node.js?
 
