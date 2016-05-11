@@ -1,5 +1,5 @@
 ![logo_aitex.png](nodejs/images/logo_aitex_min.png "Logotipo de Aitex")
-#Proyecto: Node.js + .NET
+#Proyecto: Node.js + npm + .NET + React.js
 
 ##Introdución
 Tengamos en cuenta que el mundo web va evolucionando constantemente. Antes disponíamos de tres lenguajes de desarrollo en el servidor web: **[PHP][enlacePHP]**, **[J2EE][enlaceJ2EE]** o **[ASPx][enlaceASPNET]**. Todos ellos comparten HTML + JavaScript (librerías importantes **[jQuery][enlaceJQUERY]** y **[Knockout][enlaceKNOCKOUT]**).
@@ -31,7 +31,7 @@ En nuestro caso hemos visto [Angular.js][enlaceANGULAR] (con [Pedro Hurtado][enl
 	+ Para ello se puede utilizar **[babel][enlaceBabel]** para realizar la conversión desde el propio navegador.
 	+ Para producción (en nuestro caso) utilizaremos "Node.js" y una serie de paquetes (por ejemplo "browserify") lo cuál nos generará JavaScript nativo directamente para luego ser interpretado en el navegador.  
 
-4. Necesidad de modelar el HTML desde JSX ya que React.js como front-end, compila una réplica del HTML en el ++DOM Virtual++ se compara con el ++DOM real++, se aplican ambos para que se muestren finalmente en dicho HTML.
+4. Necesidad de modelar el HTML desde JSX ya que React.js como front-end, compila una réplica del HTML en el **DOM Virtual** se compara con el ++DOM real++, se aplican ambos para que se muestren finalmente en dicho HTML.
 > **DOM:** *Document Object Model* (Modelo en Objetos para la Representación de Documentos) es una interfaz de programación de apliaciones (API) que proporciona un conjunto estándar de objetos para representar documentos HTML, XHTML y XML, pudiendo combinarlos, acceder a ellos y manipularlos *(fuente: Wikipedia)*.  
 >
 > **JSX:** Es una extensión de la sintaxis de XML similar a ECMAScript. Tanto la sintaxis de JSX y HTML son similares pero difieren: en el uso de atributos de clase en HTML es "class" mientras que en JSX es "className" *(fuente: Wikipedia)*. 
@@ -46,7 +46,7 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 + React 0.5.17
 + Visual Studio Community 2015
 + Markdown
-> NOTA: Markdown dejará de utilizarse en las páginas que se exporten a GitHub a partir del 01/05/2016, utilizándose [**Kramdown**][enlaceKRAMDOWN]. Aqui puede acceder al [enlace a la noticia](https://help.github.com/articles/updating-your-markdown-processor-to-kramdown/). ++Recordemos que GitHub tiene su propio Markdown++.
+> NOTA: Markdown dejará de utilizarse en las páginas que se exporten a GitHub a partir del 01/05/2016, utilizándose [**Kramdown**][enlaceKRAMDOWN]. Aqui puede acceder al [enlace a la noticia](https://help.github.com/articles/updating-your-markdown-processor-to-kramdown/). **Recordemos que GitHub tiene su propio Markdown.**
 
 ##Esquema del proyecto
 1. **Node JS.**  
