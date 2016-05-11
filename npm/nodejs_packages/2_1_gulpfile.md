@@ -153,7 +153,7 @@ Del siguiente código extraemos:
 
 4.  Definición de las tareas a realizar por **"gulp"**. Mediante "gulp.task" definiremos cada tarea usando un módulo para la secuenciación, ejecución de tareas y dependencias de forma simultanea. Indicaremos mediante una cadena y una función:
 
-    | Nombre_de_la_Tarea   | Detalle |
+    | Nombre de la Tarea   | Detalle |
     |:--------:|:--------|
     |default| Se lanza browserify y watchify. Primero se guarda el fichero "index.js", si se producen cambios se genera el fichero "main.js" y se guarda en la ruta "\wwwroot\js"|
     |browserify|Lo mismo que el anterior, es decir, la tarea tal cual.|
