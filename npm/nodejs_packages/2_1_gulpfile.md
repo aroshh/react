@@ -194,7 +194,7 @@ Del siguiente código extraemos:
 
 	+ Finalmente al arrancar **"gulp"** se ejecutará la tarea  "default" en la que le estamos pasando el nombre de otra tarea llamada "browserify" aunque es posible que podemos integrar varias tareas englobadas dentro de una:
 
-	> En nuestro fichero "gulpfile.js" podemos unificar tareas mediante el siguiente código:
+	> En nuestro fichero "gulpfile.js" podemos unificar tareas mediante el siguiente código:  
 >`gulp.task('default', ['browserify','build','server']);`
 
 
