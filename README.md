@@ -1,4 +1,4 @@
-![logo_aitex.png](nodejs/images/logo_aitex.png "Logotipo de Aitex" "width:70px;float:right")
+![logo_aitex.png](nodejs/images/logo_aitex_min.png "Logotipo de Aitex")
 #Proyecto: Node.js + .NET
 
 ##Introdución
