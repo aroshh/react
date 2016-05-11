@@ -74,7 +74,7 @@ Podemos observar que se ha añadido:
 - "_from": ruta donde se encuentra el repositorio o carpeta de nuestro primer proyecto.
 - "_resolved": ruta donde se guarda la solución del proyecto. 
 
-En el caso de que queramos instalar nuevos paquetes para nuestro proyecto, se almacenarán en la ruta `C:\sample_node\node_modules\\[nombrePaquete]` estando disponibles para utilizarlos. Es posible que nos aparezcan unos avisos ("warnings") indicando que "npm" no encuentra los ficheros "README.md" y la ruta del repositorio dentro del fichero "package.json"
+En el caso de que queramos instalar nuevos paquetes para nuestro proyecto, se almacenarán en la ruta `C:\sample_node\node_modules\[nombrePaquete]` estando disponibles para utilizarlos. Es posible que nos aparezcan unos avisos ("warnings") indicando que "npm" no encuentra los ficheros "README.md" y la ruta del repositorio dentro del fichero "package.json"
 
 **C. Ejemplo de "package.json".**
 
