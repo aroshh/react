@@ -1,5 +1,3 @@
-![Alt logotipo de aitex](../images/logo_aitex.png "AITEX" "width:60px ;float:right")
-
 ##Fichero "gulpfile.js"
 
 Podemos encontrar diferentes "gulpfile.js" en Internet, aquí os proporcionamos el que utilizaremos para nuestro proyecto o muy similar:
@@ -164,35 +162,35 @@ Del siguiente código extraemos:
 
 	+ La tarea **"browserify"**, guardamos en la variable "bundler" que será un objeto instanciado de "browserify" que contendrá diferentes métodos (opciones del objeto):
 
-		+ ++*"entries"*++, indicaremos la ruta relativa del fichero de entrada.
+		+ *"entries"*, indicaremos la ruta relativa del fichero de entrada.
 
-		+ ++*"transform"*++, es un array de transformación de funciones o nombres de módulos, en nuestro caso, el módulo babelify, el cuál transformarán el código fuente antes de ser analizado.
+		+ *"transform"*, es un array de transformación de funciones o nombres de módulos, en nuestro caso, el módulo babelify, el cuál transformarán el código fuente antes de ser analizado.
 
-		+ ++*"debug"*++, al tener el valor "true" añadirá una línea de mapa de origen al final del envoltorio/paquete. Permite que la depuración sea más fácil porque se pueden ver todos los archivos originales en un navegador moderno.
+		+ *"debug"*, al tener el valor "true" añadirá una línea de mapa de origen al final del envoltorio/paquete. Permite que la depuración sea más fácil porque se pueden ver todos los archivos originales en un navegador moderno.
 
-		+ ++*"fullPaths"*++, al tener el valor "true" se desactiva la conversión de los identificadores del módulo en índices numéricos. Nos puede servir para conservar los caminos que se han generado con el paquete.  
+		+ *"fullPaths"*, al tener el valor "true" se desactiva la conversión de los identificadores del módulo en índices numéricos. Nos puede servir para conservar los caminos que se han generado con el paquete.  
 
 		+ Instanciamos el objeto **"watcher"** a partir de la instanciación de "watchify" al cuál le pasamos el objeto instanciado de browserify llamado "bundler" *(watchify es un plugin de browserify)*. Mediante el "return" lo que hacemos es devolver un evento y en función del evento hará: actualizará el fichero (que lo tenía guardado en la caché) guardando las dependencias y el fichero en uno único, en caso de que al hacerlo de error nos mostrará un mensaje de error y finalizará la ejecución en caso de que el evento sea otro de los indicados al detectarse la actualizción, mediante el método ".pipe()" encandenando el resultado y guardándolo como "main.js" luego se vuelve a encadenar para dejarlo en la ruta especificada.
 
-	> ++Uso de tuberías mediante++ **".pipe()"**, conseguimos una cadena de procesos conectados de forma que la salida de cada elemento de la cadena es la entrada del próximo, permitiendo la comunicación y sincronización entre procesos. Es común el uso de buffer de datos entre elementos consecutivos.
+	> Uso de tuberías mediante **".pipe()"**, conseguimos una cadena de procesos conectados de forma que la salida de cada elemento de la cadena es la entrada del próximo, permitiendo la comunicación y sincronización entre procesos. Es común el uso de buffer de datos entre elementos consecutivos.
 
 	+ Para la tarea **"build"**, le pasamos el nombre y dentro de la función instanciaremos un objeto mediante "browserify", en donde las opciones serán prácticamente las mismas que en la primera tarea, sólo que creará el "main.js" en la carpeta de destino indicada.
 
 	+ Para **"server"**, indicamos la carpeta de origen mediante "paths.webroot" donde se encontrará nuestro "index.html" y encadenamos con el objeto "webserver" que ya ha sido definido anteriormente, por lo que incluimos las opciones:
 
-		+ *++"host"++*: indicamos la dirección IP de nuestra propia máquina.
+		+ *"host"*: indicamos la dirección IP de nuestra propia máquina.
 
 		> Si es la propia máquina: ` host: 'localhost'`.
 
 		> Si queremos que nos escuche en toda la red: ` host: '0.0.0.0'`
 
-		+ *++"port"++*: establecer un puerto para atender las peticiones "http".
+		+ *"port"*: establecer un puerto para atender las peticiones "http".
 
 		> Procurar no utilizar un puerto ya en uso para que no nos de error.
 
-		+ *++"fallback"++*: fichero html que se cargará.
+		+ *"fallback"*: fichero html que se cargará.
 
-		+ *++"livereload"++*: habilitar la recarga de la página. Al producirse modificaciones en la carpeta indicada "paths.webroot" automáticamente recargará.
+		+ *"livereload"*: habilitar la recarga de la página. Al producirse modificaciones en la carpeta indicada "paths.webroot" automáticamente recargará.
 
 	+ Finalmente al arrancar **"gulp"** se ejecutará la tarea  "default" en la que le estamos pasando el nombre de otra tarea llamada "browserify" aunque es posible que podemos integrar varias tareas englobadas dentro de una:
 
