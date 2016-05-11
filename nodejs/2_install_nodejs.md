@@ -1,4 +1,4 @@
-![logo_aitex.png](images/logo_aitex.png "Logotipo de Aitex" "width:70px;float:right")
+![logo_aitex.png](images/logo_aitex_min.png "Logotipo de Aitex" "width:70px;float:right")
 #Instalación
 ##Instalando Node.js en Microsoft Windows 7/10
 La instalación de No​de.js es muy sencilla, aun así, existen múltiples páginas [[1]][enlace1] donde lo explica en castellano.
