@@ -127,7 +127,7 @@ Del siguiente código extraemos:
 
 1.  Pasamos a requerir los módulos necesarios, previamente los tendremos que tener instalados en nuestro proyecto minímamente de forma local, para ello desde el prompt de Node.js:  
 
-	| Paquete_o_módulo_empleado | Descripción |
+	| Paquete/módulo empleado | Descripción |
 |:---:|:---|
 |[vinyl-source-stream][linkVinyl]|Utilizado para convertir el stream del fichero creado por **"browserify"** sin utilizar ficheros temporales como punto intermedio.| 
 |browserify|Resolución de módulos, crea el **"bundle.js"** final utilizado por el navegador|
@@ -153,7 +153,7 @@ Del siguiente código extraemos:
 
 4.  Definición de las tareas a realizar por **"gulp"**. Mediante "gulp.task" definiremos cada tarea usando un módulo para la secuenciación, ejecución de tareas y dependencias de forma simultanea. Indicaremos mediante una cadena y una función:
 
-    | Nombre de la Tarea   | Detalle |
+    | Tarea   | Detalle |
     |:--------:|:--------|
     |default| Se lanza browserify y watchify. Primero se guarda el fichero "index.js", si se producen cambios se genera el fichero "main.js" y se guarda en la ruta "\wwwroot\js"|
     |browserify|Lo mismo que el anterior, es decir, la tarea tal cual.|
