@@ -15,12 +15,13 @@ Utilizaremos Flux para organizar nuestro código y separar responsabilidades. Fl
 
 El patrón Flux se centra en un "dispatcher" centralizado que actúa como mecanismo de publicador/suscriptor. Este mecanismo lo usaremos para comunicar a nuestros componentes que algo ha cambiado y que por lo tanto el componente (si procede) deberá renderizarse o lo que proceda.
 
-![flux_map.png](../images/flux_map.png "Diagrama conceptual de Flux")
+![flux_map.png](../images/flux_map.png "Diagrama conceptual de Flux")  
+
 Explicación del diagrama:
 1. Empezamos desde la "Acción", que podría haber sido creada desde una **[WebApi][webapi]** o por una interacción del usuario con la vista (que también puede llamar a una WebApi).  
 > **Web API:** "_API_" interfaz de programación de aplicaciones (o Application Programming Interface) que es un conjunto de rutinas que provee acceso a funciones de un determinado software. En la web se publican para ofrecer la posibilidad de realizar acciones, acceso a características *(fuente: Wikipedia)*.  
 
-	+ El usuario quiere borrar un Autor. Por lo que al interactuar con el enlace oportuno, genera una acción compuesta para llamar a la WebApi para que la borre al autor e informar al "dispatcher" que se ha procedido al borrado.  
+> + El usuario quiere borrar un Autor. Por lo que al interactuar con el enlace oportuno, genera una acción compuesta para llamar a la WebApi para que la borre al autor e informar al "dispatcher" que se ha procedido al borrado.  
 
 2. La "Acción" se notifica al "Disptacher", éste comprueba qué "Stores" se han suscrito a dicha "Acción" y se publican (notifica). La "Store" equivale al modelo, el que contiene los datos de la aplicación, por lo que no se caracteriza por tener lógica.
 
