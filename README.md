@@ -70,7 +70,7 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 
 4. **Visual Studio Express 2015**  
 
-	+ [Instalar Node.js Tools en Visual Studio](visualStudio/pluginNodejs.md)  
+	+ [Instalar Node.js Tools en Visual Studio](visualStudio/01_pluginNodejs.md)  
 
 ##Referencias
 + [Documentación de Node.js](https://nodejs.org/dist/latest-v4.x/docs/api/).
