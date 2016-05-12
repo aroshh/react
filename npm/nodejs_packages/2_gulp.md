@@ -1,24 +1,24 @@
-##Paquete gulp
+#Paquete gulp
 Gulp nos ayuda a automatizar tareas en el despliegue y pre-compilación de la aplicación que de otra forma sería realizadas de forma manual. Dichas tareas se describen en un fichero llamado **"[gulpfile.js][linkGulpfile]"** el cuál situaremos dentro de la ruta raíz del proyecto y dentro de la carpeta donde se tenga puesto el código. 
 
 >Recordemos instalar los módulos o paquetes necesarios antes de ejecutar el fichero **"gulpfile.js"** para que no nos de errores de dependencia de paquetes requeridos.
 
 Dicha automatización de tareas es en resumen, un sistema de construcción de streaming mediante la cual nos permite concatenar y pasar los datos/ficheros los cuáles están siendo manipulados por los diferentes plugins. Por tanto, es normal que un mismo fichero pase entre distintos plugins.
 
-###¿Por qué utilizar **"gulp"** y no **["grunt"][gulpVSgrunt]**?
+##¿Por qué utilizar **"gulp"** y no **["grunt"][gulpVSgrunt]**?
 Aunque se venga utilizando popularmente "grunt", "gulp" presenta una serie de ventajas:
-- ++Intercambio de información entre procesos más fácilmente.++
-- ++Esquema de **"pipes"** más resumido.++
-- ++Mejora la legibilidad++, permitiendo así seguir el flujo.
+- **Intercambio de información entre procesos más fácilmente.**
+- **Esquema de **"pipes"** más resumido.**
+- **Mejora la legibilidad**, permitiendo así seguir el flujo.
 - Disposición de variables que cargan librerías.
-- Realiza ++menos pasos a la hora de manipular los archivos++ al realizar sus tareas.
+- Realiza **menos pasos a la hora de manipular los archivos** al realizar sus tareas.
 
 ##Instalación
 Instalaremos "gulp" de forma global para poder utilizarlo desde el prompt de Node.js (o línea de comandos) `> npm install -g gulp` 
 
 Sobre la instalación podemos encontrar la [documentación necesaria][docGulp].
 
-###Uso
+##Uso
 1. Interacciona perfectamente con otros módulos. **"Gulp"** usará otros módulos de **"Node.js"** que se podrán identificar en el archivo "gulpfile.js" con el formato ` require = ('nombrePaqueteNpm')`.
 > Si utilizamos **"package.json"** generado correctamente, al reinstalarlo nos instalaría los módulos necesarios (indicados en "devDependencies" y/o "dependencies" dentro del fichero). 
 2. Podemos ejecutar tareas (manualmente) desde el prompt de Node.js: `> gulp <nombreTarea>`.
