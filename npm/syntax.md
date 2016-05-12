@@ -33,9 +33,9 @@ Ejecutamos el command propmt de Node.js, y escribimos` > npm ` obtendremos el de
 
 	Nos muestra la versión de "npm", de "node.js" el sistema operativo y su arquitectura. Ruta dónde por defecto dónde se instalarán los paquetes **"en caché"** que necesitemos así como los "nuevos" proyectos que vayamos creando, es decir, que se guardan como un nuevo paquete dentro de **"node_modules"** en **"..\AppData\Roaming\npm\node_modules"**.
 
-+ ++Editar la configuración de "npm"++: mediante el comando `> npm config edit` nos abrirá el fichero de configuración del usuario en un editor, en nuestro caso con el bloc de notas. Mientras que con `> npm config edit --global` tendremos el fichero de configuración general.
++ **Editar la configuración de "npm"**: mediante el comando `> npm config edit` nos abrirá el fichero de configuración del usuario en un editor, en nuestro caso con el bloc de notas. Mientras que con `> npm config edit --global` tendremos el fichero de configuración general.
 
 ##Referencias
-[**"npm"** - Más comandos del lado del cliente](https://docs.npmjs.com/cli/npm)  
++ [**"npm"** - Más comandos del lado del cliente](https://docs.npmjs.com/cli/npm)  
 
 	
