@@ -1,4 +1,4 @@
-![Alt logotipo de aitex](../logo_aitex.png "AITEX" "width:60px ;float:right")
+![logo_aitex.png](images/logo_aitex_min.png "Logotipo de Aitex")
 #Comandos con npm
 
 Ejecutamos el command propmt de Node.js, y escribimos` > npm ` obtendremos el detalle de los comandos que podemos utilizar:
