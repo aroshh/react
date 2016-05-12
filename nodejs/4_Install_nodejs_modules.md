@@ -1,3 +1,4 @@
+![logo_aitex.png](images/logo_aitex_min.png "Logotipo de Aitex")
 #Módulos para Node.js
 ##Instalando módulos
 
