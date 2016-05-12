@@ -19,11 +19,13 @@ La elección del back-end la tenemos clara (al trabajar con ***.NET antes del 20
 
 ###¿Qué front-end elegir? React.js.
 En nuestro caso hemos visto [Angular.js][enlaceANGULAR] (con [Pedro Hurtado][enlacePEDROHURTADO]) y [React.js][enlaceREACT] (con [Eduard Tomás][enlaceEDUARD]), seleccionando finalmente **React.js**. ¿Qué ha motivado dicha elección? 
-1. [Desconfianza][enlaceDESCONF] ya que la versión 2.0 de Angular.js:
-	+ Es incompatible con la versión 1.0.
-	+ No soporta navegadores recientes como Internet Explorer 10.
-	+ Nuevo lenguaje de programación por encima de JavaScript.
-	+ ***¡Es un nuevo framework construido desde cero!***.  
+
+1. [Desconfianza][enlaceDESCONF] ya que la versión 2.0 de Angular.js:  
+
+    + Es incompatible con la versión 1.0.
+    + No soporta navegadores recientes como Internet Explorer 10.
+    + Nuevo lenguaje de programación por encima de JavaScript.
+    + ***¡Es un nuevo framework construido desde cero!***.  
 
 2. Curva de aprendizaje alta.
 
