@@ -1,4 +1,4 @@
-![Alt logotipo de aitex](../images/logo_aitex_min.png "Logotiop de Aitex")
+![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 
 ##Paquete Watchify
 
