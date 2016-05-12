@@ -1,7 +1,5 @@
-#Ciclo de vida y Especificación de Componentes.
-
-##Ciclo de vida de un componente React.
-
+#React: ciclo de vida de un componente y sus características
+##Ciclo de vida de un componente React
 ![ciclo_vida_react.png](images/ciclo_vida_react_esp.png "Detalle de las fases por las que pasa un componente React")
 
 Al crear e interactuar con un componente React éste pasa por tres ciclos:
@@ -16,8 +14,6 @@ Al crear e interactuar con un componente React éste pasa por tres ciclos:
 
 En la documentación de la página oficial de React, separa métodos para la especificación de componentes y otros para el ciclo de vida:  
 
-
-
 |Especificación|Montaje|Actualización|Desmontaje|
 |:--------:|:--------:|:--------:|:--------:|
 | render(*) 		| getInitialState | [componentWillReceiveProps][enlaceComponentwillreceiveprops] | [componentWillUnmount][enlaceUnmountingcomponentwillmount] |
@@ -28,15 +24,11 @@ En la documentación de la página oficial de React, separa métodos para la esp
 | statics(*) 		|  |  |  |
 | displayName(*) |  |  |  |  
 
-
-
 > (*) Métodos que podemos utilizar para la creación del componente.
 
 > Aunque nosotros trataremos "dichas especificaciones" como pertenecientes al montaje del componente.
 
-
-
-###Montaje.
+###Montaje
 
 En esta fase creamos/montamos el componente **en el DOM virtual** pudiendo utilizar los siguientes métodos:
 
