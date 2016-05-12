@@ -198,14 +198,15 @@ Observando el código anterior tenemos los siguientes enlaces:
 + El atributo **"to"** es utilizado como descriptor de ubicación, pudiendo pasarle como parámetros un cadena de caracteres (string) o un objeto:
 	+   En el caso de pasarle la ruta, sólo soportaría rutas absolutas del tipo `/home/things` hace referencia al "path" de la ruta indicada en el fichero "routes.jsx". Al clicar tendrá el color indicado.
 	
-	+   Si es un objeto, pude contener cuatro claves:
-	| CLAVE | DESCRIPCIÓN |
-|:--------:|:--------:|
-|pathname|Una cadena de tipo String que representa la ruta para ir al link/enlace.|
-|query|Un objeto de una llave: el valor de los pares será fuertemente tipado|
-|hash|Un hash para poner en la URL. *Ejemplo: #/index?_k=a2s4gt*|
-|state|Estado persistente hacia la localización|
-|***Ejemplo:***|`<Link to={{ pathname: '/foo', query: { the: 'query' } }}/>`|
+	+   Si es un objeto, pude contener cuatro claves:  
+	
+    | CLAVE | DESCRIPCIÓN |
+    |:--------:|:--------:|
+    |pathname|Una cadena de tipo String que representa la ruta para ir al link/enlace.|
+    |query|Un objeto de una llave: el valor de los pares será fuertemente tipado|
+    |hash|Un hash para poner en la URL. *Ejemplo: #/index?_k=a2s4gt*|
+    |state|Estado persistente hacia la localización|
+    |***Ejemplo:***|`<Link to={{ pathname: '/foo', query: { the: 'query' } }}/>`|  
 	
 + **"activeStyle"** es el estilo que se le aplicará al elemento enlazado cuando está activa su ruta, es decir, cuando cliquemos sobre el enlace tendrá el color que queramos, al perder el foco tendrá el color por defecto.  
 
