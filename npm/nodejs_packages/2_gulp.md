@@ -8,7 +8,7 @@ Dicha automatización de tareas es en resumen, un sistema de construcción de st
 ##¿Por qué utilizar **"gulp"** y no **["grunt"][gulpVSgrunt]**?
 Aunque se venga utilizando popularmente "grunt", "gulp" presenta una serie de ventajas:
 - **Intercambio de información entre procesos más fácilmente.**
-- **Esquema de **"pipes"** más resumido.**
+- Esquema de **"pipes"** más resumido.
 - **Mejora la legibilidad**, permitiendo así seguir el flujo.
 - Disposición de variables que cargan librerías.
 - Realiza **menos pasos a la hora de manipular los archivos** al realizar sus tareas.
