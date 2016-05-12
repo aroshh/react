@@ -1,3 +1,4 @@
+![logo_aitex_min.png](images/logo_aitex_min.png "Logotipo de Aitex")
 #React.js
 
 Tenemos la opción de trabajar con la versión de **"react.js"** a partir del código proporcioando en su página oficial, pero nosotros lo tendremos instalado como módulo en nuestro proyecto a través del gestor de paquetes **"npm"** y registrado como dependencia de desarrollo en nuestro "package.json".
@@ -20,7 +21,7 @@ Para poder comprobar ***qué versión*** disponemos, desde el prompt de node.js 
 |08/04/2016|**[15.0.1][enlaceReact1501]**|Nuevas interacciones con el DOM:|
 | | |1) Método "React.__spread ha quedado obsoleto. |
 | | |2) Bug fijado sobre la pérdida de la posición del cursor en los inputs.|
-|29/04/2016|15.0.2|Más modificaciones realizadas|
+
 
 >**SVG:** Gráficos Vectoriales Redimensionables (o Scalable Vector Graphics) son una especificación para describir "gráficos vectoriales" bidimensionales, tanto estáticos como animados) en formato XML.
 
