@@ -30,8 +30,6 @@ La sintaxis de instalación es la siguiente:
 > - el repositorio de paquetes **npm**, sólo hay que poner el nombre.
 > - GitHub, se tiene que poner la dirección precedida de la palabra "git:" (formato del protocolo).
 
----
-
 **Ejemplo básico: Instalando el paquete** **"expres":**
 
 >Para ello la sintaxis utilizada es la siguiente:`> npm install express`
