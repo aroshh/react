@@ -1,3 +1,4 @@
+![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 #Paquete Browserify
 
 **Browserify** [[1]] nos permite organizar una aplicación javascript (o módulos de node.js) en varios archivos y referenciarlos unos desde otros a través de `require('module')` que vamos a ir usando a lo largo del proyecto. Además, unirá los diferentes archivos incluyendo los módulos necesarios en el orden adecuado para después generar un fichero para ser utilizado en nuestro navegador.  
