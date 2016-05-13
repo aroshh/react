@@ -1,3 +1,4 @@
+![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 ##Fichero "gulpfile.js"
 
 Podemos encontrar diferentes "gulpfile.js" en Internet, aquí os proporcionamos el que utilizaremos para nuestro proyecto o muy similar:
