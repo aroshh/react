@@ -1,3 +1,4 @@
+![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 ##Paquete Babelify
 Es otro módulo de npm que añadido al módulo **["browserify"][enlaceBrowserify]** se produce la transformación de nuestro código JavaScript en JavaScript nativo comprensible por nuestro navegador web. Éste traduce (transforma) ES6 a ES5 para luego crear un fichero "bundle.js" que contendrá todos los ficheros de la aplicación.  
 
