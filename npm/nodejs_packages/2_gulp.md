@@ -1,3 +1,4 @@
+![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 #Paquete gulp
 Gulp nos ayuda a automatizar tareas en el despliegue y pre-compilación de la aplicación que de otra forma sería realizadas de forma manual. Dichas tareas se describen en un fichero llamado **"[gulpfile.js][linkGulpfile]"** el cuál situaremos dentro de la ruta raíz del proyecto y dentro de la carpeta donde se tenga puesto el código. 
 
