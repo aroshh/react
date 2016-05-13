@@ -1,4 +1,5 @@
-##Paquete react-dom.js
+![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
+##Paquete react-dom
 Este existe desde la versión 0.14.0 (octubre 2015) de "React.js" ya que se [**decidió separar**][enlaceSeparar] dicho paquete único en dos: react y react-dom. Con lo que permite compartir componentes entre las diferentes versiones de ___React___ (web y nativo), por lo que tendremos que incluir tanto archivos como funciones movidas de **react** a **react-dom**.
 
 Lo podemos encontrar dentro del gestor de paquetes de [**"npm"**][enlaceNpm]. Su utilidad es que nos permite renderizar de forma automática nuestra tabla de rutas (routes.jsx) e inicializar el DOM. Para realizar la importación será mediante `import {render} from 'react-dom';` (ECMAScript 6).
