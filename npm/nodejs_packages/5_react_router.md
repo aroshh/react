@@ -1,3 +1,4 @@
+![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 ##Paquete react-router.js
 
 Nos permite crear tablas de rutas en el cliente completamente integradas en "React.js". Esto nos permite tener un comportamiento de nuestra web como una SPA.
