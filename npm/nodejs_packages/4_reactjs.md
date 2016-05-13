@@ -1,4 +1,4 @@
-![logo_aitex_min.png](images/logo_aitex_min.png "Logotipo de Aitex")
+![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 #React.js
 
 Tenemos la opción de trabajar con la versión de **"react.js"** a partir del código proporcioando en su página oficial, pero nosotros lo tendremos instalado como módulo en nuestro proyecto a través del gestor de paquetes **"npm"** y registrado como dependencia de desarrollo en nuestro "package.json".
