@@ -47,6 +47,7 @@ Explicación del diagrama:
 + [Introducción a Web API en ASP.NET](https://www.pluralsight.com/courses/aspnetwebapi).
 + [Video: Flux, Arquitectura de UI, explicado por Eduard Tomàs](https://www.youtube.com/watch?v=IRitxt702EY).
 + [Programación por capas (Wikipedia)](https://es.wikipedia.org/wiki/Programaci%C3%B3n_por_capas).
-+ [¿Qué es el MVC (modelo-vista-controlador)?](http://www.desarrolloweb.com/articulos/que-es-mvc.html).
++ [¿Qué es el MVC (modelo-vista-controlador)?](http://www.desarrolloweb.com/articulos/que-es-mvc.html).  
+
 <!-- Referencias ocultas -->
 [webapi]:https://es.wikipedia.org/wiki/Web_API
