@@ -80,7 +80,7 @@ let HelloWord = React.createClass({
         return {};
     },
     componentWillMount: function () { 
-    console.log('Paso 3º. Ejecución de componentWillMount'); 
+    	console.log('Paso 3º. Ejecución de componentWillMount'); 
     },
 
     render: function () {
