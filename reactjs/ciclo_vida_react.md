@@ -238,7 +238,7 @@ Dicho objeto permite definir métodos estáticos que pueden ser llamados desde u
 ####[displayName][enlaceDisplayname]
 Objeto utilizado para el debug de mensajes, en JSX se pone este valor automáticamente. JSX definirá la clase `displayName` para la asignación de una variable en el caso de que `displayName` no sea definida.
 
-Desde la página oficial nos indican utilizar `BABEL REPL` para probar JSX y ver el resultado también en JavaScript nativo, además tmabién se dispone del convertidor de etiquetas/código HTML a JSX **[en este enlace][enlaceHtmltojsx].**
+Desde la página oficial nos indican utilizar `BABEL REPL` para probar JSX y ver el resultado también en JavaScript nativo, además también se dispone del convertidor de etiquetas/código HTML a JSX **[en este enlace][enlaceHtmltojsx].**
 
 >Las expresiones en JSX siempre evalúan a un elemento React.
 
