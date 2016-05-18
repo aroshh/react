@@ -73,7 +73,8 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 	+ [Instalar Node.js Tools en Visual Studio](visualStudio/01_pluginNodejs.md)  
 
 5. **Miscelanea**
-    + [Librería JavaScript Lazy.js](http://danieltao.com/lazy.js/docs/)
+    + [Librería JavaScript Lazy.js](http://danieltao.com/lazy.js/docs/)  
+
 ##Referencias
 + [Documentación de Node.js](https://nodejs.org/dist/latest-v4.x/docs/api/).
 + [Obtener Visual Studio Express](https://www.visualstudio.com/es-es/features/node-js-vs.aspx).
