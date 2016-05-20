@@ -80,6 +80,8 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 + [Obtener Visual Studio Express](https://www.visualstudio.com/es-es/features/node-js-vs.aspx).
 + [Conceptos básicos de React.js](https://platzi.com/blog/conceptos-basicos-reactjs/).
 + Herramientas de integración en React.js - [compilación de React.js](http://facebook.github.io/react/docs/tooling-integration.html).
++ [Boostrap Datapicker](http://bootstrap-datepicker.readthedocs.io/en/latest/). 
++ ["npm react-datepicker"](https://github.com/Hacker0x01/react-datepicker) y ["npm react-boostrap-date-picker"](https://www.npmjs.com/package/react-bootstrap-date-picker).
 
 <!-- Referencias y enlaces utilizados en el texto -->
 [enlacePHP]:http://php.net/manual/es/index.php
