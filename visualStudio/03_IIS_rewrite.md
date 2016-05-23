@@ -1,5 +1,5 @@
 ##URL Rewrite 2.0 (para Internet Information Services)
-![web_install_url.png](../images/web_install_url_rewrite.png "Instalación desde la plataforma web")
+![web_install_url.png](../npm/images/web_install_url_rewrite.png "Instalación desde la plataforma web")
 Esta extensión habilita a los administradores web a crear reglas para implementar URL's que sean más fáciles para los usuarios recordar y facilitar a los motores de búsqueda para encontrar.
 Nos descargaremos el paquete instalador para MS Windows dependiendo de la arquitectura:
 - Instalador Plataforma Web.
@@ -9,11 +9,11 @@ Dicho módulo **es compatible con** las siguientes versiones de **IIS: 7, 7.5, 8
 
 Nosotros trabajamos con "Visual Studio 2015 Community" pero utilizamos el **"IIS 10.0 Express"** que viene incluido también, por lo que no podremos ejecutarlo, ya que necesitaríamos tener instalado el **"IIS 7"** (cómo mínimo):  
 
-![wizar_instalador_web_rewrite.png](../images/wizar_instalador_web_rewrite.png "Instalador plataforma web")
+![wizar_instalador_web_rewrite.png](../npm/images/wizar_instalador_web_rewrite.png "Instalador plataforma web")
 
 Para solucionar el problema tendremos que acceder al registro de MS Windows mediante `regedit` Tendremos que situarnos en la siguiente ruta `HKEY_LOCAL_MACHINE > SOFTWARE > Microsoft > InetStp` y modificar el tipo y el valor del registro "MajorVersion" (Sería conveniente realizar una copia del registro por seguridad)
 
-![regedit_url_rewrite.png](../images/regedit_url_rewrite.png "Registro de Windows")  
+![regedit_url_rewrite.png](../npm/images/regedit_url_rewrite.png "Registro de Windows")  
 
 Guardamos los cambios y actualizamos con `F5`, después desde el instalador web o desde el paquete MSI procederemos a la instalación del módulo URL Rewrite 2.0. Ahora ya no tendremos problema en instalarlo y tampoco necesitaremos instalarnos ningún IIS totalmente en nuestro sistema.
 
