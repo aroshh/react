@@ -62,6 +62,13 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 2. **Paquetes utilizados**
 	+ [Browserify](npm/nodejs_packages/1_browserify.md) 
 	+ [Watchify](npm/nodejs_packages/3_watchify.md)
+	+ [Gulp](npm/nodejs_packages/2_gulp.md)
+	+ ["gulpfile.js"](npm/nodejs_packages/2_1_gulpfile.md)
+	+ [React.js](npm/nodejs_packages/4_reactjs.md)
+	+ [React-router](npm/nodejs_packages/5_react_router.md)
+	+ [Babelify](npm/nodejs_packages/6_babelify.md)
+	+ [React-dom](npm/nodejs_packages/7_react_dom.md)
+	+ [Flux](npm/nodejs_packages/8_flux.md)
 
 3. **Gestor de paquetes para Nodejs: "npm"**.  
 
