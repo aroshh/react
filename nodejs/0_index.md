@@ -1,7 +1,7 @@
 ![logo_aitex.png](images/logo_aitex_min.png "Logotipo de Aitex")
 #Node.js
 
-##Listado
+##Índice
 1. [¿Qué es Node.js?](/react/nodejs/1_what_is_node.md)
 2. [Instalación de Node.js](/react/nodejs/2_install_nodejs.md)
 3. [Primer proyecto con Node.js](/react/nodejs/3_first_project.md)
