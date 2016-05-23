@@ -61,7 +61,7 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 
 2. **Paquetes utilizados**
 	+ [Browserify](npm/nodejs_packages/1_browserify.md) 
-	+ [Watchify](npm/nodejs_packages/3_browserify.md)
+	+ [Watchify](npm/nodejs_packages/3_watchify.md)
 
 3. **Gestor de paquetes para Nodejs: "npm"**.  
 
