@@ -56,8 +56,8 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 1. **Node JS.**  
 	+ [¿Qué es Node.js?](nodejs/1_what_is_node.md)  
 	+ [Instalar Node.js](nodejs/2_install_nodejs.md)
-	+ [Primer proyecto en Node.js](nodejs/3_first_proyect.md)
-	+ [Instalar módulos en Node.js](nodejs/4_install_nodejs_modules.md)  
+	+ [Primer proyecto en Node.js](nodejs/3_first_project.md)
+	+ [Instalar módulos en Node.js](nodejs/4_Install_nodejs_modules.md)  
 
 2. **Paquetes utilizados**
 	+ [Browserify](npm/nodejs_packages/1_browserify.md) 
