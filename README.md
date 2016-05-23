@@ -1,7 +1,7 @@
 ![logo_aitex.png](nodejs/images/logo_aitex_min.png "Logotipo de Aitex")
 #Proyecto: Node.js + npm + .NET + React.js
 
-##Introdución
+##Introducción
 Tengamos en cuenta que el mundo web va evolucionando constantemente. Antes disponíamos de tres lenguajes de desarrollo en el servidor web: **[PHP][enlacePHP]**, **[J2EE][enlaceJ2EE]** o **[ASPx][enlaceASPNET]**. Todos ellos comparten HTML + JavaScript (librerías importantes **[jQuery][enlaceJQUERY]** y **[Knockout][enlaceKNOCKOUT]**).
 > **Php:** es un lenguaje de programación para el lado der servidor utilizado para el desarrollo web de contenido dinámico *(fuente: Wikipedia)*.
   
