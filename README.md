@@ -59,9 +59,7 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 
 3. [**Gestor de paquetes para Nodejs: "npm"**](/npm/README.md)
 
-4. **Visual Studio Express 2015**  
-
-	+ [Instalar Node.js Tools en Visual Studio](visualStudio/01_pluginNodejs.md)  
+4. [**Visual Studio Express 2015**](/visualStudio/README.md)  
 
 5. **Miscelanea**
     + [Librería JavaScript Lazy.js](http://danieltao.com/lazy.js/docs/)  
