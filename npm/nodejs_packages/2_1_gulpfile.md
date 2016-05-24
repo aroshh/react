@@ -240,7 +240,8 @@ A pesar de que nuestro código queda reducido a un único fichero "main.js" ocup
 ![main_without_minify.png](../images/main_without_minify.png "Código sin minificar")
 
 Para lograr "minificar" dicho código y con ello ocupe menos tamaño, favoreciendo la descarga en el navegador del cliente y su posterior renderización tendremos que:
-+ Añadir los siguientes modulos npm:
++ Añadir los siguientes modulos npm:  
+
 | Módulo npm elegido | Descripción |
 |:--------:|:--------|
 |[vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer)|Crea un stream transformado que toma los ficheros "vinyl" como entrada y la salida de los ficheros se modifica, conviertiéndolos en un buffer antes de emitirse de nuevo.|
