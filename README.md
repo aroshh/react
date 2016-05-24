@@ -66,10 +66,7 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 	+ [React-dom](npm/nodejs_packages/7_react_dom.md)
 	+ [Flux](npm/nodejs_packages/8_flux.md)
 
-3. **Gestor de paquetes para Nodejs: "npm"**.  
-
-	+ [¿Qué es "npm"?](nodejs/what_is_node.md)  
-	+ [Sintaxis en npm](npm/syntax.md)
+3. [**Gestor de paquetes para Nodejs: "npm"**](/npm/README.md)
 
 4. **Visual Studio Express 2015**  
 
