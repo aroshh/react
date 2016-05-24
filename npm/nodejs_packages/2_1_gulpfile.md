@@ -1,8 +1,8 @@
 ![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 #Fichero "gulpfile.js"
 
-##Código detallado
-Podemos encontrar diferentes formas de crear eñ fichero "gulpfile.js" en Internet, aquí os proporcionamos el que utilizaremos para nuestro proyecto o muy similar:
+##Uso de los modulos npm en un fichero "gulpfile.js"
+Podemos encontrar diferentes formas de crear el fichero "gulpfile.js" en Internet, aquí os proporcionamos el que utilizaremos para nuestro proyecto o muy similar:
 
 ```javascript
 //Módulos requeridos 
