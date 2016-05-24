@@ -1,6 +1,5 @@
 ![logo_aitex.png](images/logo_aitex_min.png "Logotipo de Aitex")
-#Acercamiento a Node.js
-##¿Qué es Node.js?
+#¿Qué es Node.js?
 
 Inicialmente es una librería y un entorno de ejecución de entrada y salida, dirigida por eventos, asíncrona que se ejecuta con el intérprete de JavaScript "V8" creado por Google. Además fue la primera librería basasda en JavaScript y con un gran rendimiento.
 
