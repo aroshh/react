@@ -1,30 +1,4 @@
 ![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
-#React.js
-
-Tenemos la opción de trabajar con la versión de **"react.js"** a partir del código proporcioando en su página oficial, pero nosotros lo tendremos instalado como módulo en nuestro proyecto a través del gestor de paquetes **"npm"** y registrado como dependencia de desarrollo en nuestro "package.json".
-
-##Modificaciones entre versiones
-
-Para poder comprobar ***qué versión*** disponemos, desde el prompt de node.js ejecutaremos el comando `> npm show react version`
-
-
-###[Historial de versiones](:https://github.com/facebook/react/blob/master/CHANGELOG.md)
-
-| Fecha | Versión |Detalle modificaciones realizadas|
-|:--------:|:--------:|------|
-|07/10/2015|**[0.14][enlaceReact14]**|División del paquete **"react"** en dos: **"react"** y **"react-dom"** para facilitar el renderizado. Por lo que facilita compartir componentes entre la versión web de "react" y el "react nativo".|
-|29/03/2016|**[0.14.8][enlaceReact148]**|Solucionado el problema de la pérdida de memoria relacionada con la renderización en el lado del servidor.|
-|07/04/2016|**[15.0][enlaceReact150]**|Modificaciones en la interacción con el DOM:|
-|||El identificador utilizado por react.js **"data_reactid"** no aparecerá como atributo para cada nodo DOM cómo se hacía anteriormente. Para conseguir que el renderizado del DOM sea más ligero pero con el inconveniente de que no se sabrá si el sitio web está usando React.js o no.|
-|||**"no hay más `<span\>` extra"**, en el renderizado de textos de bloque.Podemos renderizar textos plano  intercalados con nodos de comentario que se utilizan para demarcación.Esto nos da la misma capacidad de actualizar las piezas individuales de texto, sin crear nodos anidados adicionales. |
-|||**Soporte de etiquetas SVG** gácias a que JSX y el método `React.createElement` trabaja con nombres de etiquetas.
-|08/04/2016|**[15.0.1][enlaceReact1501]**|Nuevas interacciones con el DOM:|
-| | |1) Método "React.__spread ha quedado obsoleto. |
-| | |2) Bug fijado sobre la pérdida de la posición del cursor en los inputs.|
-
-
->**SVG:** Gráficos Vectoriales Redimensionables (o Scalable Vector Graphics) son una especificación para describir "gráficos vectoriales" bidimensionales, tanto estáticos como animados) en formato XML.
-
 ##Paquete React.js "npm"
 
 Por otra parte tenemos el módulo correspondiente que podemos encontrar en el gestor de paquetes **"npm"**. Nos permitirá acceder al código introducido en "React.js" sin requerimiento de la transformación de JavaScript XML (JSX)
