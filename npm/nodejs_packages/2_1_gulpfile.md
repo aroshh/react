@@ -1,6 +1,7 @@
 ![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
-##Fichero "gulpfile.js"
+#Fichero "gulpfile.js"
 
+##Código detallado
 Podemos encontrar diferentes forma de crear eñ fichero "gulpfile.js" en Internet, aquí os proporcionamos el que utilizaremos para nuestro proyecto o muy similar:
 
 ```javascript
@@ -44,7 +45,6 @@ paths.concatJsDest = paths.js + "site.min.js";
 paths.concatCssDest = paths.webroot + "css/site.min.css"; 
 paths.entrySource = "./site/js/" + fileNames.entrySource;
 
-//paths.entrySourceCss = "./site/css/" +; 
 paths.bundleDest = paths.js + fileNames.bundleDest; 
 
 var contador = 0;
@@ -167,20 +167,20 @@ Del siguiente código extraemos:
 | Paquete/módulo empleado | Descripción |
 |:---:|:---|
 |[vinyl-source-stream][linkVinyl]|Utilizado para convertir el stream del fichero creado por **"browserify"** sin utilizar ficheros temporales como punto intermedio.| 
-|browserify|Resolución de módulos, crea el **"bundle.js"** final utilizado por el navegador|
-|watchify|Detecta cambios y modificaciones tanto en directorios como en ficheros|
-|gulp| Utilizado para automatizar tareas|
+|[browserify](1_browserify.md)|Resolución de módulos, crea el **"bundle.js"** final utilizado por el navegador|
+|[watchify](3_watchify.md)|Detecta cambios y modificaciones tanto en directorios como en ficheros|
+|[gulp](2_gulp.md)| Utilizado para automatizar tareas|
 |[gulp-concat][linkGulp-concat]|Concatena / añade los ficheros indicados desde **gulp** para luego ser utilizado por browserify y así generar el **"bundle.js"** o fichero único.|
 |[gulp-webserver][linkGulp-web]|Plugin de **"gulp"** para ejecutar un servidor web en local con "LiveReload" (recarga automática)|
-|babelify|Es un transpiler que permite convertír código de ECMAScript 6 a código compatible con la mayoría de navegadores modernos.|  
+|[babelify](6_babelify.md)|Es un transpiler que permite convertír código de ECMAScript 6 a código compatible con la mayoría de navegadores modernos.|  
 
 >Sintaxis: instalación local `> npm --save-dev <nombrePaquete>`.  
 
 |Paquete|Descripción|
 |:---:|:---|
-|react|Complementa las herramientas de desarrollo de Chrome para poder visualizar los JSX.|
-|react-router|Utilizado para generar una tabla de rutas de la aplicación.|
-|reactify|Traduce de JavaScript XML (JSX) a JavaScript.|  
+|[react](4_reactjs.md)|Complementa las herramientas de desarrollo de Chrome para poder visualizar los JSX.|
+|[react-router](5_react_router.md)|Utilizado para generar una tabla de rutas de la aplicación.|
+|[reactify](https://www.npmjs.com/package/reactify)|Traduce de JavaScript XML (JSX) a JavaScript.|  
 
 > Sintaxis: sin comprobar las dependencias `> npm --save <nombrePaquete>`.  
 
@@ -192,10 +192,10 @@ Del siguiente código extraemos:
 
     | Tarea   | Detalle |
     |:--------:|:--------|
-    |default| Se lanza browserify y watchify. Primero se guarda el fichero "index.js", si se producen cambios se genera el fichero "main.js" y se guarda en la ruta "\wwwroot\js"|
+    |default| Se lanza browserify y watchify. Primero se guarda el fichero "index.js", si se producen cambios se genera el fichero "main.js" y se guarda en la ruta "\wwwroot\js".|
     |browserify|Lo mismo que el anterior, es decir, la tarea tal cual.|
     |build| Compilar el fichero "js" a partir de los "JSX" que estén en el proyecto.|
-    |server| Utilizada para arrancar un servidor web en la máquina local.|
+    |server| Utilizada para arrancar un servidor web en la máquina local si no necesitamos **"iniciar" IIS** (Internet Information Services).|
 
 	+ La tarea **"browserify"**, guardamos en la variable "bundler" que será un objeto instanciado de "browserify" que contendrá diferentes métodos (opciones del objeto):
 
@@ -234,6 +234,14 @@ Del siguiente código extraemos:
 	> En nuestro fichero "gulpfile.js" podemos unificar tareas mediante el siguiente código:  
 >`gulp.task('default', ['browserify','build','server']);`
 
+##Minificar código JavaScript, JSX, etc
+A pesar de que nuestro código queda reducido a un único fichero "main.js" ocupa 2MB como causa de los espacios, formato del código, etc., como podemos apreciar en la imagen
+![main_without_minify.png](../images/main_without_minify.png "Código sin comprimir")
+
+Para lograr "minificar" dicho código y con ello ocupe menos, con lo que favorezca la descarga en el navegador del cliente y su posterior renderización tendremos que realizar los siguientes pasos
+
+Para finalmente obtener el resultado deseado
+![main_without_minify.png](../images/main_with_minify.png "Código comprimido")
 
 
 ##Referencias
