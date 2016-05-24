@@ -2,7 +2,7 @@
 #Fichero "gulpfile.js"
 
 ##Código detallado
-Podemos encontrar diferentes forma de crear eñ fichero "gulpfile.js" en Internet, aquí os proporcionamos el que utilizaremos para nuestro proyecto o muy similar:
+Podemos encontrar diferentes formas de crear eñ fichero "gulpfile.js" en Internet, aquí os proporcionamos el que utilizaremos para nuestro proyecto o muy similar:
 
 ```javascript
 //Módulos requeridos 
@@ -234,7 +234,8 @@ Del siguiente código extraemos:
 	> En nuestro fichero "gulpfile.js" podemos unificar tareas mediante el siguiente código:  
 >`gulp.task('default', ['browserify','build','server']);`
 
-##Minificar código JavaScript, JSX, etc
+##Minificar código
+### \...JavaScript
 A pesar de que nuestro código queda reducido a un único fichero "main.js" ocupa 2MB como causa de los espacios, formato del código, etc., como podemos apreciar en la imagen
 ![main_without_minify.png](../images/main_without_minify.png "Código sin minificar")
 
@@ -258,8 +259,27 @@ Para lograr "minificar" dicho código y con ello ocupe menos tamaño, favorecien
 Inicialmente utilizábamos **browserify.bundle()** el cual devuelve un stream de texto que no se podrá concatenar con otros plugins de **gulp** por lo que necesitaremos utilizar **vinyl-source-stream** el cual convertirá dichos streams de texto devueltos por **browserify** a streams de objetos vinyl pudiendo concatenar con otros plugins que soporten streaming. Podríamos utilizar el método `gulp.dest` para escribir la salida del fichero pero al concatenar con `gulp-uglify` obtendremos un error de: **`Streaming not sopported`** debido a que "gulp-uglify" no soporta streaming de objetos vinyl, etonces concatenaremos con `vinyl-buffered` para que los convierta a buffer para así posteriormente con `gulp-uglify` pueda trabajar con objetos tipo buffer. 
 
 Para finalmente obtener como resultado el fichero "gulpfile.js" minificado:
-![main_without_minify.png](../images/main_with_minify.png "Código minificado")
+![main_without_minify.png](../images/main_with_minify.png "Código minificado")  
 
+### \...CSS (hojas de estilo) 
+Por otra parte, aunque no seamos diseñadores ni maquetadores (puesto que de esa labor se encargar empresas exteriores) podemos también minificar los distintos CSS de nuestro proyecto en un único fichero **".css"**, con el mismo resultado que con el código JavaScript.
+
+| Módulo/paquete npm | Detalle |
+|:--------:|:--------|
+|[gulp-plumber](https://www.npmjs.com/package/gulp-plumber)|Que no rompan la tubería los errores causados por otros plugins de **gulp**.|
+||`npm install --save-dev gulp-plumber`|
+||`var plumber = require('gulp-plumber');`|
+|[gulp-rename](https://www.npmjs.com/package/gulp-rename)|Es un plugin de **gulp** para renombrar ficheros fácilmente.|
+||`npm install --save-dev gulp-rename`|
+||`var plumber = require('gulp-rename');`|
+|[gulp-clean-css](https://www.npmjs.com/package/gulp-clean-css)|Utilizado para minificar ficheros "css".|
+||`npm install --save-dev gulp-clean-css`|
+||`var plumber = require('gulp-clean-css');`|
+|[gulp-csslint](https://www.npmjs.com/package/gulp-csslint)|Para detectar errores en la sintaxis de los ficheros "css".|
+||`npm install --save-dev gulp-csslint`|
+||`var plumber = require('gulp-csslint');`|
+
+Al final del código, tenemos la tarea llamada `gulp.task('css'...);` para que recoja todos los ficheros "css" cuyo origen es la ruta relativa `'site/css/*css'` que tendremos que tener creado previamente en nuestro proyecto para que no nos de error. Mediante tuberías (`.pipe()`) comprobaremos la sintaxis, en caso de que se encuentre algún error, recibiremos por consola un log indicando el fichero y ubicación del error ___(en el Explorador del Ejecutador de Tareas de Visual Studio o Task Runner Explorer)___, después se "fusionarán" todos los ".css" en uno sólo que será `main.css` para después guardarlo en la carpeta de destino y añadirle `.min`. Con la siguiente tubería, utilizando `cleanCss` se minifica dicho ".css". En necesario de que la carpeta de destino exista previamente, así se almancerá el fichero `main.css.min`, además dicho `main.css.min` se creará al lanzar el IIS cuando se detecten cambios mediante la tarea `watch_default_css` se modificará dicho fichero.
 
 ##Referencias
 + [Generador de ficheros gulpfile.js on line](http://steelydylan.github.io/gulp-generator/).
