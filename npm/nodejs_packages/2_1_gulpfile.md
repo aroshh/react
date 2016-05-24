@@ -242,13 +242,20 @@ Para lograr "minificar" dicho código y con ello ocupe menos tamaño, favorecien
 + Añadir los siguientes modulos npm:
 | Módulo npm elegido | Descripción |
 |:--------:|:--------|
-|[gulp-uglify](https://www.npmjs.com/package/gulp-uglify)|Módulo para minificar ficheros, en nuestro caso tendremos: JavaScript, JSX, JSON.        |
-||**Instalación:** `npm install --save-dev gulp-uglify`|
 |[vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer)|Crea un stream transformado que toma los ficheros "vinyl" como entrada y la salida de los ficheros se modifica, conviertiéndolos en un buffer antes de emitirse de nuevo.|
-||**Instalación:** `npm install --save vinyl-buffer` |
+||`npm install --save vinyl-buffer` |
+||`var buffer = require('vinyl-buffer');`|
+|[gulp-uglify](https://www.npmjs.com/package/gulp-uglify)|Módulo para minificar ficheros, en nuestro caso tendremos: JavaScript, JSX, JSON.        |
+||`npm install --save-dev gulp-uglify`|
+||`var uglify = require('gulp-uglify');`|
+|[gulp-util](https://www.npmjs.com/package/gulp-util)|Utilidad para obtener mensajes de error producidos dentro del código de nuestro fichero "gulpfile.js".|
+||`npm install --save-dev gulp-util`|
+||`var util = require ('gulp-util');`|
 + Modificar el código del fichero "gulpfile.js"  
+    ![gulpfile_minify.png](../images/gulpfile_minify_code.png "Minificar código en el fichero gulpgile.js")
 
-![gulpfile_minify.png](../images/gulpfile_minify_code.png "Minificar código en el fichero gulpgile.js")
+>#####Explicamos: 
+Inicialmente utilizábamos **browserify.bundle()** el cual devuelve un stream de texto que no se podrá concatenar con otros plugins de **gulp** por lo que necesitaremos utilizar **vinyl-source-stream** el cual convertirá dichos streams de texto devueltos por **browserify** a streams de objetos vinyl pudiendo concatenar con otros plugins que soporten streaming. Podríamos utilizar el método `gulp.dest` para escribir la salida del fichero pero al concatenar con `gulp-uglify` obtendremos un error de: **`Streaming not sopported`** debido a que "gulp-uglify" no soporta streaming de objetos vinyl, etonces concatenaremos con `vinyl-buffered` para que los convierta a buffer para así posteriormente con `gulp-uglify` pueda trabajar con objetos tipo buffer. 
 
 Para finalmente obtener como resultado el fichero "gulpfile.js" minificado:
 ![main_without_minify.png](../images/main_with_minify.png "Código minificado")
