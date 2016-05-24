@@ -7,7 +7,7 @@ Podemos encontrar diferentes "gulpfile.js" en Internet, aquí os proporcionamos 
 
 //Módulos requeridos 
 var gulp = require('gulp'); 
-var source = require('vinyl-source-stream');    // Se utiliza para transmitir paquete para su  
+var source = require('vinyl-source-stream');    // Se utiliza para transmitir paquetes para su  
                                               // posterior manipulación 
 var browserify = require('browserify'); 
 var reactify = require('reactify'); 
