@@ -236,12 +236,22 @@ Del siguiente código extraemos:
 
 ##Minificar código JavaScript, JSX, etc
 A pesar de que nuestro código queda reducido a un único fichero "main.js" ocupa 2MB como causa de los espacios, formato del código, etc., como podemos apreciar en la imagen
-![main_without_minify.png](../images/main_without_minify.png "Código sin comprimir")
+![main_without_minify.png](../images/main_without_minify.png "Código sin minificar")
 
-Para lograr "minificar" dicho código y con ello ocupe menos, con lo que favorezca la descarga en el navegador del cliente y su posterior renderización tendremos que realizar los siguientes pasos
+Para lograr "minificar" dicho código y con ello ocupe menos tamaño, favoreciendo la descarga en el navegador del cliente y su posterior renderización tendremos que:
++ Añadir los siguientes modulos npm:
+| Módulo npm elegido | Descripción |
+|:--------:|:--------|
+|[gulp-uglify](https://www.npmjs.com/package/gulp-uglify)|Módulo para minificar ficheros, en nuestro caso tendremos: JavaScript, JSX, JSON.        |
+||**Instalación:** `npm install --save-dev gulp-uglify`|
+|[vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer)|Crea un stream transformado que toma los ficheros "vinyl" como entrada y la salida de los ficheros se modifica, conviertiéndolos en un buffer antes de emitirse de nuevo.|
+||**Instalación:** `npm install --save vinyl-buffer` |
++ Modificar el código del fichero "gulpfile.js"  
 
-Para finalmente obtener el resultado deseado
-![main_without_minify.png](../images/main_with_minify.png "Código comprimido")
+![gulpfile_minify.png](../images/gulpfile_minify_code.png "Minificar código en el fichero gulpgile.js")
+
+Para finalmente obtener como resultado el fichero "gulpfile.js" minificado:
+![main_without_minify.png](../images/main_with_minify.png "Código minificado")
 
 
 ##Referencias
