@@ -180,7 +180,7 @@ Del siguiente código extraemos:
 |:---:|:---|
 |[react](4_reactjs.md)|Complementa las herramientas de desarrollo de Chrome para poder visualizar los JSX.|
 |[react-router](5_react_router.md)|Utilizado para generar una tabla de rutas de la aplicación.|
-|[reactify](https://www.npmjs.com/package/reactify)|Traduce de JavaScript XML (JSX) a JavaScript.|  
+|[reactify](https://www.npmjs.com/package/reactify)|Traduce de JavaScript XML (JSX) a JavaScript. Puede también transformar y compilar un conjunto limitado de construcciones de ES6 (ECMAScript 2015) en ES5. Más sobre ES6/5 en el fichero **["babelify"](/npm/nodejs_packages/6_babelify.md).**|
 
 > Sintaxis: sin comprobar las dependencias `> npm --save <nombrePaquete>`.  
 
