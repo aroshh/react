@@ -209,7 +209,7 @@ Del siguiente código extraemos:
 + ["npm" gulp-concat](https://www.npmjs.com/package/gulp-concat).
 + [Documentación en GitHub sobre "gulp-webserver"](https://github.com/schickling/gulp-webserver)
 + ["npm" gulp-webserver](https://www.npmjs.com/package/gulp-webserver).
-+ [Minificar código JavaScript](http://blog.revathskumar.com/2016/02/browserify-with-gulp.html)
++ [**Cómo minificar código JavaScript**](http://blog.revathskumar.com/2016/02/browserify-with-gulp.html)
 
 
 <!-- Enlaces y referencias del documento -->
