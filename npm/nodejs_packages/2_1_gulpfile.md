@@ -48,12 +48,6 @@ paths.entrySource = "./site/js/" + fileNames.entrySource;
 paths.bundleDest = paths.js + fileNames.bundleDest; 
 
 var contador = 0;
-var trans = 1; //contador para las veces que se transforma el bundler
-
-//console.log("el cssFilter => " + paths.cssFilter);
-//console.log("el minCssFilter => " + paths.minCssFilter);
-
-
 
 //Definición de la Tarea 
 gulp.task('browserify', function () {
@@ -64,16 +58,10 @@ gulp.task('browserify', function () {
         entries: [paths.entrySource],                   // Solo necesitamos el archivo inicial para encontrar dependencias. 
         transform: [reactify],
         transform: [[babelify, { "presets": ["es2015", "react"] }]],
-        //transform: [babelify],                          // Queremos convertir JSX a EMACScript 5.0
-        debug: true,                                    // Nos da sourcemapping 
+        					                          // Queremos convertir JSX a EMACScript 5.0
+        debug: true,                                  // Nos da sourcemapping 
         cache: {}, packageCache: {},
-        fullPaths: true                                 // Reserva la ruta original con la que se generó. 
-        //}).transform(babelify);
-        //}).transform(babelify, { presets: ["es2015", "react"] });
-    //});
-        //}).on('transform', function () {
-        //    console.log("Transformación correcta " + trans);
-        //    trans++;
+        fullPaths: true                               // Reserva la ruta original con la que se generó. 
     });
 
     console.log('Preparando para que se quede observando los cambios.'); 
@@ -249,15 +237,15 @@ Del siguiente código extraemos:
 
 
 ##Referencias
-+ [Generador de ficheros gulpfile.js on line](http://steelydylan.github.io/gulp-generator/)
-+ [Documentación de GULP en español](https://github.com/bucaran/gulp-docs-es)
-+ [Pagina oficial de GULP en GitHub](https://github.com/gulpjs/gulp/blob/master/docs/README.md)
-+ [Comenzando con GULP - Video series](https://www.youtube.com/playlist?list=PLRk95HPmOM6PN-G1xyKj9q6ap_dc9Yckm)
++ [Generador de ficheros gulpfile.js on line](http://steelydylan.github.io/gulp-generator/).
++ [Documentación de GULP en español](https://github.com/bucaran/gulp-docs-es).
++ [Pagina oficial de GULP en GitHub](https://github.com/gulpjs/gulp/blob/master/docs/README.md).
++ [Comenzando con GULP - Video series](https://www.youtube.com/playlist?list=PLRk95HPmOM6PN-G1xyKj9q6ap_dc9Yckm).
 + [Documentación en GitHub sobre "gulp-concat"](https://github.com/contra/gulp-concat).
 + ["npm" gulp-concat](https://www.npmjs.com/package/gulp-concat).
-+ [Documentación en GitHub sobre "gulp-webserver"](https://github.com/schickling/gulp-webserver)
++ [Documentación en GitHub sobre "gulp-webserver"](https://github.com/schickling/gulp-webserver).
 + ["npm" gulp-webserver](https://www.npmjs.com/package/gulp-webserver).
-+ [**Cómo minificar código JavaScript**](http://blog.revathskumar.com/2016/02/browserify-with-gulp.html)
++ [**Browserify + gulp: cómo minificar código JavaScript**](http://blog.revathskumar.com/2016/02/browserify-with-gulp.html).
 
 
 <!-- Enlaces y referencias del documento -->
