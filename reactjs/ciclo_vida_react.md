@@ -1,4 +1,4 @@
-#React: ciclo de vida de un componente y sus características
+#React
 ##Ciclo de vida de un componente React
 ![ciclo_vida_react.png](images/ciclo_vida_react_esp.png "Detalle de las fases por las que pasa un componente React")
 
