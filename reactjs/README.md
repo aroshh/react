@@ -1,3 +1,3 @@
 #Índice
 
-+ [Ciclo de vida](ciclo_de_vida.md)
++ [Ciclo de vida](ciclo_vida_react.md)
