@@ -1,6 +1,5 @@
 #React
 ##Características de los componentes React
-##Especificaciones de componentes
 Cuando creamos la clase de un componente mediante `React.createClass()` deberemos proporcionar un objeto de especificaciones el cual contendrá un método `render` pudiendo también tener otros métodos (o no) correspondientes al ciclo de vida descritos anteriormente.
 
 > Tenemos la posibilidad para utilizar clases JavaScript como clases de componentes, pudiendo dichas clases implementar varios métodos con diferencias. **[Más información sobre las clases en ECMAScript6](https://facebook.github.io/react/docs/reusable-components.html#es6-classes)**.
