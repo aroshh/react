@@ -128,7 +128,7 @@ Del siguiente código extraemos:
 
 1.  Pasamos a requerir los módulos necesarios, previamente los tendremos que tener instalados en nuestro proyecto minímamente de forma local, para ello desde el prompt de Node.js:  
 
-	| Paquete/módulo empleado | Descripción |
+| Paquete/módulo empleado | Descripción |
 |:---:|:---|
 |[vinyl-source-stream][linkVinyl]|Utilizado para convertir el stream del fichero creado por **"browserify"** sin utilizar ficheros temporales como punto intermedio.| 
 |browserify|Resolución de módulos, crea el **"bundle.js"** final utilizado por el navegador|
@@ -138,13 +138,13 @@ Del siguiente código extraemos:
 |[gulp-webserver][linkGulp-web]|Plugin de **"gulp"** para ejecutar un servidor web en local con "LiveReload" (recarga automática)|
 |babelify|Es un transpiler que permite convertír código de ECMAScript 6 a código compatible con la mayoría de navegadores modernos.|  
 
-	>Sintaxis: instalación local `> npm --save-dev <nombrePaquete>`.  
+>Sintaxis: instalación local `> npm --save-dev <nombrePaquete>`.  
 
 |Paquete|Descripción|
-    |:---:|:---|
-    |react|Complementa las herramientas de desarrollo de Chrome para poder visualizar los JSX.|
-    |react-router|Utilizado para generar una tabla de rutas de la aplicación.|
-    |reactify|Traduce de JavaScript XML (JSX) a JavaScript.|  
+|:---:|:---|
+|react|Complementa las herramientas de desarrollo de Chrome para poder visualizar los JSX.|
+|react-router|Utilizado para generar una tabla de rutas de la aplicación.|
+|reactify|Traduce de JavaScript XML (JSX) a JavaScript.|  
 
 > Sintaxis: sin comprobar las dependencias `> npm --save <nombrePaquete>`.  
 
