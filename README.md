@@ -55,7 +55,7 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 ##Esquema del proyecto
 1. [**Node JS.**](/nodejs/README.md)
 
-2. [**Modulos utilizados**](/npm/nodejs_packages/README.md)
+2. [**Modulos "npm" utilizados**](/npm/nodejs_packages/README.md)
 
 3. [**Gestor de paquetes para Nodejs: "npm"**](/npm/README.md)
 
