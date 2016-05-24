@@ -4,7 +4,8 @@ Tenemos la opción de trabajar con la versión de **"react.js"** a partir del c�
 
 ##Modificaciones entre versiones
 
-Para poder comprobar ***qué versión*** disponemos, desde el prompt de node.js ejecutaremos el comando `> npm show react version`
+Para poder comprobar ***qué versión*** disponemos, desde el prompt de node.js ejecutaremos el comando  
+`> npm show react version`
 
 
 ###[Historial de versiones](:https://github.com/facebook/react/blob/master/CHANGELOG.md)
