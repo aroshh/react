@@ -126,7 +126,7 @@ gulp.task('default', ['browserify']);
 
 Del siguiente código extraemos:
 
-1.  Pasamos a requerir los módulos necesarios, previamente los tendremos que tener instalados en nuestro proyecto minímamente de forma local, para ello desde el prompt de Node.js:  
++ Pasamos a requerir los módulos necesarios, previamente los tendremos que tener instalados en nuestro proyecto minímamente de forma local, para ello desde el prompt de Node.js:  
 
 | Paquete/módulo empleado | Descripción |
 |:---:|:---|
@@ -148,11 +148,11 @@ Del siguiente código extraemos:
 
 > Sintaxis: sin comprobar las dependencias `> npm --save <nombrePaquete>`.  
 
-2.  Obtención de los ficheros claves. Para la entrada de datos **"index.js"** y nombre del fichero resultante **"main.js"** (o bundle) que contendrá minificado todos los JavaScript de la aplicación.
++ Obtención de los ficheros claves. Para la entrada de datos **"index.js"** y nombre del fichero resultante **"main.js"** (o bundle) que contendrá minificado todos los JavaScript de la aplicación.
 
-3.  Establecimiento de las rutas relativas así como los ficheros correspondientes: **"js", "css", "main.js", etc.** todo esto a partir de la información contenida dentro del JSON generado de nuestro proyecto en Visual Studio **"project.json"**.
++ Establecimiento de las rutas relativas así como los ficheros correspondientes: **"js", "css", "main.js", etc.** todo esto a partir de la información contenida dentro del JSON generado de nuestro proyecto en Visual Studio **"project.json"**.
 
-4.  Definición de las tareas a realizar por **"gulp"**. Mediante "gulp.task" definiremos cada tarea usando un módulo para la secuenciación, ejecución de tareas y dependencias de forma simultanea. Indicaremos mediante una cadena y una función:
++ Definición de las tareas a realizar por **"gulp"**. Mediante "gulp.task" definiremos cada tarea usando un módulo para la secuenciación, ejecución de tareas y dependencias de forma simultanea. Indicaremos mediante una cadena y una función:
 
     | Tarea   | Detalle |
     |:--------:|:--------|
