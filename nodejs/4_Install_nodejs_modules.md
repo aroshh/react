@@ -1,6 +1,6 @@
 ![logo_aitex.png](images/logo_aitex_min.png "Logotipo de Aitex")
 #Módulos para Node.js
-##Instalando módulos
+##Instalación
 
 Existen dos tipos de instalaciones en Node.js:
 + Módulos necesarios para Tiempo de Compilación.
