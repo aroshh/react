@@ -1,5 +1,4 @@
-#React
-##Ciclo de vida
+##React: Ciclo de vida
 ![ciclo_vida_react.png](images/ciclo_vida_react_esp.png "Detalle de las fases por las que pasa un componente React")
 
 Al crear e interactuar con un componente React éste pasa por tres ciclos:
