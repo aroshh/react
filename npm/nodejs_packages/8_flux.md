@@ -1,15 +1,25 @@
 ![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 #Paquete Flux para node.js
 
+##[Detalle cambios en Flux][enlaceVersionesflux]
+Para ver la versión de que disponemos en nuestro sistema tendremos que ejecutar desde el prompt de node.js el siguiente comando:  
+`>npm show flux version`
+
+| Versión | Detalles |
+|--------|--------|
+|2.1.0||        
+|2.1.1|Publicada la carpeta `dist/` en "npm"|
+|3.0.0||
+
 ##Descripción
 Patrón (independiente de flux) que usaremos en la capa de presentación que se pretende seguir en los proyectos que desarrollamos en AITEX. En este caso seguimos la implementación que ha desarrollado Facebook ( y que sirve de base en la mayoría de otros paquetes que implementan flux).  
 
 > Como norma general en React.js es muy fácil ponerle lógica de negocio a los mismos componentes, dejando que estos sean todo lo reutilizables que deberían ser. Además nos encontramos que los componentes padres deben ser Vistas, al final actúan como Controladores, Vistas-Detalles, etc.  
 
-> **Lógica de negocio / Lógica de la aplicación:**  conjunto de reglas para reaccionar antes distintas situaciones que queda a cargo de los modelos los cuales deberán saber qué hacer ante las situaciones que se produzcan en el proceso de ejecución de una aplicación.
+> **[Lógica de negocio / Lógica de la aplicación:][enlaceProgramarporcapas]**  conjunto de reglas para reaccionar antes distintas situaciones que queda a cargo de los modelos los cuales deberán saber qué hacer ante las situaciones que se produzcan en el proceso de ejecución de una aplicación.
 
 ##Instalación propuesta
-Desde el prompt de "node.js" escribiremos `npm install --save flux` además tenemos los detalles de la instalación **[aqui](https://www.npmjs.com/package/flux).**
+Desde el prompt de "node.js" escribiremos `npm install --save flux`. Para más detalles sobre la instalación **[aqui](https://www.npmjs.com/package/flux).**
 
 ##Uso
 Utilizaremos Flux para organizar nuestro código y separar responsabilidades. Flux se fundamenta en crear una comunicación fluida entre los distintos niveles, siempre direccionando la comunicación de arriba hacia abajo.  
@@ -37,6 +47,28 @@ Explicación del diagrama:
     ![flux_detail.png](../images/flux_details.png "Detalle del direccionamiento de Flux")
 > Hay que tener en cuenta que los componentes React tienen que ser lo más aislados posibles y que su única comunicación debería de ser con el componente de nivel superior mediante sus propiedades, mientras que el padre lo escucha mediante eventos.  
 
+##Dispatcher
+Crearemos nuestro "dispatcher" el cuál centralizará la comunicación entre nuestros componentes mediante publicaciones y/o suscripciones. Para importarlo necesitaremos añadir el siguiente código en nuestro fichero JSX:  
+
+| ES6 [(ECMAScript 2015)][enlaceEcmascript6_5] | ES5 |
+|:--------:|:--------:|
+|`let { Dispatcher } from 'flux';` | `var Dispatcher = require('flux').Dispatcher;`|
+|**¿¿¿¿¿¿¿**`module.exports = new Dispatcher();`**??????**|`module.exports = new Dispatcher();`|
+
+###Métodos
+Disponemos de 5 métodos que proporciona el "Dispatcher"
+
+#####.register (function callback): string 
+Registra una llamada para res invocada con cada
+Devuelve un token que puede ser utilizado con el método `waitFor()`.
+> Token: o componente léxico es una cadena de caracteres que tiene un significado coherente en ciertos lenguajes de programación. Ejemplos de tokens podrían ser palabras clave (if, else, while, int, ...), identificadores, números, signos o un operador de varios caracteres *(fuente: Wikipedia).*
+
+#####.unregister
+Borra una llamada basaq en su token
+
+##Eventos
+Para detectar los eventos en nuestra SPA utilizaremos **[EventEmitter][enlaceEventemitter]** como base para los **"Stores"** así como para los **"Views"**, es decir, un listener para detectar los cambios que se van a realizar debido a las acciones del usuario.
+
 ##Referencias
 + [Gestor de paquetes "npm"](https://www.npmjs.com/).
 + [Flux en el gestor de paquetes "npm"](https://www.npmjs.com/package/flux).
@@ -46,8 +78,12 @@ Explicación del diagrama:
 + [Tutorial - Web oficial Flux](https://facebook.github.io/flux/docs/todo-list.html).
 + [Introducción a Web API en ASP.NET](https://www.pluralsight.com/courses/aspnetwebapi).
 + [Video: Flux, Arquitectura de UI, explicado por Eduard Tomàs](https://www.youtube.com/watch?v=IRitxt702EY).
-+ [Programación por capas (Wikipedia)](https://es.wikipedia.org/wiki/Programaci%C3%B3n_por_capas).
 + [¿Qué es el MVC (modelo-vista-controlador)?](http://www.desarrolloweb.com/articulos/que-es-mvc.html).  
++ [Nuevas características de ECMAScript6](http://www.hongkiat.com/blog/ecmascript-6/).
 
 <!-- Referencias ocultas -->
 [webapi]:https://es.wikipedia.org/wiki/Web_API
+[enlaceProgramarporcapas]:https://es.wikipedia.org/wiki/Programaci%C3%B3n_por_capas
+[enlaceEventemitter]:https://nodejs.org/api/events.html#events_class_events_eventemitter
+[enlaceVersionesflux]:https://github.com/facebook/flux/blob/master/CHANGELOG.md
+[enlaceEcmascript6_5]:http://es6-features.org/#Constants
