@@ -28,7 +28,8 @@ El patrón Flux se centra en un "dispatcher" centralizado que actúa como mecani
 
 ![flux_map.png](../images/flux_map.png "Diagrama conceptual de Flux")  
 
-Explicación del diagrama:
+Explicación del diagrama:  
+
 1. Empezamos desde la "Acción", que podría haber sido creada desde una **[WebApi][webapi]** o por una interacción del usuario con la vista (que también puede llamar a una WebApi).  
 > **Web API:** "_API_" interfaz de programación de aplicaciones (o Application Programming Interface) que es un conjunto de rutinas que provee acceso a funciones de un determinado software. En la web se publican para ofrecer la posibilidad de realizar acciones, acceso a características *(fuente: Wikipedia)*.  
 
