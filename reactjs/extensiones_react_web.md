@@ -2,7 +2,7 @@
 #React
 ##Extensiones/plugins para navegadores web
 
-###Instalando React Developer Tools (extensión/plugin)
+###Instalación
 
 ####En Google Chrome
 
