@@ -8,7 +8,7 @@ Para ver la versión de que disponemos en nuestro sistema tendremos que ejecutar
 | Versión | Detalles |
 |--------|--------|
 |2.1.0||        
-|2.1.1|Publicada la carpeta `dist/` en "npm"|
+|2.1.1|Publicada la carpeta `dist/` en "npm".|
 |3.0.0||
 
 ##Descripción
