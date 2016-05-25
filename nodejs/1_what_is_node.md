@@ -33,10 +33,10 @@ Para producción dispondremos de un servidor con Internet Information Services (
 
 ##Arquitecturas utilizadas
 ###Arquitectura de desarrollo
-![arquitectura_desarrollo.png](images/arquitectura_desarrollo.png)
+![arquitectura_desarrollo.png](images/arquitectura_desarrollo_visual.png)
 
 ###Arquitectura de producción
-![arquitectura_produccion.png](images/arquitectura_produccion.png)
+![arquitectura_produccion.png](images/arquitectura_produccion_visual.png)
 ***
 ##Gestor de paquetes "npm"
 **"npm"** facilita a los desarrolladores de JavaScript compartir , reutilizar código así como actualizar el código que se está compartiendo.  
