@@ -76,12 +76,12 @@ Es un conjunto de clases de utilidades que nos ayudarán a comenzar con "Flux". 
 
 ###Uso
 Para disponer de dichas clases principales tendremos que importarlas mediante:  
-``import {Store, ReduceStore, MapStore, Container} from 'flux/utils';`
+`import {Store, ReduceStore, MapStore, Container} from 'flux/utils';`
 
 ###***Métodos***
 #####Store
 | Método | Detalle |
-|:--------:|:--------:|
+|:--------:|:--------|
 | constructor(dispatcher:Dispatcher)|Construye y registra una instancia de "este" Store cuando lo proporciona/da el dispatcher.|  
 ```javascript  
 export default class MessageActions {
@@ -91,7 +91,7 @@ export default class MessageActions {
 }
 ```
 | Método | Detalle |
-|:--------:|:--------:|
+|:--------:|:--------|
 |addListener(callback: Function):{remove:Function}|Añade un "listener" a los Store, cuando estos dan la llamada serán llamados. Un token es devuelto cuando éste puede ser utilizado para borrar el "listener". LLamando a la función `remove()` devolverá dicho token.|
 ```javascript
 class App extends Component {
@@ -109,6 +109,63 @@ class App extends Component {
 	...
 }
 ```
+| Método | Detalle |
+|:--------:|:--------|
+|getDispatcher():Dispatcher|Devuelve el "dispatcher" del Store que se ha registrado.|
+|getDispatchToken():DispatchToken|Devuelve el token del "dispatcher" cuyo Store está reconocido como token. Este Store puede ser utilizado por `waitFor()`.|
+|hasChanged():boolean|Pregunta si una Store ha cambiado durante el "dispatch" actual. Sólo puede ser invocado mientras "dispatching". Este puede ser utilizado para construir Stores derivados que dependan de los datos de otros Stores.|
+
+| Método | Detalle |
+|:--------:|:--------|
+|emitChange():void|Emite la notificación de un evento a todos los "listeners" que ese Store ha cambiado. Esto sólo puede ser invocado cuando "dispatching". Los cambios son deduplicados y resueltos al final de la función `__onDispatch` de este Store.|
+```javascript
+...
+	emitChange: function(){
+    	console.log('foo::emitChange');
+		this.emit(CHANGE_EVENT);
+    },
+...
+```
+| Método | Detalle |
+|:--------:|:--------|
+|\__onDispatch(payload: Object):void|Las subclases pueden ser sobreescritas con él. Esto es como los Store reciben las acciones del "dispatcher". Todas las mutaciones lógicas del estado serán hechos durante dicho método.|
+
+#####ReduceStore
+| Método | Detalle |
+|:--------:|:--------|
+|extends Store| Esta clase extiende de la de Store.|
+|getState|"Getter" que expone el estado entero de este Store. Si el estado no es inmutable deberemos sobreescribirlo y no exponer el estado directamente.|
+```javascript
+import MessageStore from './stores/message-store';
+import { Dispatcher } from 'flux';
+
+class App extends Component {
+	constructor(props){
+		...
+		this.store = new MessageStore(this.dispatcher);
+		...
+        this.state = {
+        	data: this.store.getState
+        };
+    }
+	...
+}
+```
+| Método | Detalle |
+|:--------:|:--------|
+|getInitialState()|Construye el estado inicial para un Store. Este se llama una vez durante la construcción del Store.|
+|reduce(state: , action:Object):|Reduce el estado actual y una acción para el nuevo estado de dicho Store. Todas las subclases deben implementar éste método, el cuál debe ser puro y no tener otros efectos.|
+|areEqual(one: , two: ):boolean|Comprueba si dos versiones del estado son la misma. No sobreescribiremos en caso de que su estado sea inmutable.|
+
+* No necesitamos emitir un cambio. En caso de que algún Store extienda la clase `ReduceStore` no necesita emitir cambios manualmente mediante `reduce()`. El estado es comparado antes y después de cada "dispatch" y los cambios son emitidos automáticamente. Si necesitamos controlar este comportamiento (quizás porque tu estado es mutable) sobreescribe el método `areEqual()`.
+
+#####MapStore
+| Método | Detalle |
+|:--------:|:--------|
+|`extends ReduceStore<Immutable.Map<K,V>>`|Esta clase extiende ReduceStore y define el estado como un mapa inmutable.|
+|at(key: K):V|Acceso al valor |
+
+***
 ###Recomendaciones
 Para la utilización de estas clases básicas tendremos que tener en cuenta cuándo y dónde:
 
@@ -144,6 +201,7 @@ Para la utilización de estas clases básicas tendremos que tener en cuenta cuá
 + [¿Qué es el MVC (modelo-vista-controlador)?](http://www.desarrolloweb.com/articulos/que-es-mvc.html).  
 + **[Nuevas características de ECMAScript6](http://www.hongkiat.com/blog/ecmascript-6/).**
 + **[Aprendiendo React con Flux](http://smashingboxes.com/blog/learn-react-part-3).**
++ **[Flux Stores - managing store dependencies… waitFor vs addChangeListener vs raise action](http://stackoverflow.com/questions/32605318/flux-stores-managing-store-dependencies-waitfor-vs-addchangelistener-vs-rai)**
 
 <!-- Referencias ocultas -->
 [webapi]:https://es.wikipedia.org/wiki/Web_API
