@@ -30,17 +30,17 @@ El patrón Flux se centra en un "dispatcher" centralizado que actúa como mecani
 
 Explicación del diagrama:  
 
-1. Empezamos desde la "Acción", que podría haber sido creada desde una **[WebApi][webapi]** o por una interacción del usuario con la vista (que también puede llamar a una WebApi).  
++ Empezamos desde la "Acción", que podría haber sido creada desde una **[WebApi][webapi]** o por una interacción del usuario con la vista (que también puede llamar a una WebApi).  
 
 > **Web API:** "_API_" interfaz de programación de aplicaciones (o Application Programming Interface) que es un conjunto de rutinas que provee acceso a funciones de un determinado software. En la web se publican para ofrecer la posibilidad de realizar acciones, acceso a características *(fuente: Wikipedia)*.  
 
 > + El usuario quiere borrar un Autor. Por lo que al interactuar con el enlace oportuno, genera una acción compuesta para llamar a la WebApi para que la borre al autor e informar al "dispatcher" que se ha procedido al borrado.  
 
-2. La "Acción" se notifica al "Disptacher", éste comprueba qué "Stores" se han suscrito a dicha "Acción" y se publican (notifica). La "Store" equivale al modelo, el que contiene los datos de la aplicación, por lo que no se caracteriza por tener lógica.
++ La "Acción" se notifica al "Disptacher", éste comprueba qué "Stores" se han suscrito a dicha "Acción" y se publican (notifica). La "Store" equivale al modelo, el que contiene los datos de la aplicación, por lo que no se caracteriza por tener lógica.
 
 	+ Marcará en la "Store" que en el Autor se está borrando. Vamos a considerar que hasta que no se obtenga una acción de cofirmación de borrado, no se va a borrar, meramente se marcan como que se están borrando.  
 
-3. Las "Stores" harán lo que tengan programado (en principio nada ya que sólo contienen datos) y notificarán a las "Vistas" o "Componentes React.js", éstos a su vez consultarán a la "Store" y si les afecta el cambio se tendrán que renderizar (las "Vistas" se suscriben al evento "Change" de la "Store"). Por lo que las "Vistas" o "Componentes React.js" no interaccionarán nunca con el "Dispatcher".
++ Las "Stores" harán lo que tengan programado (en principio nada ya que sólo contienen datos) y notificarán a las "Vistas" o "Componentes React.js", éstos a su vez consultarán a la "Store" y si les afecta el cambio se tendrán que renderizar (las "Vistas" se suscriben al evento "Change" de la "Store"). Por lo que las "Vistas" o "Componentes React.js" no interaccionarán nunca con el "Dispatcher".
 
 	+ Los componentes suscritos a la "Store", le solicitarán los nuevos valores, verán los cambios ocasionados, realizando un renderizado con los nuevos valores.
 
