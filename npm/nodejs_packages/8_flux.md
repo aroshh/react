@@ -55,7 +55,7 @@ Crearemos nuestro "dispatcher" el cuál centralizará la comunicación entre nue
 | ES6 [(ECMAScript 2015)][enlaceEcmascript6_5] | ES5 |
 |:--------:|:--------:|
 |`let { Dispatcher } from 'flux';` | `var Dispatcher = require('flux').Dispatcher;`|
-|**¿¿¿¿¿¿¿**`module.exports = new Dispatcher();`**??????**|`module.exports = new Dispatcher();`|
+|**¿**`module.exports = new Dispatcher();`**?**|`module.exports = new Dispatcher();`|
 
 ###Métodos
 Disponemos de 5 métodos que proporciona el "Dispatcher"
@@ -71,6 +71,67 @@ Borra una llamada basaq en su token
 ##Eventos
 Para detectar los eventos en nuestra SPA utilizaremos **[EventEmitter][enlaceEventemitter]** como base para los **"Stores"** así como para los **"Views"**, es decir, un listener para detectar los cambios que se van a realizar debido a las acciones del usuario.
 
+##Flux Utils
+Es un conjunto de clases de utilidades que nos ayudarán a comenzar con "Flux". Dichas clases base nos servirán como base sólida para una simple aplicación con "Flux" sólida, pero no disponen de todas las características para todos los casos de uso.
+
+###Uso
+Para disponer de dichas clases principales tendremos que importarlas mediante:  
+``import {Store, ReduceStore, MapStore, Container} from 'flux/utils';`
+
+###***Métodos***
+#####Store
+| Método | Detalle |
+|:--------:|:--------:|
+| constructor(dispatcher:Dispatcher)|Construye y registra una instancia de "este" Store cuando lo proporciona/da el dispatcher.|  
+```javascript  
+export default class MessageActions {
+  constructor(dispatcher) {
+    this.dispatcher = dispatcher;
+  }
+}
+```
+| Método | Detalle |
+|:--------:|:--------:|
+|addListener(callback: Function):{remove:Function}|Añade un "listener" a los Store, cuando estos dan la llamada serán llamados. Un token es devuelto cuando éste puede ser utilizado para borrar el "listener". LLamando a la función `remove()` devolverá dicho token.|
+```javascript
+class App extends Component {
+	constructor(props){
+    	super(props);
+		...
+    }
+	...
+	componentDidMount() {
+    	this.listener = this.store.addListener(this.onStateChanged.bind(this));
+    }
+	componentWillUnmount(){
+    	this.listener.remove();
+    }
+	...
+}
+```
+###Recomendaciones
+Para la utilización de estas clases básicas tendremos que tener en cuenta cuándo y dónde:
+
+#####_Stores_
+1. Data Caché.
+2. Exponer los 'getters' públicos para acceder a los datos (nunca si tenemos 'setters' públicos).
+3. Responder específicamente a las acciones del "Dispatcher".
+4. Siempre emitir un cambio cuando sus datos cambian.
+5. Sólo emitir cambios durante un "dispatch".
+
+#####_Actions_
+* Describe la acción de un usuario, no son 'setters'.
+
+#####_Containers (contenedores)_
+1. Son los componentes React los que controlan la "Vista".
+2. El trabajo principal
+3. No tener `props` y no tener lógica `user interface (UI)`.
+
+#####_Vistas_
+1. Son los componentes React los que son controlados por un `container`.
+2. Lo tiene todo de la UI y la rederización lógica.
+3. Recibir toda la información así como llamadas como `props`.
+
 ##Referencias
 + [Gestor de paquetes "npm"](https://www.npmjs.com/).
 + [Flux en el gestor de paquetes "npm"](https://www.npmjs.com/package/flux).
@@ -81,7 +142,8 @@ Para detectar los eventos en nuestra SPA utilizaremos **[EventEmitter][enlaceEve
 + [Introducción a Web API en ASP.NET](https://www.pluralsight.com/courses/aspnetwebapi).
 + [Video: Flux, Arquitectura de UI, explicado por Eduard Tomàs](https://www.youtube.com/watch?v=IRitxt702EY).
 + [¿Qué es el MVC (modelo-vista-controlador)?](http://www.desarrolloweb.com/articulos/que-es-mvc.html).  
-+ [Nuevas características de ECMAScript6](http://www.hongkiat.com/blog/ecmascript-6/).
++ **[Nuevas características de ECMAScript6](http://www.hongkiat.com/blog/ecmascript-6/).**
++ **[Aprendiendo React con Flux](http://smashingboxes.com/blog/learn-react-part-3).**
 
 <!-- Referencias ocultas -->
 [webapi]:https://es.wikipedia.org/wiki/Web_API
