@@ -7,7 +7,6 @@ Tenemos la opción de trabajar con la versión de **"react.js"** a partir del c�
 Para poder comprobar ***qué versión*** disponemos, desde el prompt de node.js ejecutaremos el comando  
 `> npm show react version`
 
-
 ###[Historial de versiones](:https://github.com/facebook/react/blob/master/CHANGELOG.md)
 
 | Fecha | Versión |Detalle modificaciones realizadas|
@@ -25,6 +24,21 @@ Para poder comprobar ***qué versión*** disponemos, desde el prompt de node.js 
 
 >**SVG:** Gráficos Vectoriales Redimensionables (o Scalable Vector Graphics) son una especificación para describir "gráficos vectoriales" bidimensionales, tanto estáticos como animados) en formato XML.
 
+##Referencias
++ [Página oficial de "npm".](https://www.npmjs.com/)
++ [Página oficial de react.js.](https://facebook.github.io/react/index.html)
++ [React.js - blog oficial - versiones.](https://facebook.github.io/react/blog/)
++ [Lista completa de cambios en la versión 15.0.](https://facebook.github.io/react/blog/2016/04/07/react-v15.html)
++ [¿What is debbuging?](https://en.wikipedia.org/wiki/Debugging)
++ [Página oficial de react.js en npm.](https://www.npmjs.com/package/react)
++ [Vídeo: Curso React.js por OutKast.](https://www.youtube.com/watch?v=utAoFpE0tJs&index=1&list=PLEtcGQaT56ci0QiNycpR8mXWeaXcZn5yA)
++ [Vídeo: React.js en #programadorIO.](https://www.youtube.com/watch?v=ejMEwNVoOT0)
++ [Vídeo: Curso de React.js framework de facebook (latino)](https://www.youtube.com/watch?v=EDhvRw93Ui8&list=PLSuKjujFoGJ2XwyfRvH2nvJ44gvxBEPOd).
++ [Ejemplo de aplicación con React.js y ECMAScript 6](https://carlosazaustre.es/blog/ejemplo-de-aplicacion-con-react-js-en-ecmascript-6/)
++ [Ejemplo uso de React.js 0.14 con ECMAScript 6-7](http://blog.ricardofilipe.com/post/babel-react-es7-sample)
++ [Completa introducción a React.js (marzo 2016)](https://btholt.github.io/complete-intro-to-react/)
++ [Tutorial de React.js en Tutorials-Point](http://www.tutorialspoint.com/reactjs/index.htm)
++ [Diferencias entre React.createClass y React.Component](https://toddmotto.com/react-create-class-versus-component/)
 
 <!-- Referencias  ocultas -->
 [enlace1]:https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
