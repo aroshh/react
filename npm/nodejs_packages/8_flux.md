@@ -44,7 +44,7 @@ Explicación del diagrama:
 
 + La "Acción" se notifica al "Disptacher", éste comprueba qué "Stores" se han suscrito a dicha "Acción" y se publican (notifica). La "Store" equivale al modelo, el que contiene los datos de la aplicación, por lo que no se caracteriza por tener lógica.
 
-	+ Marcará en la "Store" que en el Autor se está borrando. Vamos a considerar que hasta que no se obtenga una acción de cofirmación de borrado, no se va a borrar, meramente se marcan como que se están borrando.  
+	+ Marcará en la "Store" que el Autor se está borrando. Vamos a considerar que hasta que no se obtenga una acción de cofirmación de borrado, no se va a borrar, meramente se marcan como que se están borrando.  
 
 + Las "Stores" harán lo que tengan programado (en principio nada ya que sólo contienen datos) y notificarán a las "Vistas" o "Componentes React.js", éstos a su vez consultarán a la "Store" y si les afecta el cambio se tendrán que renderizar (las "Vistas" se suscriben al evento "Change" de la "Store"). Por lo que las "Vistas" o "Componentes React.js" no interaccionarán nunca con el "Dispatcher".
 
@@ -231,7 +231,8 @@ Para la utilización de estas clases básicas tendremos que tener en cuenta cuá
 + [¿Qué es el MVC (modelo-vista-controlador)?](http://www.desarrolloweb.com/articulos/que-es-mvc.html).  
 + **[Nuevas características de ECMAScript6](http://www.hongkiat.com/blog/ecmascript-6/).**
 + **[Aprendiendo React con Flux](http://smashingboxes.com/blog/learn-react-part-3).**
-+ **[Flux Stores - managing store dependencies… waitFor vs addChangeListener vs raise action](http://stackoverflow.com/questions/32605318/flux-stores-managing-store-dependencies-waitfor-vs-addchangelistener-vs-rai)**
++ **[Flux Stores - managing store dependencies… waitFor vs addChangeListener vs raise action](http://stackoverflow.com/questions/32605318/flux-stores-managing-store-dependencies-waitfor-vs-addchangelistener-vs-rai).**
++ [Módulo EventEmitter para los motores de Node.js](https://www.npmjs.com/package/events).
 
 <!-- Referencias ocultas -->
 [webapi]:https://es.wikipedia.org/wiki/Web_API

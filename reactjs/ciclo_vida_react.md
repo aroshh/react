@@ -111,7 +111,7 @@ Dicha fase sucede cuando se producen cambios en el estado o nuevas propiedades.
 
 + **[componentWillReceiveProps][enlaceComponentwillreceiveprops]**, sólo cuando el componente recibe nuevos "props". Utilizamos éste método para actualizar el estado del componente (`this.state`). Los valores anteriores de los "props" son accesibles mediante el método `this.props` porque aún no se han actualizado. Dicho método recibe como parámetros los valores de los "props" a actualizar. Este método no es llamado cuando hay un cambio de estado.
 
-+ **[shouldComponentUpdate][enlaceShouldcomponentupdate]**, se llama al recibir los nuevos "props" / "estados". El valor por defecto devuelto es `true` pero podemos sobreescribirlo y cambiarlo a `false` en el caso de que la actualización de los "props"/"estados" no implice la actualización del componente, provocando a su vez que no se llame a los métodos: `render`, `componentWillUpdate`, `componentDidUpdate` hasta el próximo cambio. Dentro de este método podemos efectuar comparaciones entre los cambios pudiendo decidir si actualizamos o no por lo que la ventaja que presenta es la de un mejor rendimiento y aprovechamiento de los recursos.
++ **[shouldComponentUpdate][enlaceShouldcomponentupdate]**,invocado antes del render en el caso de recibir los nuevos `props` / `states`. El valor por defecto devuelto es `true` pero podemos sobreescribirlo y cambiarlo a `false` en el caso de que la actualización de los `props`/`states` no implique la actualización del componente, provocando a su vez que no se llame a los métodos: `render`, `componentWillUpdate`, `componentDidUpdate` hasta el próximo cambio. Dentro de este método podemos efectuar comparaciones entre los cambios pudiendo decidir si actualizamos o no por lo que la ventaja que presenta es la de un mejor rendimiento y aprovechamiento de los recursos.
 
 + **[componentWillUpdate][enlaceComponentwillupdate]**, se invoca al recibir los nuevos "props"/"estados". No podremos utilizar `this.setState` en caso de que queramos cambiar el estado ya que se produce un cambio en los "props" por tanto deberemos utilizar el método `componentWillReceiveProps`.
 
@@ -132,7 +132,7 @@ Es la última fase donde el componente se desmonta, el método utilizado es:
 + [Ejemplos de componentes React.js: animaciones, iconos, imágenes...](https://js.coach/react).
 + [React.js - Listado de cambios](https://github.com/facebook/react/blob/master/CHANGELOG.md).
 + [React sobre ES6](https://babeljs.io/blog/2015/06/07/react-on-es6-plus).
-
++ [Primeros pasos con React](http://frontendlabs.io/3158--react-js-espanol-tutorial-basico-primeros-pasos-ejemplos).
 
 
 <!-- Referencias ocultas -->
