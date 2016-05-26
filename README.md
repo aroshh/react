@@ -33,7 +33,7 @@ En nuestro caso hemos visto [Angular.js][enlaceANGULAR] (con [Pedro Hurtado][enl
 	+ Para ello se puede utilizar **[babel][enlaceBabel]** para realizar la conversión desde el propio navegador.
 	+ Para producción (en nuestro caso) utilizaremos "Node.js" y una serie de paquetes (por ejemplo "browserify") lo cuál nos generará JavaScript nativo directamente para luego ser interpretado en el navegador.  
 
-4. Necesidad de modelar el HTML desde JSX ya que React.js como front-end, compila una réplica del HTML en el **DOM Virtual** se compara con el ++DOM real++, se aplican ambos para que se muestren finalmente en dicho HTML.
+4. Necesidad de modelar el HTML desde JSX ya que React.js como front-end, compila una réplica del HTML en el **DOM Virtual** se compara con el **DOM real**, se aplican ambos para que se muestren finalmente en dicho HTML.
 > **DOM:** *Document Object Model* (Modelo en Objetos para la Representación de Documentos) es una interfaz de programación de apliaciones (API) que proporciona un conjunto estándar de objetos para representar documentos HTML, XHTML y XML, pudiendo combinarlos, acceder a ellos y manipularlos *(fuente: Wikipedia)*.  
 >
 > **JSX:** Es una extensión de la sintaxis de XML similar a ECMAScript. Tanto la sintaxis de JSX y HTML son similares pero difieren: en el uso de atributos de clase en HTML es "class" mientras que en JSX es "className" *(fuente: Wikipedia)*. 
