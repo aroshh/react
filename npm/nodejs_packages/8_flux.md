@@ -7,9 +7,15 @@ Para ver la versión de que disponemos en nuestro sistema tendremos que ejecutar
 
 | Versión | Detalles |
 |--------|--------|
-|2.1.0||        
+|2.1.0|Añadir **flux-utils** bases principales incluidas: `Store`, `ReduceStroe`, `MapStore`, `Container`|        
 |2.1.1|Publicada la carpeta `dist/` en "npm".|
-|3.0.0||
+|3.0.0|`FluxMapStore`: borrado.|
+||`FluxContainer`: las suscripciones están configuradas en el constructor y no en el `componentDidMount`.|
+||Además podemos crear **"containers"** usando componentes funcionales sin estado. Usa la versión funcional de `setState`.|
+||`FluxMixin`: las subscripciones son configuradas en `componentWillMount` en vez de `componentDidMount`.|
+||`Dispatcher`: los métodos `register` y `unregister` no pueden ser llamados en medio de un **"dispatch"**.|
+||`React` añadido como dependencia para **"flux/utils"**  |
+
 
 ##Descripción
 Patrón (independiente de flux) que usaremos en la capa de presentación que se pretende seguir en los proyectos que desarrollamos en AITEX. En este caso seguimos la implementación que ha desarrollado Facebook ( y que sirve de base en la mayoría de otros paquetes que implementan flux).  
@@ -18,7 +24,7 @@ Patrón (independiente de flux) que usaremos en la capa de presentación que se 
 
 > **[Lógica de negocio / Lógica de la aplicación:][enlaceProgramarporcapas]**  conjunto de reglas para reaccionar antes distintas situaciones que queda a cargo de los modelos los cuales deberán saber qué hacer ante las situaciones que se produzcan en el proceso de ejecución de una aplicación.
 
-##Instalación propuesta
+##Instalación
 Desde el prompt de "node.js" escribiremos `npm install --save flux`. Para más detalles sobre la instalación **[aqui](https://www.npmjs.com/package/flux).**
 
 ##Uso
@@ -49,10 +55,10 @@ Explicación del diagrama:
     ![flux_detail.png](../images/flux_details.png "Detalle del direccionamiento de Flux")
 > Hay que tener en cuenta que los componentes React tienen que ser lo más aislados posibles y que su única comunicación debería de ser con el componente de nivel superior mediante sus propiedades, mientras que el padre lo escucha mediante eventos.  
 
-##Dispatcher
+##[Dispatcher](https://facebook.github.io/flux/docs/dispatcher.html#api)
 Crearemos nuestro "dispatcher" el cuál centralizará la comunicación entre nuestros componentes mediante publicaciones y/o suscripciones. Para importarlo necesitaremos añadir el siguiente código en nuestro fichero JSX:  
 
-| ES6 [(ECMAScript 2015)][enlaceEcmascript6_5] | ES5 |
+| ECMAScript 6 [(ECMAScript 2015)][enlaceEcmascript6_5] | ECMAScript 5 |
 |:--------:|:--------:|
 |`let { Dispatcher } from 'flux';` | `var Dispatcher = require('flux').Dispatcher;`|
 |`export default new Dispatcher();`|`module.exports = new Dispatcher();`|
@@ -60,18 +66,30 @@ Crearemos nuestro "dispatcher" el cuál centralizará la comunicación entre nue
 ###Métodos
 Disponemos de 5 métodos que proporciona el "Dispatcher"
 
-#####.register (function callback): string 
+#####register (function callback): string 
 Registra una llamada para res invocada con cada
 Devuelve un token que puede ser utilizado con el método `waitFor()`.
 > Token: o componente léxico es una cadena de caracteres que tiene un significado coherente en ciertos lenguajes de programación. Ejemplos de tokens podrían ser palabras clave (if, else, while, int, ...), identificadores, números, signos o un operador de varios caracteres *(fuente: Wikipedia).*
 
-#####.unregister
-Borra una llamada basaq en su token
+#####unregister
+Borra una llamada basada en su token.
+
+#####waitFor(array<string>ids):void
+Espera las llamadas especificadas para invocar antes de continuar la ejecución de la llamada actual. Este método sólo debe ser usado por una llamada como respuesta a una carga distribuida por el "dispatcher".
+
+#####dispatch(object payload):void
+Distribuye una carga útil a todas las llamadas registradas.
+
+#####isDispatching():boolean
+El **"dispatcher"** actual esta distribuyendo. 
+
+**[Ejemplos de los métodos utilizados](https://facebook.github.io/flux/docs/dispatcher.html#example)**
+
 
 ##Eventos
 Para detectar los eventos en nuestra SPA utilizaremos **[EventEmitter][enlaceEventemitter]** como base para los **"Stores"** así como para los **"Views"**, es decir, un listener para detectar los cambios que se van a realizar debido a las acciones del usuario.
 
-##Flux Utils
+##[Flux Utils](https://facebook.github.io/flux/docs/flux-utils.html#content)
 Es un conjunto de clases de utilidades que nos ayudarán a comenzar con "Flux". Dichas clases base nos servirán como base sólida para una simple aplicación con "Flux" sólida, pero no disponen de todas las características para todos los casos de uso.
 
 ###Uso
@@ -134,7 +152,7 @@ class App extends Component {
 | Método | Detalle |
 |:--------:|:--------|
 |extends Store| Esta clase extiende de la de Store.|
-|getState|"Getter" que expone el estado entero de este Store. Si el estado no es inmutable deberemos sobreescribirlo y no exponer el estado directamente.|
+|getState()|"Getter" que expone el estado entero de este Store. Si el estado no es inmutable (con propiedades) deberemos sobreescribirlo y no exponer el estado directamente.|
 ```javascript
 import MessageStore from './stores/message-store';
 import { Dispatcher } from 'flux';
@@ -155,15 +173,27 @@ class App extends Component {
 |:--------:|:--------|
 |getInitialState()|Construye el estado inicial para un Store. Este se llama una vez durante la construcción del Store.|
 |reduce(state: , action:Object):|Reduce el estado actual y una acción para el nuevo estado de dicho Store. Todas las subclases deben implementar éste método, el cuál debe ser puro y no tener otros efectos.|
-|areEqual(one: , two: ):boolean|Comprueba si dos versiones del estado son la misma. No sobreescribiremos en caso de que su estado sea inmutable.|
+|areEqual(one: , two: ):boolean|Comprueba si dos versiones del estado son la misma. No sobreescribiremos en caso de que su estado sea inmutable (propiedades).|
 
-* No necesitamos emitir un cambio. En caso de que algún Store extienda la clase `ReduceStore` no necesita emitir cambios manualmente mediante `reduce()`. El estado es comparado antes y después de cada "dispatch" y los cambios son emitidos automáticamente. Si necesitamos controlar este comportamiento (quizás porque tu estado es mutable) sobreescribe el método `areEqual()`.
+* No necesitamos emitir un cambio. En caso de que algún Store extienda la clase `ReduceStore` no necesita emitir cambios manualmente mediante `reduce()`. El estado es comparado antes y después de cada "dispatch" y los cambios son emitidos automáticamente. Si necesitamos controlar este comportamiento sobreescribe el método `areEqual()`.
 
 #####MapStore
 | Método | Detalle |
 |:--------:|:--------|
-|`extends ReduceStore<Immutable.Map<K,V>>`|Esta clase extiende ReduceStore y define el estado como un mapa inmutable.|
-|at(key: K):V|Acceso al valor |
+|`extends ReduceStore<Immutable.Map<K,V>>`|Esta clase extiende ReduceStore y define el estado como un mapa inmutable (con propiedades).|
+|at(key: K):V|Acceso al valor proporcionado por la clave. Devolverá un error si la clave (key) no existe en caché.|
+|has(key:K):boolean|Comprueba si la caché tiene una clave particular.|
+|get(key:K): ?V| Obtiene el valor de una clave particular. Devolverá **undefined** si la clave no existe en caché.|
+|`getAll(keys:Iterable<K>, prev:?Immutable.Map<K,V>):Immutable.Map<K,V>`| Obtiene un array de claves y pone los valores en un mapa si éstas existen, lo que permite proveer un resultado previo para actualizar en cambio un nuevo mapa. Provee un resultado previo permitiendo la posibilidad de obtener el mismo resultado si las claves no cambian.|
+
+#####[Container](https://facebook.github.io/flux/docs/flux-utils.html#container)
+| Método | Detalle |
+|:--------:|:--------|
+|create(base: ReactClass,options:?Object):ReactClass| Utilizado para transformar una clase React en un contenedor que actualiza su estado cuando hay cambios en los Stores. La clase base debe tener los métodos estáticos `getStores()` y `calculateState`|
+
++ Los **containers** son puros, por defecto no re-renderizar cuando sus `props` y `state` no cambian (como se determina por `shallowEquals()`). Para deshabilitar esto tendremos que pasar las opciones `{pure:false}` como segundo argument para el método `create()`.
+
++ Los **containers** no pueden acceder a las propiedades (`props`) porque así está establecido por defecto. Esto se debe a que asegura que los contenedores son reutilizables y las `props` no tienen que estar a lo largo del árbol de componente. A veces es necesario determinar su `state` así como del Store, por lo que se indicará mediante `{withProps: true}` como segundo argumento de `create()`. De esta forma exponrá los `props` de los componentes como segundo argument de `calculateState`.
 
 ***
 ###Recomendaciones
