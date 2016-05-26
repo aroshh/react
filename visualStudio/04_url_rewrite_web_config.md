@@ -1,5 +1,5 @@
 ## web.config
-Además de establecer las rutas entre el componente padre y sus respectivos hjos indicado en el fichero **"routes.jsx"** para poder navegar entre componentes react. Además al ejecutar nuestra **SPA** utilizando **IIS Express 10.0** también deberemos establecer unas reglas de naevgación en nuestro fichero de configuración `web.config` en nuestro proyecto de Visual Studio Community 2015 es el siguiente:
+Primeramente establecemos las rutas entre el componente padre y sus respectivos hijos indicado en el fichero **"routes.jsx"** para poder navegar entre componentes react. Por otra parte, al ejecutar nuestra **SPA** utilizando **IIS Express 10.0** también establecemos unas reglas de navegación en nuestro fichero de configuración `web.config` dentro del propio proyecto de Visual Studio Community 2015 siendo el siguiente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,13 +44,13 @@ Además de establecer las rutas entre el componente padre y sus respectivos hjos
 </configuration>
 ```
 Explicamos el código anterior:
-+ `<defaultDocument>` al habilitarlo indicamos que el fichero a cargar será nuestro `index.html` será cargado por defecto al ejecutar nuestra SPA.  
++ `<defaultDocument>` al habilitarlo indicamos que el fichero a cargar por defecto será nuestro `index.html` al ejecutar nuestra SPA.  
 
-+ `<rules>...</rules>` indicamos que a continuación siguen las reglas de redirección en caso de que el navegador no encuentre el recurso indicado. Es una colección de "reglas distribuidas" que se pueden definir en cualquier nivel dentro de la jerarquía de la configuración, además dichas reglas distribuidas se utilizan para definir URL's lógicas de reescritura dentro de un ámbito de configuración.  
++ `<rules>...</rules>` indicamos que a continuación siguen las reglas de redirección en caso de que el navegador no encuentre el recurso indicado. Es una colección de "reglas distribuidas" que se pueden definir en cualquier nivel dentro de la jerarquía de la configuración, además dichas reglas distribuidas se utilizan para definir URL's lógicas de reescritura dentro del ámbito de configuración.  
 
-+ `<rule>...</rule>` contiene el detalle de la regla junto con las etiquetas etiquetas necesarias para administrar con nombres concretos que dejamos habilitadas.  
++ `<rule>...</rule>` contiene el detalle de las reglas junto con las etiquetas necesarias para administrar con nombres concretos que dejamos habilitadas.  
 
-+ `<match>` si aquello que escribimos en la url **contiene** "myinicio" o "myindice" indicamos que la acción a realizar (`<action>`) y mediante el atributo `type` indicamos que "redireccione" al directorio raíz de nuestra aplicación o a un fichero. También podemos utilizar expresiones regulares para filtrar lo que escriba el usuario. **[Más sobre redireccionamiento](http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference#Redirect_action).**
++ `<match>` si aquello que escribimos en la url **contiene** "myinicio" o "myindice" indicamos que la acción a realizar (`<action>`) y mediante el atributo `type` "redireccione" al directorio raíz de nuestra aplicación o a un fichero. También podemos utilizar expresiones regulares para filtrar lo que escriba el usuario. **[Más sobre redireccionamiento](http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference#Redirect_action).**
 
 + También podemos indicar condiciones (`<conditions>`) para que se aplique la regla. Añadiremos condiciones mediante `<add>` indicando mediante los atributos:
 	+ **"input"** recogerá una string o cadena arbitraria que podrá incluir variables de servidor. El valor para el atributo será una variable de tipo servidor, por ejemplo: `"{REQUEST_URI}"`, `"{PATH_INFO}"`, etc., **[más información sobre dichas variables...](http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference#Interaction_with_IIS_Output_Caching).**
