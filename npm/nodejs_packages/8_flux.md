@@ -55,7 +55,7 @@ Crearemos nuestro "dispatcher" el cuál centralizará la comunicación entre nue
 | ES6 [(ECMAScript 2015)][enlaceEcmascript6_5] | ES5 |
 |:--------:|:--------:|
 |`let { Dispatcher } from 'flux';` | `var Dispatcher = require('flux').Dispatcher;`|
-|**¿**`module.exports = new Dispatcher();`**?**|`module.exports = new Dispatcher();`|
+|`export default new Dispatcher();`|`module.exports = new Dispatcher();`|
 
 ###Métodos
 Disponemos de 5 métodos que proporciona el "Dispatcher"
