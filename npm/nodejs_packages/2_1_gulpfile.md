@@ -1,7 +1,7 @@
 ![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 #Fichero "gulpfile.js"
 
-##Uso de los modulos npm en un fichero "gulpfile.js"
+##Uso de los modulos de Node.js en un fichero "gulpfile.js"
 Podemos encontrar diferentes formas de crear el fichero "gulpfile.js" en Internet, aquí os proporcionamos el que utilizaremos para nuestro proyecto o muy similar:
 
 ```javascript
@@ -17,14 +17,14 @@ var concat = require('gulp-concat');
 var webserver = require('gulp-webserver');      // Por si queremos ejecutar nuestro propio servidor. 
 var project = require('./project.json');        // Lectura del json del proyecto. 
 
-var uglify = require('gulp-uglify');        // Minifica el código JS
+var uglify = require('gulp-uglify');        // Minifica el código
 var util = require('gulp-util');            // Mostrar mensajes de error al minificar el código
 var buffer = require('vinyl-buffer');       // Soportar Streaming
 
-var plumber = require('gulp-plumber');		// Mimifica el CSS
-var rename = require('gulp-rename');		 
-var cleanCss = require('gulp-clean-css');	
-var csslint = require('gulp-csslint');		
+var plumber = require('gulp-plumber');
+var rename = require('gulp-rename');
+var cleanCss = require('gulp-clean-css');
+var csslint = require('gulp-csslint');
 
 //Nombre de los archivos claves 
 var fileNames = {}; 
@@ -45,9 +45,16 @@ paths.concatJsDest = paths.js + "site.min.js";
 paths.concatCssDest = paths.webroot + "css/site.min.css"; 
 paths.entrySource = "./site/js/" + fileNames.entrySource;
 
+//paths.entrySourceCss = "./site/css/" +; 
 paths.bundleDest = paths.js + fileNames.bundleDest; 
 
 var contador = 0;
+var trans = 1; //contador para las veces que se transforma el bundler
+
+//console.log("el cssFilter => " + paths.cssFilter);
+//console.log("el minCssFilter => " + paths.minCssFilter);
+
+
 
 //Definición de la Tarea 
 gulp.task('browserify', function () {
@@ -58,10 +65,10 @@ gulp.task('browserify', function () {
         entries: [paths.entrySource],                   // Solo necesitamos el archivo inicial para encontrar dependencias. 
         transform: [reactify],
         transform: [[babelify, { "presets": ["es2015", "react"] }]],
-        					                          // Queremos convertir JSX a EMACScript 5.0
-        debug: true,                                  // Nos da sourcemapping 
+        //transform: [babelify],                          // Queremos convertir JSX a EMACScript 5.0
+        debug: true,                                    // Nos da sourcemapping 
         cache: {}, packageCache: {},
-        fullPaths: true                               // Reserva la ruta original con la que se generó. 
+        fullPaths: true                                 // Reserva la ruta original con la que se generó. 
     });
 
     console.log('Preparando para que se quede observando los cambios.'); 
@@ -71,7 +78,7 @@ gulp.task('browserify', function () {
             console.log('Actualización de Archivo detectada.');
             var updateStart = Date.now();
 
-            console.log('Actualizando bundle', (Date.now() - updateStart) + 'ms...' + 'guardado(' + contador + ')');
+            console.log('Actualizando bundle', (Date.now() - updateStart) + ' ms...' + 'guardado(' + contador + ')');
             contador++;
             return watcher.bundle()                 // Crea un nuevo bundle (como se lo hemos pasado por parámetro ya tiene la configuración) 
             // Logs errors
@@ -88,15 +95,15 @@ gulp.task('browserify', function () {
                 this.emit('end');
             })
             .pipe(source(fileNames.bundleDest))
-            .pipe(buffer())                       //para que soporte el streaming
-            .pipe(uglify())                       // minificamos el códgio
+            .pipe(buffer())                       // para que soporte el streaming
+            .pipe(uglify())                       // minificamos el código
             .pipe(gulp.dest(paths.js))            // Se puede ver el nuevo bundle en paths.bundleDest 
         })
         .bundle()                                 // Crea el bundle inicial cuando se inicia la tarea 
         .pipe(source(fileNames.bundleDest))
-        .pipe(buffer())                         //para que soporte el streaming
-        .pipe(uglify())                     // minificamos el código
-        .pipe(uglify().on('error', util.log))
+        .pipe(buffer())                         // para que soporte el streaming
+        .pipe(uglify())                         // minificamos el código
+        .pipe(uglify().on('error', util.log))   // mostrar mensajes de error
         .pipe(gulp.dest(paths.js))
 }); 
 
@@ -106,7 +113,7 @@ gulp.task('build', function () {
     browserify({ 
         entries: [paths.entrySource],                   // Solo necesitamos el archivo inicial para encontrar dependencias. 
         transform: [reactify],
-        //transform: [babelify],                          // Queremos convertir JSX a EMACScript 5.0 
+                                                      // Queremos convertir JSX a EMACScript 5.0 
         transform: [[babelify, { "presets": ["es2015", "react"] }]],
         debug: true,                                    // Nos da sourcemapping 
         cache: {}, packageCache: {}, 
@@ -142,9 +149,9 @@ gulp.task('css', function () {
 		.pipe(csslint.reporter())
 		.pipe(concat('main.css'))
 		.pipe(gulp.dest('css'))
-		.pipe(rename({
-		    suffix: '.min'
-		}))
+		//.pipe(rename({
+		//    suffix: '.min'
+		//}))
 		.pipe(cleanCss())
 		.pipe(gulp.dest('./wwwroot/css'))
 });
@@ -157,6 +164,7 @@ gulp.task('watch_default_css', function () {
 // Ejecutará las 2 tareas 
 gulp.task('default', ['browserify']);
 //gulp.task('default', ['browserify', 'css', 'watch_default_css']);
+//gulp.task('default', ['browserify', 'server']);
 //Recordatorio: en windows Ctrl+C para parar el servicio.
 ```
 
