@@ -263,7 +263,7 @@ Para finalmente obtener como resultado el fichero "gulpfile.js" minificado:
 ![main_without_minify.png](../images/main_with_minify.png "Código minificado")  
 
 ### \...CSS (hojas de estilo) 
-Por otra parte, aunque no seamos diseñadores ni maquetadores (puesto que de esa labor se encargar empresas exteriores) podemos también minificar los distintos CSS de nuestro proyecto en un único fichero **".css"**, con el mismo resultado que con el código JavaScript.
+Por otra parte, aunque no seamos diseñadores ni maquetadores (puesto que de esa labor se encargarán empresas exteriores) podemos también minificar los distintos CSS de nuestro proyecto en un único fichero **".css"**, con el mismo resultado que con el código JavaScript.
 
 | Módulo/paquete npm | Detalle |
 |:--------:|:--------|
