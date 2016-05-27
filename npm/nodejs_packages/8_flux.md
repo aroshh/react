@@ -100,7 +100,7 @@ Para disponer de dichas clases principales tendremos que importarlas mediante:
 #####Store
 | Método | Detalle |
 |:--------:|:--------|
-| constructor(dispatcher:Dispatcher)|Construye y registra una instancia de "este" Store cuando lo proporciona/da el dispatcher.|  
+| `constructor(dispatcher:Dispatcher)`|Construye y registra una instancia de "este" Store cuando lo proporciona/da el dispatcher.|  
 ```javascript  
 export default class MessageActions {
   constructor(dispatcher) {
@@ -110,7 +110,7 @@ export default class MessageActions {
 ```
 | Método | Detalle |
 |:--------:|:--------|
-|addListener(callback: Function):{remove:Function}|Añade un "listener" a los Store, cuando estos dan la llamada serán llamados. Un token es devuelto cuando éste puede ser utilizado para borrar el "listener". LLamando a la función `remove()` devolverá dicho token.|
+|`addListener(callback: Function):{remove:Function}`|Añade un "listener" a los Store, cuando estos dan la llamada serán llamados. Un token es devuelto cuando éste puede ser utilizado para borrar el "listener". LLamando a la función `remove()` devolverá dicho token.|
 ```javascript
 class App extends Component {
 	constructor(props){
@@ -129,13 +129,13 @@ class App extends Component {
 ```
 | Método | Detalle |
 |:--------:|:--------|
-|getDispatcher():Dispatcher|Devuelve el "dispatcher" del Store que se ha registrado.|
-|getDispatchToken():DispatchToken|Devuelve el token del "dispatcher" cuyo Store está reconocido como token. Este Store puede ser utilizado por `waitFor()`.|
-|hasChanged():boolean|Pregunta si una Store ha cambiado durante el "dispatch" actual. Sólo puede ser invocado mientras "dispatching". Este puede ser utilizado para construir Stores derivados que dependan de los datos de otros Stores.|
+|`getDispatcher():Dispatcher`|Devuelve el "dispatcher" del Store que se ha registrado.|
+|`getDispatchToken():DispatchToken`|Devuelve el token del "dispatcher" cuyo Store está reconocido como token. Este Store puede ser utilizado por `waitFor()`.|
+|`hasChanged():boolean`|Pregunta si una Store ha cambiado durante el "dispatch" actual. Sólo puede ser invocado mientras "dispatching". Este puede ser utilizado para construir Stores derivados que dependan de los datos de otros Stores.|
 
 | Método | Detalle |
 |:--------:|:--------|
-|emitChange():void|Emite la notificación de un evento a todos los "listeners" que ese Store ha cambiado. Esto sólo puede ser invocado cuando "dispatching". Los cambios son deduplicados y resueltos al final de la función `__onDispatch` de este Store.|
+|`emitChange():void`|Emite la notificación de un evento a todos los "listeners" que ese Store ha cambiado. Esto sólo puede ser invocado cuando "dispatching". Los cambios son deduplicados y resueltos al final de la función `__onDispatch` de este Store.|
 ```javascript
 ...
 	emitChange: function(){
@@ -146,13 +146,13 @@ class App extends Component {
 ```
 | Método | Detalle |
 |:--------:|:--------|
-|\__onDispatch(payload: Object):void|Las subclases pueden ser sobreescritas con él. Esto es como los Store reciben las acciones del "dispatcher". Todas las mutaciones lógicas del estado serán hechos durante dicho método.|
+|`__onDispatch(payload: Object):void`|Las subclases pueden ser sobreescritas con él. Esto es como los Store reciben las acciones del "dispatcher". Todas las mutaciones lógicas del estado serán hechos durante dicho método.|
 
 #####ReduceStore
 | Método | Detalle |
 |:--------:|:--------|
-|extends Store| Esta clase extiende de la de Store.|
-|getState()|"Getter" que expone el estado entero de este Store. Si el estado no es inmutable (con propiedades) deberemos sobreescribirlo y no exponer el estado directamente.|
+|`extends Store`| Esta clase extiende de la de Store.|
+|`getState()`|"Getter" que expone el estado entero de este Store. Si el estado no es inmutable (con propiedades) deberemos sobreescribirlo y no exponer el estado directamente.|
 ```javascript
 import MessageStore from './stores/message-store';
 import { Dispatcher } from 'flux';
@@ -171,9 +171,9 @@ class App extends Component {
 ```
 | Método | Detalle |
 |:--------:|:--------|
-|getInitialState()|Construye el estado inicial para un Store. Este se llama una vez durante la construcción del Store.|
-|reduce(state: , action:Object):|Reduce el estado actual y una acción para el nuevo estado de dicho Store. Todas las subclases deben implementar éste método, el cuál debe ser puro y no tener otros efectos.|
-|areEqual(one: , two: ):boolean|Comprueba si dos versiones del estado son la misma. No sobreescribiremos en caso de que su estado sea inmutable (propiedades).|
+|`getInitialState()`|Construye el estado inicial para un Store. Este se llama una vez durante la construcción del Store.|
+|`reduce(state: , action:Object)`|Reduce el estado actual y una acción para el nuevo estado de dicho Store. Todas las subclases deben implementar éste método, el cuál debe ser puro y no tener otros efectos.|
+|`areEqual(one: , two: ):boolean`|Comprueba si dos versiones del estado son la misma. No sobreescribiremos en caso de que su estado sea inmutable (propiedades).|
 
 * No necesitamos emitir un cambio. En caso de que algún Store extienda la clase `ReduceStore` no necesita emitir cambios manualmente mediante `reduce()`. El estado es comparado antes y después de cada "dispatch" y los cambios son emitidos automáticamente. Si necesitamos controlar este comportamiento sobreescribe el método `areEqual()`.
 
@@ -181,15 +181,15 @@ class App extends Component {
 | Método | Detalle |
 |:--------:|:--------|
 |`extends ReduceStore<Immutable.Map<K,V>>`|Esta clase extiende ReduceStore y define el estado como un mapa inmutable (con propiedades).|
-|at(key: K):V|Acceso al valor proporcionado por la clave. Devolverá un error si la clave (key) no existe en caché.|
-|has(key:K):boolean|Comprueba si la caché tiene una clave particular.|
-|get(key:K): ?V| Obtiene el valor de una clave particular. Devolverá **undefined** si la clave no existe en caché.|
+|`at(key: K):V`|Acceso al valor proporcionado por la clave. Devolverá un error si la clave (key) no existe en caché.|
+|`has(key:K):boolean`|Comprueba si la caché tiene una clave particular.|
+|`get(key:K): ?V`| Obtiene el valor de una clave particular. Devolverá **undefined** si la clave no existe en caché.|
 |`getAll(keys:Iterable<K>, prev:?Immutable.Map<K,V>):Immutable.Map<K,V>`| Obtiene un array de claves y pone los valores en un mapa si éstas existen, lo que permite proveer un resultado previo para actualizar en cambio un nuevo mapa. Provee un resultado previo permitiendo la posibilidad de obtener el mismo resultado si las claves no cambian.|
 
 #####[Container](https://facebook.github.io/flux/docs/flux-utils.html#container)
 | Método | Detalle |
 |:--------:|:--------|
-|create(base: ReactClass,options:?Object):ReactClass| Utilizado para transformar una clase React en un contenedor que actualiza su estado cuando hay cambios en los Stores. La clase base debe tener los métodos estáticos `getStores()` y `calculateState`|
+|`create(base: ReactClass,options:?Object):ReactClass`| Utilizado para transformar una clase React en un contenedor que actualiza su estado cuando hay cambios en los Stores. La clase base debe tener los métodos estáticos `getStores()` y `calculateState`|
 
 + Los **containers** son puros, por defecto no re-renderizar cuando sus `props` y `state` no cambian (como se determina por `shallowEquals()`). Para deshabilitar esto tendremos que pasar las opciones `{pure:false}` como segundo argument para el método `create()`.
 
