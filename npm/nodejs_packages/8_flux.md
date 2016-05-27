@@ -1,13 +1,13 @@
 ![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 #Paquete Flux para node.js
 
-##[Detalle cambios en Flux][enlaceVersionesflux]
+##[Cambios en Flux][enlaceVersionesflux]
 Para ver la versión de que disponemos en nuestro sistema tendremos que ejecutar desde el prompt de node.js el siguiente comando:  
 `>npm show flux version`
 
 | Versión | Detalles |
 |--------|--------|
-|2.1.0|Añadir **flux-utils** bases principales incluidas: `Store`, `ReduceStroe`, `MapStore`, `Container`|        
+|2.1.0|Añadido **flux-utils** que contiene las bases principales : `Store`, `ReduceStroe`, `MapStore`, `Container`|        
 |2.1.1|Publicada la carpeta `dist/` en "npm".|
 |3.0.0|`FluxMapStore`: borrado.|
 ||`FluxContainer`: las suscripciones están configuradas en el constructor y no en el `componentDidMount`.|
