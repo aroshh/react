@@ -224,8 +224,6 @@ Para la utilización de estas clases básicas tendremos que tener en cuenta cuá
 + [Flux en el gestor de paquetes "npm"](https://www.npmjs.com/package/flux).
 + [Flux documentación en GitHub](https://github.com/facebook/flux).
 + [Web oficial de Flux](http://facebook.github.io/flux/).
-+ [Documentación - Web oficial Flux](https://facebook.github.io/flux/docs/overview.html).
-+ [Tutorial - Web oficial Flux](https://facebook.github.io/flux/docs/todo-list.html).
 + [Introducción a Web API en ASP.NET](https://www.pluralsight.com/courses/aspnetwebapi).
 + [Video: Flux, Arquitectura de UI, explicado por Eduard Tomàs](https://www.youtube.com/watch?v=IRitxt702EY).
 + [¿Qué es el MVC (modelo-vista-controlador)?](http://www.desarrolloweb.com/articulos/que-es-mvc.html).  
@@ -233,6 +231,8 @@ Para la utilización de estas clases básicas tendremos que tener en cuenta cuá
 + **[Aprendiendo React con Flux](http://smashingboxes.com/blog/learn-react-part-3).**
 + **[Flux Stores - managing store dependencies… waitFor vs addChangeListener vs raise action](http://stackoverflow.com/questions/32605318/flux-stores-managing-store-dependencies-waitfor-vs-addchangelistener-vs-rai).**
 + [Módulo EventEmitter para los motores de Node.js](https://www.npmjs.com/package/events).
++ [Tutorial: react + flux](http://www.tutorialspoint.com/reactjs/reactjs_using_flux.htm).
++ [Tutorial: usando flux](http://www.talentec.pe/blog/flux-1/).
 
 <!-- Referencias ocultas -->
 [webapi]:https://es.wikipedia.org/wiki/Web_API
