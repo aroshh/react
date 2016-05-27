@@ -93,7 +93,7 @@ En el **[listado actualizado de transformaciones de origen soportadas][enlaceTra
 [2] [Uso de módulos en JavaScript con ECMAScript 6](http://www.2ality.com/2013/11/es6-modules-browsers.html)  
 [3] [Soporte de EMACScript en los principales navegadores](http://kangax.github.io/compat-table/es6/)  
 [4] [Princpio DRY (No lo vuelvas a repetir)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)  
-[5] [Principio SOLID](https://es.wikipedia.org/wiki/SOLID_(object-oriented_design)  
+[5] [Principio SOLID](https://es.wikipedia.org/wiki/SOLID_object-oriented_design)  
 [6] [Instalación browserify](https://www.npmjs.com/package/browserify)  
 [7] [Página oficial de CommonJS](http://www.commonjs.org/)  
 [8] [Uso de browserify](http://blog.koalite.com/2014/09/como-utilizar-reactjs-con-browserify/)  
