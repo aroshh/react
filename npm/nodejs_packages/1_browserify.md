@@ -96,9 +96,10 @@ En el **[listado actualizado de transformaciones de origen soportadas][enlaceTra
 [5] [Principio SOLID](https://es.wikipedia.org/wiki/SOLID_(object-oriented_design)  
 [6] [Instalación browserify](https://www.npmjs.com/package/browserify)  
 [7] [Página oficial de CommonJS](http://www.commonjs.org/)  
-[8] [Uso de browserify](http://blog.koalite.com/2014/09/como-utilizar-reactjs-con-browserify/)
-[9] [Ejemplo de fichero browserify utilizando watchify](https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md)
- [10] [Uso de babelify](6_babelify.md)
+[8] [Uso de browserify](http://blog.koalite.com/2014/09/como-utilizar-reactjs-con-browserify/)  
+[9] [Ejemplo de fichero browserify utilizando watchify](https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md)  
+ [10] [Uso de babelify](6_babelify.md)  
+ 
 <!-- Enlaces y referencias del documento -->
 [1]:http://browserify.org/
 [2]:http://www.2ality.com/2013/11/es6-modules-browsers.html
