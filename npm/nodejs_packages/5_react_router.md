@@ -235,7 +235,7 @@ Más información sobre `<Link>` `<IndexLink>` ... [**en la API de react-router*
 ###Eventos
 Podemos utilizar los eventos `onEnter={}`, `onLeave={}` dentro de las etiquetas `<Route>` y `<Link>` en el caso de que queramos se ejecuten funciones (objetos, etc.) al cargar la tabla de enrutamiento o bien el componente "React" que tenga en sus enlaces dicho evento. Hemos observado que los dos eventos se comportan igual.  
 
-[**Más información sobre Router**][enlaceRouter]  
+[**Más información sobre react-router**][enlaceRouter]  
 
 ##Referencias
 + [Guía actualizada "react-router" (12/04/2016)](https://github.com/reactjs/react-router/blob/master/upgrade-guides/v2.0.0.md).
