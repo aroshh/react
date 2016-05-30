@@ -8,11 +8,11 @@ Adjuntamos varios ejemplos sobre la creación de una aplicación web SPA utiliza
 
 + **Tabla de rutas con** `react-router` **/ enrutamiento** web (`web.config`) para la navegación web. Consiguiendo una navegación como una SPA sin refrescar.  
 
-> SPA:
+> SPA (o single-page application): es una aplicación de página única o sitio web que cabe en una sola página con el propósito de dar una experiencia más fluida a los usuarios como una aplicación de escritorio. En una SPA todos los códigos de HTML, JavaScript y CSS se cargan de una vez.
 
 + **Comunicación entre componentes:** muestra de componentes, agrupados por grupo, ensayo y tareas. Uso de Jquery para los eventos que sucedan dentro del padre.  
 
-+ Ejemplo utilizando "Flux", pretendemos sustituir jQuery por flux y así no depender de una variable de entorno que recoge todos los eventos que suceden dentro del padre, para luego poder separar el código en distintos ficheros según los componentes que utilizamos.
++ **Uso de "Flux"**, pretendemos sustituir jQuery por flux y así no depender de una variable de entorno que recoge todos los eventos que suceden dentro del padre, para luego poder separar el código en distintos ficheros según los componentes que utilizamos.
 
 ##Instalación
 Descargado el repositorio "react", nos situaremos dentro de la carpeta `visualStudio projects` y a su vez dentro de `[NombreProyecto]/src/[NombreProyecto]`.  
