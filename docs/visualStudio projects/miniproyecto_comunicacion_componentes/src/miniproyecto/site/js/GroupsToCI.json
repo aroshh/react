@@ -1,0 +1,416 @@
+[{
+	"Id": 274,
+	"Description": "Arilaminas (Bisuteria)"
+},
+{
+	"Id": 252,
+	"Description": "Arilaminas (SN)"
+},
+{
+	"Id": 286,
+	"Description": "Bencenos y Toluenos Clorados (Bisuteria)"
+},
+{
+	"Id": 265,
+	"Description": "Bencenos y Toluenos Clorados (SN)"
+},
+{
+	"Id": 48,
+	"Description": "Calzado Cremalleras"
+},
+{
+	"Id": 50,
+	"Description": "Calzado Etiquetado"
+},
+{
+	"Id": 113,
+	"Description": "Calzado Fijacion del Tacon"
+},
+{
+	"Id": 44,
+	"Description": "Calzado Fuerza de Adhesion"
+},
+{
+	"Id": 46,
+	"Description": "Calzado Resistencia a la Abrasión (Plantilla)"
+},
+{
+	"Id": 235,
+	"Description": "Calzado Resistencia a la Abrasión (Puntera)"
+},
+{
+	"Id": 34,
+	"Description": "Calzado Resistencia a la Abrasión (Suela)"
+},
+{
+	"Id": 114,
+	"Description": "Calzado Resistencia a la Fatiga"
+},
+{
+	"Id": 39,
+	"Description": "Calzado Resistencia a la Flexión (Empeine)"
+},
+{
+	"Id": 38,
+	"Description": "Calzado Resistencia a la Flexión (Suela)"
+},
+{
+	"Id": 40,
+	"Description": "Calzado Solidez a la Luz Artificial"
+},
+{
+	"Id": 42,
+	"Description": "Calzado Solidez al Frote"
+},
+{
+	"Id": 43,
+	"Description": "Calzado Solidez al Sudor"
+},
+{
+	"Id": 148,
+	"Description": "Calzado Solidez Saliva"
+},
+{
+	"Id": 52,
+	"Description": "Calzado Tipo Corte"
+},
+{
+	"Id": 47,
+	"Description": "Calzado Velcro"
+},
+{
+	"Id": 25,
+	"Description": "Capacidad de Absorción"
+},
+{
+	"Id": 253,
+	"Description": "Colorantes Alérgicos (SN)"
+},
+{
+	"Id": 1,
+	"Description": "Composición"
+},
+{
+	"Id": 266,
+	"Description": "Composición (SN)"
+},
+{
+	"Id": 33,
+	"Description": "Composición Cuaternaria"
+},
+{
+	"Id": 32,
+	"Description": "Composición Ternaria"
+},
+{
+	"Id": 62,
+	"Description": "Composición v2"
+},
+{
+	"Id": 21,
+	"Description": "Cordones y Cordeles"
+},
+{
+	"Id": 53,
+	"Description": "Cordones y Cordeles - Lazos"
+},
+{
+	"Id": 254,
+	"Description": "Cordones y Cordeles (SN)"
+},
+{
+	"Id": 54,
+	"Description": "Cordones y Cordeles SS16"
+},
+{
+	"Id": 276,
+	"Description": "Cromo VI (Bisuteria)"
+},
+{
+	"Id": 255,
+	"Description": "Cromo VI (SN)"
+},
+{
+	"Id": 232,
+	"Description": "Determinación de Ftalatos (Bisuteria)"
+},
+{
+	"Id": 229,
+	"Description": "Determinación de Niquel (Bisuteria)"
+},
+{
+	"Id": 233,
+	"Description": "Determinación del contenido de Hidrocarburos Arómaticos Policiclicos (Bisuteria)"
+},
+{
+	"Id": 230,
+	"Description": "Determinación del Contenido de Metales Pesados Extraíbles (Bisuteria)"
+},
+{
+	"Id": 231,
+	"Description": "Determinación del Contenido de Metales Totales (Bisuteria)"
+},
+{
+	"Id": 256,
+	"Description": "Dimetil Fumarato (SN)"
+},
+{
+	"Id": 8,
+	"Description": "Elasticidad"
+},
+{
+	"Id": 150,
+	"Description": "Elementos decorativos"
+},
+{
+	"Id": 272,
+	"Description": "Elementos Pequeños Rígidos (Tracción) (SN)"
+},
+{
+	"Id": 17,
+	"Description": "Estabilidad Dimensional"
+},
+{
+	"Id": 65,
+	"Description": "Estabilidad Dimensional (Hogar)"
+},
+{
+	"Id": 18,
+	"Description": "Estabilidad Dimensional en Seco"
+},
+{
+	"Id": 275,
+	"Description": "Formaldehido (Bisuteria)"
+},
+{
+	"Id": 257,
+	"Description": "Formaldehido (SN)"
+},
+{
+	"Id": 269,
+	"Description": "Ftalatos (SN)"
+},
+{
+	"Id": 283,
+	"Description": "Grado de lisura"
+},
+{
+	"Id": 55,
+	"Description": "Grosor de la Piel"
+},
+{
+	"Id": 273,
+	"Description": "Inflamabilidad (SN)"
+},
+{
+	"Id": 20,
+	"Description": "Inspección de Etiquetado"
+},
+{
+	"Id": 234,
+	"Description": "Inspección de Etiquetado (Bisuteria)"
+},
+{
+	"Id": 267,
+	"Description": "Inspección de Etiquetado (SN)"
+},
+{
+	"Id": 63,
+	"Description": "Inspección de Etiquetado v2"
+},
+{
+	"Id": 59,
+	"Description": "Inspección visual tras ciclo de lavado"
+},
+{
+	"Id": 2,
+	"Description": "Instrucciones de Conservación"
+},
+{
+	"Id": 258,
+	"Description": "Liberación de Níquel (SN)"
+},
+{
+	"Id": 23,
+	"Description": "Masa Laminar"
+},
+{
+	"Id": 259,
+	"Description": "Metales Pesados Extraíbles (SN)"
+},
+{
+	"Id": 260,
+	"Description": "Metales Pesados Totales (SN)"
+},
+{
+	"Id": 270,
+	"Description": "PAHs (SN)"
+},
+{
+	"Id": 261,
+	"Description": "Parafinas Cloradas (SN)"
+},
+{
+	"Id": 151,
+	"Description": "Permeabilidad al Agua CI"
+},
+{
+	"Id": 271,
+	"Description": "PFOS (SN)"
+},
+{
+	"Id": 281,
+	"Description": "Policlorofenoles (Bisuteria)"
+},
+{
+	"Id": 262,
+	"Description": "Policlorofenoles (SN)"
+},
+{
+	"Id": 60,
+	"Description": "Recomendacion de Etiquetado"
+},
+{
+	"Id": 3,
+	"Description": "Resistencia a la Abrasión"
+},
+{
+	"Id": 67,
+	"Description": "Resistencia a la Flexión (Piel)"
+},
+{
+	"Id": 6,
+	"Description": "Resistencia a la Tracción"
+},
+{
+	"Id": 57,
+	"Description": "Resistencia a las Costuras (Piel)"
+},
+{
+	"Id": 192,
+	"Description": "Resistencia a las Cremalleras"
+},
+{
+	"Id": 5,
+	"Description": "Resistencia al deslizamiento de las Costuras"
+},
+{
+	"Id": 4,
+	"Description": "Resistencia al Pilling"
+},
+{
+	"Id": 9,
+	"Description": "Resistencia al Rasgado"
+},
+{
+	"Id": 56,
+	"Description": "Resistencia al Rasgado (Piel)"
+},
+{
+	"Id": 7,
+	"Description": "Resistencia al Reventamiento"
+},
+{
+	"Id": 279,
+	"Description": "Seguridad de los Juguetes. Parte 1 - Tracción"
+},
+{
+	"Id": 280,
+	"Description": "Seguridad de los Juguetes. Parte 2 - Inflamabilidad"
+},
+{
+	"Id": 278,
+	"Description": "Seguridad de los Juguetes. Parte 3 - Migración Metales"
+},
+{
+	"Id": 19,
+	"Description": "Snarling después del lavado"
+},
+{
+	"Id": 11,
+	"Description": "Solidez a la Limpieza en seco"
+},
+{
+	"Id": 16,
+	"Description": "Solidez a la Luz"
+},
+{
+	"Id": 68,
+	"Description": "Solidez a la Luz (Piel)"
+},
+{
+	"Id": 66,
+	"Description": "Solidez al Agua"
+},
+{
+	"Id": 15,
+	"Description": "Solidez al Agua Clorada"
+},
+{
+	"Id": 14,
+	"Description": "Solidez al Agua de Mar"
+},
+{
+	"Id": 12,
+	"Description": "Solidez al Frote"
+},
+{
+	"Id": 58,
+	"Description": "Solidez al Frote (Piel)"
+},
+{
+	"Id": 241,
+	"Description": "Solidez al Frote SS16"
+},
+{
+	"Id": 10,
+	"Description": "Solidez al Lavado"
+},
+{
+	"Id": 13,
+	"Description": "Solidez al Sudor"
+},
+{
+	"Id": 69,
+	"Description": "Solidez del Color a la Gota de Agua (Piel)"
+},
+{
+	"Id": 51,
+	"Description": "Solidez Saliva y Sudor"
+},
+{
+	"Id": 24,
+	"Description": "Spray Test"
+},
+{
+	"Id": 264,
+	"Description": "TBT (SN)"
+},
+{
+	"Id": 61,
+	"Description": "Tracción de piezas pequeñas - Adornos"
+},
+{
+	"Id": 26,
+	"Description": "Tracción de piezas pequeñas - Botones "
+},
+{
+	"Id": 22,
+	"Description": "Tracción de piezas pequeñas - Broches"
+},
+{
+	"Id": 27,
+	"Description": "Tracción de piezas pequeñas - Cremallera"
+},
+{
+	"Id": 287,
+	"Description": "Tracción de piezas pequeñas - Cremallera - HG"
+},
+{
+	"Id": 180,
+	"Description": "Tracción de piezas pequeñas - Remaches"
+},
+{
+	"Id": 263,
+	"Description": "Valor de pH (SN)"
+}]
