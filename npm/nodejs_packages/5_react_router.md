@@ -17,11 +17,10 @@ Cada ruta que se mapee, será un componente de "React", por lo que cada direcci�
 
 Como requisito para el navegador se necesita que soporte **["Session history management"][enlaceSessionmanagement]** o (HistoryApi) mientras que en los servidores, los cuales no lo soportan todos, podemos configurar el uso de **["HashChange"][enlaceHashchange]**.
 
-Dicha tabla se define en un archivo JSX (por ejemplo: js/routes.jsx). Aunque podemos utilizar un JS utilizando el estándard ECMAScript 6 (como el código siguiente). Podemos poner en marcha automáticamente las rutas para poder navegar por nuesta SPA:
+Dicha tabla se define en un archivo JSX (por ejemplo: js/routes.jsx). Aunque podemos utilizar un JS utilizando el estándard ECMAScript 6 (como el código siguiente). Podemos poner en marcha automáticamente las rutas para poder navegar por nuestra SPA:
 ```javascript
 // importamos los módulos necesarios
 import React from 'react';
-import { ReactDOM, Render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute, Redirect } from 'react-router'; 
 
 // importamos los ficheros JSX
@@ -53,7 +52,7 @@ export default routes;
 Elementos que podemos utilizar:
 + **Router**: compomente primario de **"react-router"**. Se encarga de mantener la interfaz de usuario y la dirección URL en sincronía.
 
-+ **Route:** define la tabla de enrutamiento de forma jerárquica. Equivale al "Layout" (entorno común de la SPA). Este caso se ha optado por nombrar la app.
++ **Route:** define la tabla de enrutamiento de forma jerárquica. Equivale al "Layout" (entorno común de la SPA). Este caso se ha optado por nombrarla "App".
 	+ **history:** es una propiedad utilizada para guardar la ruta de las distintas páginas del SPA, es decir, modificamos el historial del navegador pero sin recargar la página. Se puede indicar como objetos: "hashHistory" o bien "browserHistory". "React-router" está construido con un historial para escuchar en la barra de direcciones del navegador los cambios y analizar la URL pasándolo a un objeto que `<Router>` pueda utilizar para buscar la ruta y renderizar los componentes asociados a la ruta.
 	>**React-router** antes utilizaba por defecto la creación del historial mediante "hash", pero ahora debemos indicarlo. Grácias a esto se ayuda a mantener el tamaño del paquete de la aplicación. Se recomienda utilizar **browserHistory** ya que usa la historial de la API de HTML5 (cuando esté disponible).
     
@@ -61,34 +60,34 @@ Elementos que podemos utilizar:
     |:-----:|:-----:|
     |URL's basadas en hash.|URL's de las páginas con formato HTML5 pushState |
 |![hashHistory.png]( ../images/hashHistory.png "ruta mediante hash")|![hashHistory.png]( ../images/browserHistory.png "ruta mediante HTML5")|
-	>Antes mediante el hash de la URL las aplicaciones AJAX y Flash podían soportar la interacción del historial. Con la llegada de HTML5 se incluyó el método ***pushState()*** para cambiar directamente la URL actual del navegador sin refrescar la página [**enlace a más información**][html5Pushstate].
+	>Antes, mediante el hash de la URL las aplicaciones AJAX y Flash podían soportar la interacción del historial. Con la llegada de HTML5 se incluyó el método ***pushState()*** para cambiar directamente la URL actual del navegador sin refrescar la página [**enlace a más información**][html5Pushstate].
 
 	>**"browserHistory" soporta IE8 e IE9**, ya que detecta si es posible utilizar la API nativa del navegador de "window.history", en caso contrario cualquier llamada provocará la recarga completa de la página ... [**más información**](https://github.com/reactjs/react-router/blob/832c42946c874fe56ffde0066b1088054311cb98/docs/guides/basics/Histories.md).
     
-	+ **handler: (obsoleto)** componente "React.js" a renderizar. El comportamiento del componente "React" queda superpuesto sobre el "Layout" o contenedor principal. Podemos utilizarlo pero en ese caso nuestra SPA dejaría de comportarse como tal.
+	+ **handler: (obsoleto)** componente "React.js" a renderizar. El comportamiento del componente "React" queda superpuesto sobre el "App" o contenedor principal. Podemos utilizarlo pero en ese caso nuestra SPA dejaría de comportarse como tal.
 	
-	+ **component:** componente "React.js" a renderizar. Al utilizarlo podremos renderizar los distintos "children" o componentes de segundo nivel dentro del "Layout" o contenedor principal. ***Un componente es un componete React (una clase o una cadena), siendo básicamente "algo" que puede ser utilizado como primer argumento para el méotodo `React.createElement`***.
+	+ **component:** componente "React.js" a renderizar. Al utilizarlo podremos renderizar los distintos "children" o componentes de segundo nivel dentro de la "App" o contenedor principal. ***Un componente React (una clase o una cadena), siendo básicamente "algo" que puede ser utilizado como primer argumento para crear un elemento de React ***`React.createElement`.
 	
-	+ **path:** ruta del navegador que pone el usuario (poner path="/" es lo mismo que no poner el atributo). El caso de utilizar `path="*"` y escribimos cualquier cosa nos erenderizará el componente `NotFound` la cuál contendría un mensaje de error personalizado (parecido al error 404 cunado el navegador web no encuentra la ruta). También deberemos situar este al final de todas las rutas porque de lo contrario, al ponerlo al principio o en medio de nuestras rutas, serán consideradas **"404"** ya que las "path" coinciden con cualquier cosa por el "\*". [**Si queremos saber más sobre la sintaxis "path"**][enlaceSintaxispath].
+	+ **path:** ruta del navegador que pone el usuario (poner **path="/"** es lo mismo que no poner el atributo). El caso de utilizar **path="*"** y escribimos cualquier cosa nos renderizará el componente `NotFound` la cuál contendría un mensaje de error personalizado (parecido al error 404 cuando el navegador web no encuentra la ruta). También deberemos situar este al final de todas las rutas porque de lo contrario, al ponerlo al principio o en medio de nuestras rutas, serán consideradas **"404"** ya que las "path" coinciden con cualquier cosa por el "\*". [**Si queremos saber más sobre la sintaxis "path"**][enlaceSintaxispath].
 	
 	> NOTA: no confundir el parámetro de *url* con **[QueryString][enlaceQuerystring]**. El parámetro de url equivale al route.value de ASP.MVC pero en el cliente.
 
 	Por lo tanto, el componente **Message** o su padre (en este caso App.jsx) deberá de tener una propiedad que la recibirá cuando se instancie. Esta propiedad se llamará **params** la cuál, para este ejemplo, tendrá otra denominada **id**, que será la que recibirá el valor.
 	+ [**name: (obsoleto)**][enlaceRoutename] nombre de la ruta. Es como se redireccionará entre las distintas "páginas" que ahora son componentes "React.js". En caso de no ponerlo, el comportamiento será el mismo. A partir de la versión 1 ya no es necesario indicarlo puesto que es suficiente con el "path".
 	
-+ [**DefaultRoute: (obsoleto)**][enlaceObsoleto2] si no se pone un subelemento indicamos el componente a renderizar. Esto se suele usar en los nodos raíces. Para obtener el mismo resultadodeberemos usar **"IndexRoute"**.
-+ [**NotFoundRoute: (obsoleto)**][enlaceObsoleto] si no existe la dirección puesta sabe que componente renderizar. A partir de la versión 1.0 ha sido eliminado porque confundía a los desarrolladores ahora simplemente con utilizar `<Route path="*" component={...}/>`.
++ [**DefaultRoute: (obsoleto)**][enlaceObsoleto2] si no se pone un subelemento indicamos el componente a renderizar. Esto se suele usar en los nodos raíces. Para obtener el mismo resultado deberemos usar `<IndexRoute>`.
++ [**NotFoundRoute: (obsoleto)**][enlaceObsoleto] si no existe la dirección puesta sabe que componente renderizar. A partir de la versión 1.0 ha sido eliminado porque confundía a los desarrolladores ahora simplemente basta con utilizar `<Route path="*" component={...}/>`.
 
 + **Redirect:** define los enrutados sinónimos. Ejemplo: si escribimos en el navegador "about-us" nos redirige a "about".
 
-+ **IndexRoute:** establecido previamente el tipo de historial, la ruta inicial será el componente "Layout" que es el padre, pero para que renderice éste tendremos que indicarlo mediante `IndexRoute` y  para que a su vez nos muestre los hijos que contiene necesitamos usar la propiedad `{this.props.children}` que estará dentro del nodo padre.
++ **IndexRoute:** establecido previamente el tipo de historial, la ruta inicial será el componente "App" que es el padre, pero para que renderice éste tendremos que indicarlo mediante `IndexRoute` y  para que a su vez nos muestre los hijos que contiene necesitamos usar la propiedad `{this.props.children}` que estará dentro del nodo padre.
 
-Dentro de la ruta principal `"/"` hemos indicado que pertenece al componente "Layout" el cual es el padre y a su vez, las rutas contenidas dentro hacen referencia a otros componentes que serán hijos del contenedor principal que hemos establecido y que se mostrarán. En el caso de que saquemos dichos componentes fuera de la ruta inicial, sólo se mostrarán estos puesto que no tienen ningún padre antecesor.
+Dentro de la ruta principal `"/"` hemos indicado que pertenece al componente "App" el cual es el padre y a su vez, las rutas contenidas dentro de él hacen referencia a otros componentes que serán hijos del contenedor principal que hemos establecido y que se mostrarán. En el caso de que saquemos dichos componentes fuera de la ruta inicial, sólo se mostrarán estos puesto que no tienen ningún padre antecesor.
 
 > Podemos realizar anidamientos de `<IndexRoute>` sucesivos en componentes hijos que a su vez también sean padres con más nodos a su vez:  
 ```javascript
 <Router history={browserHistory} >
-        <Route path="/" component={Layout}>
+        <Route path="/" component={App}>
             <IndexRoute component={Indice}/>
             <Route path="home" component={Home} />
             <Route path="casa" component={Casa} >
@@ -100,12 +99,18 @@ Dentro de la ruta principal `"/"` hemos indicado que pertenece al componente "La
         </Route>
 </Router>
 ```
+> En algunas páginas de desarrollo sí que les funciona el doble anidamiento pero en nuestro proyecto, no ha sido así por lo que SÓLO puede haber un único `<IndexRoute>` puesto que será el índice de nuestra SPA.
 
-En el ejemplo se puede ver cómo los 2 primeros objetos "React" se han referenciado a variables mientras que los siguientes se han instanciado directamente.
+En la siguiente tabla podemos ver cómo un objeto "React" se han instanciado directamente. Pero no nos mostrará nada:
+
+| Usando | Referenciar / Instanciar componentes|
+|:--------:|:--------:|
+|ECMAScript 5|`<Route path="/" component={require('./components/App.jsx')} />`|
+|ECMAScript 6|`<Route path="/" component={from ('./components/App.jsx')} />`|
 
 > Para un correcto funcionamiento hay que configurar el servidor para que todo el contenido vaya a index.html, pues este es el que realizará el mapeado y el servidor lo desconoce.
 
-Resumiendo, disponemos de un html con un sólo archivo JavaScript (compuesto por otros). En la tabla de rutas hemos puesto con qué componente se renderizará, además le hemos puesto un "Layout" (en este caso app.jsx). 
+Resumiendo, disponemos de un html con un sólo archivo JavaScript (compuesto por otros). En la tabla de rutas hemos indicado que componente se renderizará, además le hemos puesto un "App" (en este caso app.jsx). 
 
 ####Nuestro mapa del sitio quedará:  
 
@@ -118,12 +123,12 @@ Resumiendo, disponemos de un html con un sólo archivo JavaScript (compuesto por
 
 
 ####Otros componentes obsoletos a partir de la versión 1.0
-+ [**RouteHandler**][enlaceObsoleto] ahora automáticamente rellena utilizando `this.props.children` de los componentes en base a la ruta activa. Como todos los componentes de "React" que reciben "children" de su "parent" también es posible utilizar la plantilla `React.cloneElement` para añadir "propiedades" (props) al descendiente.
++ [**RouteHandler**][enlaceObsoleto] ahora automáticamente rellena utilizando `this.props.children` de los componentes en base a la ruta activa. Como los componentes de "React" que reciben "children" de su "parent" también es posible utilizar la plantilla `React.cloneElement` para añadir "propiedades" (props) al descendiente.
 +  `<Route name="about" />` todavía podemos anidar las rutas ya que éstas se heredan del "parent". Ha sido quitado a partir de la versión 1.0 por los siguientes motivos:
 	+ La carga dinámica de la configuración de rutas, esto implica que no se puede construir URLs reales para las etiquetas `<Link>` cuya configuración de rutas todavía no se ha cargado.
 	+ El uso de las rutas URL reales con `<Link to>` no toma tiempo extra para la búsqueda de la ruta / nombre.
 	+ No es necesario saber el parámetro "name" para crear links.
-	+ Se refuerza a los usuarios a no cambiar sus URLs en vez de usar `<Redirect>`.
+	+ Forzamos a los usuarios a no cambiar sus URLs en vez de usar `<Redirect>`.
   **Más información sobre ["Route name"][enlaceRoutename].**
 
 ###Renderizado
@@ -154,7 +159,7 @@ import './routes.jsx';
 A la hora de mostrar los componentes secundarios dentro del componente de nivel superior "App" podemos mostrar el índice de nuestra página indicando `{this.props.children || <Indice />}` en el caso de que en el fichero de rutas "routes.jsx" no tuviéramos `<IndexRoute>` . Indicamos que en la "App" mostrará los hijos o bien un componente "React".
 
 ####Links/Enlaces
-Es posible utilizar la etiqueta `<a href>` para movernos entre las distintas vistas, pero esto ocasionaría que cargara de nuevo toda la página accediendo al servidor y perdiendo todo sentido como SPA, para evitar esto utilizaremos el elemento `LINK` que proporciona el paquete "react-router".
+Es posible utilizar la etiqueta `<a href>` para movernos entre las distintas vistas, pero esto ocasionaría que cargara de nuevo toda la página accediendo al servidor y perdiendo todo sentido como SPA, para evitar esto utilizaremos el elemento `<Link>` que proporciona el paquete "react-router".
 
 Aquí tendríamos nuestra "App" como contenedor principal de nuestra SPA, es un componente que contendrá los "Links":
 ```javascript
@@ -189,7 +194,7 @@ class App extends React.Component{
 // tendremos que exportarla para que sea pública
 export default App;
 ```
-Observando el código anterior tenemos los siguientes enlaces:
+Explicamos el código anterior tenemos los siguientes enlaces:
 
 #####Link
 
@@ -213,7 +218,7 @@ Observando el código anterior tenemos los siguientes enlaces:
 
 	`<Link to="/home/authors" activeClassName="activo"></Link>`
 
-+ **"activeClassName"**, se recive el atributo `className` en una etiqueta `<Link>` cuando la ruta está activa. No se activa la clase por defecto.
++ **"activeClassName"**, se recibe el atributo `className` en una etiqueta `<Link>` cuando la ruta está activa. No se activa la clase por defecto.
 + Enlaces con parámetros
 	+ `<Link to="manageAuthor" params={{ id: "X"}}>Ir al Autor<Link>` 
 	> La palabra **params** se refiere a un objeto de tipo clave/valor que es parseada fuera de la ruta de acceso URL original. Como valor de dicho objeto son generalmente "strings". En el caso de que hubiera más de uno, el valor sería una matriz.
@@ -238,7 +243,7 @@ Podemos utilizar los eventos `onEnter={}`, `onLeave={}` dentro de las etiquetas 
 [**Más información sobre react-router**][enlaceRouter]  
 
 ##Referencias
-+ [Guía actualizada "react-router" (12/04/2016)](https://github.com/reactjs/react-router/blob/master/upgrade-guides/v2.0.0.md).
++ [Guía actualizada "react-router" (16/04/2016)](https://github.com/reactjs/react-router/blob/master/upgrade-guides/v2.0.0.md).
 + [Historial del navegador usando **react-router**](https://github.com/reactjs/react-router/blob/master/docs/API.md#histories).
 + [**¡Importante!** - Modificaciones realizadas para "react-router"](https://github.com/reactjs/react-router/blob/832c42946c874fe56ffde0066b1088054311cb98/CHANGES.md).
 + ["npm" react-router](https://www.npmjs.com/package/react-router).

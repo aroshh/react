@@ -129,11 +129,11 @@ Es la última fase donde el componente se desmonta, el método utilizado es:
 ##Referencias
 + [Ciclo de vida de un componente React](http://vensign.com/reactjs-ciclo-de-vida-de-un-componente/).
 + [Facebook React - Lifecycle](https://facebook.github.io/react/docs/component-specs.html#lifecycle-methods).
++ [Ciclo de vida con react-router](https://github.com/reactjs/react-router/blob/master/docs/guides/ComponentLifecycle.md).
 + [Ejemplos de componentes React.js: animaciones, iconos, imágenes...](https://js.coach/react).
 + [React.js - Listado de cambios](https://github.com/facebook/react/blob/master/CHANGELOG.md).
 + [React sobre ES6](https://babeljs.io/blog/2015/06/07/react-on-es6-plus).
 + [Primeros pasos con React](http://frontendlabs.io/3158--react-js-espanol-tutorial-basico-primeros-pasos-ejemplos).
-
 
 <!-- Referencias ocultas -->
 [enlaceDOM]:http://librosweb.es/libro/ajax/capitulo_4.html

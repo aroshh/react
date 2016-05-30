@@ -4,21 +4,13 @@
 
 El módulo watchify se encarga de detectar cada cambio en un directorio y notifica si se ha producido un cambio en sus archivos mediante la generación del "bundle" (o fichero unificado) cada vez que exista una modificiación.
 
-
-
 Para instalarlo globalmente, como siempre desde el prompt: `> npm install watchify -g`
 
-
-
 En nuestro caso se encarga de detectar cada cambio en los archivos fuente y ejecutar las tareas necesarias para su construcción sin cargar manualmente la tarea. Todo esto estará orquestado por Gulp. En el ejemplo de "Gulpfile.js" puesto anteriormente en la explicación de Gulp se utiliza.
-
-
 
 Como ejemplo de actualización de un archivo origen, browserify lo volvería a compilar ` > watchify main.js -o js/bundle.js`
 
 > En MS Windows el parámetro "-o" no está disponible
-
-
 
 ###Eventos
 
@@ -41,8 +33,6 @@ var b = browserify({...});
 ```bash
  X bytes written (Y seconds)
 ```
-
-
 
 ## Referencias
 

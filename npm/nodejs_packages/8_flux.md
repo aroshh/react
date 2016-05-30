@@ -233,6 +233,8 @@ Para la utilización de estas clases básicas tendremos que tener en cuenta cuá
 + [Módulo EventEmitter para los motores de Node.js](https://www.npmjs.com/package/events).
 + [Tutorial: react + flux](http://www.tutorialspoint.com/reactjs/reactjs_using_flux.htm).
 + [Tutorial: usando flux](http://www.talentec.pe/blog/flux-1/).
++ **[Redireccionando mediante "react-router" con "flux"](http://stackoverflow.com/questions/34064281/redirecting-programatically-using-react-router-with-flux).**
++ [Módulo "react-router"](5_react_router.md)
 
 <!-- Referencias ocultas -->
 [webapi]:https://es.wikipedia.org/wiki/Web_API

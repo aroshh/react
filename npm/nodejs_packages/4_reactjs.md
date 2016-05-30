@@ -1,5 +1,5 @@
 ![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
-##Paquete React.js "npm"
+##Módulo React en "npm"
 
 Por otra parte tenemos el módulo correspondiente que podemos encontrar en el gestor de paquetes **"npm"**. Nos permitirá acceder al código introducido en "React.js" sin requerimiento de la transformación de JavaScript XML (JSX)
 

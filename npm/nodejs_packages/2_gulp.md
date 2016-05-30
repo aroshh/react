@@ -1,6 +1,6 @@
 ![logo_aitex_min.png](../images/logo_aitex_min.png "Logotipo de Aitex")
 #Paquete gulp
-Gulp nos ayuda a automatizar tareas en el despliegue y pre-compilación de la aplicación que de otra forma sería realizadas de forma manual. Dichas tareas se describen en un fichero llamado **"[gulpfile.js][linkGulpfile]"** el cuál situaremos dentro de la ruta raíz del proyecto y dentro de la carpeta donde se tenga puesto el código. 
+Gulp nos ayuda a automatizar tareas en el despliegue y pre-compilación de la aplicación que de otra forma serían realizadas de forma manual. Dichas tareas se describen en un fichero llamado **"[gulpfile.js][linkGulpfile]"** el cuál situaremos dentro de la ruta raíz del proyecto y dentro de la carpeta donde se tenga puesto el código. 
 
 >Recordemos instalar los módulos o paquetes necesarios antes de ejecutar el fichero **"gulpfile.js"** para que no nos de errores de dependencia de paquetes requeridos.
 
@@ -20,7 +20,7 @@ Instalaremos "gulp" de forma global para poder utilizarlo desde el prompt de Nod
 Sobre la instalación podemos encontrar la [documentación necesaria][docGulp].
 
 ##Uso
-1. Interacciona perfectamente con otros módulos. **"Gulp"** usará otros módulos de **"Node.js"** que se podrán identificar en el archivo "gulpfile.js" con el formato ` require = ('nombrePaqueteNpm')`.
+1. Interacciona perfectamente con otros módulos. **"Gulp"** usará otros módulos de **"Node.js"** que se podrán identificar en el archivo "gulpfile.js" con el formato ` var MyModulo = require('nombrePaqueteNpm');` o en ECMAScript 6 `let MyModulo from 'modulo';`.
 > Si utilizamos **"package.json"** generado correctamente, al reinstalarlo nos instalaría los módulos necesarios (indicados en "devDependencies" y/o "dependencies" dentro del fichero). 
 2. Podemos ejecutar tareas (manualmente) desde el prompt de Node.js: `> gulp <nombreTarea>`.
 > Deberemos situarnos en la carpeta donde se encuentre nuestro fichero "gulpfile.js".
@@ -28,7 +28,7 @@ Sobre la instalación podemos encontrar la [documentación necesaria][docGulp].
 3. Las tareas de Gulp son compatibles con la ventana **"[Task Runner Explorer][enlaceTaskRunner]"** de Visual Studio. Como ejemplo disponemos de un proyecto en Visual Studio el cuál contiene el fichero **"gulpfile.js"** con cuatro tareas. En la esquina superior derecha podemos buscarlo y abrirlo, tal y como se muestra en la imagen:
 >![task_runner_explorer.png](../images/task_runner_explorer.png "Buscar Task Runner Explorer" "width:450px;")  
 
-	Se nos abrirá la ventana correspondiente, seleccionaremos del desplegable el proyecto que contiene gulpfile.js (nos aparecerán tantos como hemos indicado), en nuestro caso tendremos varias ++tareas bindeadas++ (o enlazadas):
+	Se nos abrirá la ventana correspondiente, seleccionaremos del desplegable el proyecto que contiene gulpfile.js (nos aparecerán tantos como hemos indicado), en nuestro caso tendremos varias **tareas bindeadas** (o enlazadas):
 >![task_runner_explorer.png](../images/task_runner_with_tasks.png "Tareas reconocidas por Task Runner Explorer") 
 *Observamos que tenemos cuatro tareas, no se ejecutarán hasta que lo indiquemos mediante selección del ratón directamente sobre la tarea o bien mediante el menú contextual, el cuál nos muestra dos opciones:*
 >+ **"Run"**, ejecutar la tarea.
