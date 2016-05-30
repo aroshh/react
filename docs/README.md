@@ -2,5 +2,4 @@
 
 #Índice
 
-+ [Proyectos en Visual Studio Community 2015](docs/visualStudio_projects/README.md).
 + [Proyectos en Visual Studio Community 2015](visualStudio_projects/README.md).
