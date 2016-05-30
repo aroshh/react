@@ -1,0 +1,74 @@
+[
+  {
+    "CompanyId": "CI",
+    "Description": "627.00059/BLACK (---/---) V.1",
+    "GroupId": 4,
+    "Id": 276535,
+    "ProductId": 123334,
+    "ReportNumber": "16FM005163/1",
+    "ValidationDocumentId": 7
+  },
+  {
+    "CompanyId": "CI",
+    "Description": "627.00059/BLACK (LINING/---) V.1",
+    "GroupId": 4,
+    "Id": 276536,
+    "ProductId": 123334,
+    "ReportNumber": "16FM005163/1",
+    "ValidationDocumentId": 7
+  },
+  {
+    "CompanyId": "CI",
+    "Description": "294.00044/NEGRO (---/---) V.1",
+    "GroupId": 4,
+    "Id": 276538,
+    "ProductId": 123335,
+    "ReportNumber": "16FM005164/1",
+    "ValidationDocumentId": 7
+  },
+  {
+    "CompanyId": "CI",
+    "Description": "294.00044/NEGRO (LINING/---) V.1",
+    "GroupId": 4,
+    "Id": 276539,
+    "ProductId": 123335,
+    "ReportNumber": "16FM005164/1",
+    "ValidationDocumentId": 7
+  },
+  {
+    "CompanyId": "CI",
+    "Description": "294.00150/GRANATE (---/---) V.1",
+    "GroupId": 4,
+    "Id": 276540,
+    "ProductId": 123336,
+    "ReportNumber": "16FM005165/1",
+    "ValidationDocumentId": 7
+  },
+  {
+    "CompanyId": "CI",
+    "Description": "294.00150/GRANATE (LINING/---) V.1",
+    "GroupId": 4,
+    "Id": 276541,
+    "ProductId": 123336,
+    "ReportNumber": "16FM005165/1",
+    "ValidationDocumentId": 7
+  },
+  {
+    "CompanyId": "CI",
+    "Description": "551.41331/MARRON 1635 (---/---) V.1",
+    "GroupId": 4,
+    "Id": 276614,
+    "ProductId": 123357,
+    "ReportNumber": "16FM005169/1",
+    "ValidationDocumentId": 7
+  },
+  {
+    "CompanyId": "CI",
+    "Description": "656.00162/NEGRO (---/---) V.1",
+    "GroupId": 5,
+    "Id": 276617,
+    "ProductId": 123358,
+    "ReportNumber": "16FM005177/1",
+    "ValidationDocumentId": 7
+  }
+]
