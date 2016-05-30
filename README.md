@@ -52,7 +52,7 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 
 > NOTA: Markdown dejará de utilizarse en las páginas que se exporten a GitHub a partir del 01/05/2016, utilizándose [**Kramdown**][enlaceKRAMDOWN]. Aqui puede acceder al [enlace a la noticia](https://help.github.com/articles/updating-your-markdown-processor-to-kramdown/). **Recordemos que GitHub tiene su propio Markdown.**
 
-##Esquema del proyecto
+##Indice del proyecto
 1. [**Node.js.**](/nodejs/README.md)
 
 2. [**Modulos de Node.js utilizados**](/npm/nodejs_packages/README.md) 
