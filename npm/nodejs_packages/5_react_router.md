@@ -224,9 +224,9 @@ Explicamos el código anterior tenemos los siguientes enlaces:
 	> La palabra **params** se refiere a un objeto de tipo clave/valor que es parseada fuera de la ruta de acceso URL original. Como valor de dicho objeto son generalmente "strings". En el caso de que hubiera más de uno, el valor sería una matriz.
 	+ Para versiones posteriores `<Link to="manageAuthor" id="X">Ir al Autor<Link>` 
 	+ Ejemplo complejo siguiendo [**la tabla de enrutamiento**][enlaceParamsareactive]:
-		+ `<Route path="/assignament" path="/courses/:courseId/assignment/:id"/>`
-		+ `<Link to="/assignement" courseId={assignment.courseId} id={assignment.id} />`
-		+ `<Link to="/assignment" params={assignment} />` 
+		+ `<Route path="/assignement" path="/courses/:courseId/assignement/:id"/>`
+		+ `<Link to="/assignement" courseId={assignment.courseId} id={assignement.id} />`
+		+ `<Link to="/assignement" params={assignement} />` 
 		+ [Más información](http://stackoverflow.com/questions/30115324/pass-props-in-link-react-router).
 
 + Otros atributos que podemos utilizar (como si se tratara de la `<a hfref>`): title, id, className... 
