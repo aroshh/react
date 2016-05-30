@@ -2,7 +2,7 @@
 #Fichero "gulpfile.js"
 
 ##Uso de los modulos de Node.js en un fichero "gulpfile.js"
-Podemos encontrar diferentes formas de crear el fichero "gulpfile.js" en Internet, aquí os proporcionamos el que utilizaremos para nuestro proyecto o muy similar:
+Podemos encontrar diferentes formas de crear el fichero "gulpfile.js" en Internet, aquí proporcionamos el que utilizaremos para nuestro/-s proyecto/-s:
 
 ```javascript
 //Módulos requeridos 
@@ -182,7 +182,7 @@ Del siguiente código extraemos:
 |[gulp-webserver][linkGulp-web]|Plugin de **"gulp"** para ejecutar un servidor web en local con "LiveReload" (recarga automática)|
 |[babelify](6_babelify.md)|Es un transpiler que permite convertír código de ECMAScript 6 a código compatible con la mayoría de navegadores modernos.|  
 
->Sintaxis: instalación local `> npm --save-dev <nombrePaquete>`.  
+>Sintaxis: instalación local y comprobación de dependencias `> npm install --save-dev <nombrePaquete>`.  
 
 |Paquete|Descripción|
 |:---:|:---|
@@ -190,7 +190,7 @@ Del siguiente código extraemos:
 |[react-router](5_react_router.md)|Utilizado para generar una tabla de rutas de la aplicación.|
 |[reactify](https://www.npmjs.com/package/reactify)|Traduce de JavaScript XML (JSX) a JavaScript. Puede también transformar y compilar un conjunto limitado de construcciones de ES6 (ECMAScript 2015) en ES5. Más sobre ES6/5 en el fichero **["babelify"](/npm/nodejs_packages/6_babelify.md).**|
 
-> Sintaxis: sin comprobar las dependencias `> npm --save <nombrePaquete>`.  
+> Sintaxis: sin comprobar las dependencias `> npm install --save <nombrePaquete>`.  
 
 + Obtención de los ficheros claves. Para la entrada de datos **"index.js"** y nombre del fichero resultante **"main.js"** (o bundle) que contendrá minificado todos los JavaScript de la aplicación.
 
@@ -227,9 +227,9 @@ Del siguiente código extraemos:
 
 		> Si es la propia máquina: ` host: 'localhost'`.
 
-		> Si queremos que nos escuche en toda la red: ` host: '0.0.0.0'`
+		> Si queremos que escuche en toda la red: ` host: '0.0.0.0'`
 
-		+ *"port"*: establecer un puerto para atender las peticiones "http".
+		+ *"port"*: establece un puerto para atender las peticiones "http".
 
 		> Procurar no utilizar un puerto ya en uso para que no nos de error.
 
@@ -252,15 +252,15 @@ Para lograr "minificar" dicho código y con ello ocupe menos tamaño, favorecien
 
 | Módulo npm elegido | Descripción |
 |:--------:|:--------|
-|[vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer)|Crea un stream transformado que toma los ficheros "vinyl" como entrada y la salida de los ficheros se modifica, conviertiéndolos en un buffer antes de emitirse de nuevo.|
-||`npm install --save vinyl-buffer` |
-||`var buffer = require('vinyl-buffer');`|
-|[gulp-uglify](https://www.npmjs.com/package/gulp-uglify)|Módulo para minificar ficheros, en nuestro caso tendremos: JavaScript, JSX, JSON.        |
-||`npm install --save-dev gulp-uglify`|
-||`var uglify = require('gulp-uglify');`|
-|[gulp-util](https://www.npmjs.com/package/gulp-util)|Utilidad para obtener mensajes de error producidos dentro del código de nuestro fichero "gulpfile.js".|
-||`npm install --save-dev gulp-util`|
-||`var util = require ('gulp-util');`|
+|**[vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer)**|Crea un stream transformado que toma los ficheros "vinyl" como entrada y la salida de los ficheros se modifica, conviertiéndolos en un buffer antes de emitirse de nuevo.|
+|*Instalación*|`npm install --save vinyl-buffer` |
+|*Importar*|`var buffer = require('vinyl-buffer');`|
+|**[gulp-uglify](https://www.npmjs.com/package/gulp-uglify)**|Módulo para minificar ficheros, en nuestro caso tendremos: JavaScript, JSX, JSON.        |
+|*Instalación*|`npm install --save-dev gulp-uglify`|
+|*Importar*|`var uglify = require('gulp-uglify');`|
+|**[gulp-util](https://www.npmjs.com/package/gulp-util)**|Utilidad para obtener mensajes de error producidos dentro del código de nuestro fichero "gulpfile.js".|
+|*Instalación*|`npm install --save-dev gulp-util`|
+|*Importar*|`var util = require ('gulp-util');`|
 + Modificar el código del fichero "gulpfile.js"  
     ![gulpfile_minify.png](../images/gulpfile_minify_code.png "Minificar código en el fichero gulpgile.js")
 
@@ -271,7 +271,7 @@ Para finalmente obtener como resultado el fichero "gulpfile.js" minificado:
 ![main_without_minify.png](../images/main_with_minify.png "Código minificado")  
 
 ### \...CSS (hojas de estilo) 
-Por otra parte, aunque no seamos diseñadores ni maquetadores (puesto que de esa labor se encargarán empresas exteriores) podemos también minificar los distintos CSS de nuestro proyecto en un único fichero **".css"**, con el mismo resultado que con el código JavaScript.
+Por otra parte, aunque no seamos diseñadores ni maquetadores (puesto que de esa labor se encargarían empresas exteriores) podemos también minificar los distintos CSS de nuestro proyecto en un único fichero **".css"**, con el mismo resultado que con el código JavaScript.
 
 | Módulo/paquete npm | Detalle |
 |:--------:|:--------|

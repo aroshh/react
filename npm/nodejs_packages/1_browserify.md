@@ -3,13 +3,10 @@
 
 **Browserify** [[1]] nos permite organizar una aplicación javascript (o módulos de node.js) en varios archivos y referenciarlos unos desde otros a través de `require('module')` que vamos a ir usando a lo largo del proyecto. Además, unirá los diferentes archivos incluyendo los módulos necesarios en el orden adecuado para después generar un fichero para ser utilizado en nuestro navegador.  
 
-_Browserify nos permite el uso de librerías Node.js en el cliente, permite desarrollar en el lado del cliente mediante dichos módulos y cumplimiento de dependencias de forma explícita._  
+_Browserify nos permite el uso de librerías Node.js en el cliente, permite desarrollar en el lado del cliente mediante dichos módulos y el cumplimiento de dependencias de forma explícita._  
 
 Equivale a usar los módulos que soportará de forma nativa en **JavaScript** [[2]] y que aún no ha sido implementado en los navegadores [[3]].  
 > El 28 de enero de 2016, ya se han aprobado algunas características mínimas correspondientes que han sido implementadas en los navegadores actuales.  
-
-
-
 
 Trabajar de una manera modular nos permite que el código sea independiente, desacoplado, fácil de mantener y reutilizable (DRY [[4]], no confundir con SOLID [[5]]).
 
@@ -63,8 +60,7 @@ var aitexModulo = require("./miscript.js")	// buscará en el directorio aitexMod
 
 ##package.json
 "browserify" utiliza el fichero "package.json" en el caso de que exista un campo "main", resolverá el proyecto en ese punto, es decir, indicamos los módulos necesarios, en caso contrario, buscará un fichero **"foo.js"** en el directorio raíz de nuestro módulo.
-> Cuando creamos nuestro proyecto utilizando `npm init` y por defecto se establece el campo `main: "index.js"` pero que se puede indicar otro "js".
-> Recordemos que nosotros tenemos indicado `main: "gulpfile.js"` en el "package.json".
+> Cuando creamos nuestro proyecto utilizando `npm init` y por defecto se establece el campo `main: "index.js"` pero que se puede indicar otro "js". Recordemos que nosotros tenemos indicado `main: "gulpfile.js"` en el "package.json".
 
 ###¿Qué podemos añadir a nuestro JSON?
 Podemos editarlo y proceder a:
@@ -74,8 +70,6 @@ Podemos editarlo y proceder a:
 
 ##Transformaciones 
 En el **[listado actualizado de transformaciones de origen soportadas][enlaceTransformaciones]** utilizando "browserify" y en el caso de utilizar **["babelify"][ficheroBabelify]** podemos transformar nuestro código ECMAScript 6 a JavaScript nativo comprensible por el navegador web.
-
-#PONER ECMAScript 6 y 5
 
 ##Otras herramientas
 "Browserify" también dispone de herramientas (**[browserfy-tools][enlaceBrowserifyTools]**) como:

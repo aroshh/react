@@ -33,10 +33,10 @@ Sobre la instalación podemos encontrar la [documentación necesaria][docGulp].
 *Observamos que tenemos cuatro tareas, no se ejecutarán hasta que lo indiquemos mediante selección del ratón directamente sobre la tarea o bien mediante el menú contextual, el cuál nos muestra dos opciones:*
 >+ **"Run"**, ejecutar la tarea.
 >+ **"Bindings"**, disponemos de cuatro acciones a enlazar:
->	* ___Before build,___se produce antes de "construir" o compilar.
->	* ___After build,___antes de compilar la solución.
->	* ___Clean,___cuando se limpie el proyecto.
->	* ___Open project,___al abrir el proyecto.
+>	* **Before build**, se produce antes de "construir" o compilar.
+>	* **After build**, antes de compilar la solución.
+>	* **Clean**, cuando se limpie el proyecto.
+>	* **Open project**, al abrir el proyecto.
 
 ##Métodos más utilizados
 En principio disponemos de:
@@ -58,9 +58,7 @@ gulp.task('otraTarea',['miTarea','miTarea2','...']);
 >```javascript
 gulp.src('./client/templates/*.jade')					//fichero de origen
 	.pipe(jade())
-	.pipe(gulp.dest('./build/templates'))				// carpeta de destino
-	.pipe(minify())
-	.pipe(gulp.dest('./build/minified_templates'));		//carpeta de destino
+	.pipe(gulp.dest('./build/templates'));				// carpeta de destino
 ```
 
 > Tanto **"gulp.src"** como **"gulp.dest"** son utilizados simplemente para copiar ficheros.
