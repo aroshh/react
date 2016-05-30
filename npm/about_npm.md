@@ -10,7 +10,7 @@ Esto permite que su equipo aproveche los conocimientos de otros desarrolladores 
 
 En la web oficial de **"[npm]"** podemos encontrar diferentes paquetes o módulos para Node.js, inicialmente **"npm"** comenzó como gestor de Node.js.  
 
-**"npm"** dispone de una página web que contiene multitud de paquetes registrados, es también una base de datos con información sobre los paquetes o módulos que otros desarrolladores comparten. Mediante la instalación del ++"cliente npm"++ el desarrollador lo utilizará para publicar su código en dicho registro de la base de datos, cuando aparezca la entrada de dicho paquete, otros desarrolladores utilizarán su "cliente npm" para instalar el paquete del registro. 
+**"npm"** dispone de una página web que contiene multitud de paquetes registrados, es también una base de datos con información sobre los paquetes o módulos que otros desarrolladores comparten. Mediante la instalación del **"cliente npm"** el desarrollador lo utilizará para publicar su código en dicho registro de la base de datos, cuando aparezca la entrada de dicho paquete, otros desarrolladores utilizarán su "cliente npm" para instalar el paquete del registro. 
 
 ##¿Usar "bower" o "npm"?
 Ambos son gestores, pero nuestra opción es **"npm"** porque es el más utilizado para gestionar los módulos para Node.js trabajando en front-end como en el back-end cuando se combina con otros paquetes (por ejemplo: browserify), mientras que **"Bower"** sólo es para el "front-end". 
