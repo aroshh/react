@@ -10,7 +10,7 @@ Adjuntamos varios ejemplos sobre la creación de una aplicación web SPA utiliza
 
 > SPA (o single-page application): es una aplicación de página única o sitio web que cabe en una sola página con el propósito de dar una experiencia más fluida a los usuarios como una aplicación de escritorio. En una SPA todos los códigos de HTML, JavaScript y CSS se cargan de una vez.
 
-+ **Comunicación entre componentes:** muestra de componentes, agrupados por grupo, ensayo y tareas. Uso de Jquery para los eventos que sucedan dentro del padre.  
++ **Comunicación entre componentes:** muestra de componentes, agrupados por grupo, ensayo y tareas. Uso de jQuery para los eventos que sucedan dentro del padre.  
 
 + **Uso de "Flux"**, pretendemos sustituir jQuery por flux y así no depender de una variable de entorno que recoge todos los eventos que suceden dentro del padre, para luego poder separar el código en distintos ficheros según los componentes que utilizamos.
 
