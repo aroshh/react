@@ -36,7 +36,7 @@ render((
 
 + [React-dom en "npm"](:https://www.npmjs.com/package/react-dom).
 + [Fichero "gulpfile.js"](2_1_gulpfile.md).
-+ [ECMAScript 6 y 5](:http://www.ecma-international.org/ecma-262/6.0/ "Página oficial de ECMAScript").
++ [ECMAScript 6 y 5](:http://www.ecma-international.org/ecma-262/6.0/).
 + [Nuevas características entre ECMAScript 5 y 6](http://es6-features.org).
 + [React (Virtual) DOM Terminology](https://facebook.github.io/react/docs/glossary.html).
 + [Web oficial métodos de React](https://facebook.github.io/react/docs/top-level-api.html).  
