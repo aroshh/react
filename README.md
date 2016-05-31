@@ -63,8 +63,8 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 
 5. **Miscelanea**
     + [Librería JavaScript Lazy.js](http://danieltao.com/lazy.js/docs/).  
-    + ["bind()" (JavaScript)](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/bind).
-    + [Diferencias entre: call() - apply() - bind() (JavaScript)](http://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind).
+    + ["bind()" en JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/bind).
+    + [Diferencias entre: "call()" - "apply()" - "bind()" en JavaScript](http://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind).
 
 ##Referencias
 + [Documentación de Node.js](https://nodejs.org/dist/latest-v4.x/docs/api/).
