@@ -52,7 +52,8 @@ Explicación del diagrama:
 
 	Este proceso es cíclico porque estos pasos son los que describen el ciclo de vida de una aplicación React.  
     + (Siguiendo con el ejemplo), cuando la petición de borrado se tenga resuelta (si recibimos un "200" es que ha sido borrado, en caso contrario no se ha borrado correctamente - recibimos un "500"), esta misma puede ejecutar otra acción, que será el borrado del elemento de la "Store" y el consiguiente renderizado.
-    ![flux_detail.png](../images/flux_details.png "Detalle del direccionamiento de Flux")
+    ![flux_detail.png](../images/flux_details.png "Detalle del direccionamiento de Flux")  
+    
 > Hay que tener en cuenta que los componentes React tienen que ser lo más aislados posibles y que su única comunicación debería de ser con el componente de nivel superior mediante sus propiedades, mientras que el padre lo escucha mediante eventos.  
 
 ##[Dispatcher](https://facebook.github.io/flux/docs/dispatcher.html#api)
