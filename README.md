@@ -44,7 +44,7 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 ##Tecnologías utilizadas
 + Node.js versión 4.4.0 LTS
 + "npm" versión 2.14.20
-+ Paquetes "npm": browserify, gulp, watchify, react-router, react.js, flux.
++ Paquetes relevantes "npm": browserify, gulp, watchify, react-router, react, flux.
 + React 0.5.17
 + Visual Studio Community 2015
 + Markdown  
@@ -53,16 +53,18 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 > NOTA: Markdown dejará de utilizarse en las páginas que se exporten a GitHub a partir del 01/05/2016, utilizándose [**Kramdown**][enlaceKRAMDOWN]. Aqui puede acceder al [enlace a la noticia](https://help.github.com/articles/updating-your-markdown-processor-to-kramdown/). **Recordemos que GitHub tiene su propio Markdown.**
 
 ##Indice del proyecto
-1. [**Node.js.**](/nodejs/README.md)
+1. [**Node.js.**](/nodejs/README.md).
 
-2. [**Modulos de Node.js utilizados**](/npm/nodejs_packages/README.md) 
+2. [**Modulos de Node.js utilizados**](/npm/nodejs_packages/README.md). 
 
-3. [**Gestor de paquetes para Nodejs: "npm"**](/npm/README.md)
+3. [**Gestor de paquetes para Nodejs: "npm"**](/npm/README.md).
 
-4. [**Visual Studio Express 2015**](/visualStudio/README.md)  
+4. [**Visual Studio Express 2015**](/visualStudio/README.md).  
 
 5. **Miscelanea**
-    + [Librería JavaScript Lazy.js](http://danieltao.com/lazy.js/docs/)  
+    + [Librería JavaScript Lazy.js](http://danieltao.com/lazy.js/docs/).  
+    + [Bind / Bindings (JavaScript)](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/bind).
+    + [Diferencias entre: call - apply - bind (JavaScript)](http://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind).
 
 ##Referencias
 + [Documentación de Node.js](https://nodejs.org/dist/latest-v4.x/docs/api/).
