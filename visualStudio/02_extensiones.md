@@ -9,14 +9,14 @@ Disponiendo de la versión "Community" necesitaremos las siguientes extensiones:
 ##Otras extensiones
 + **[NPM Task Runner](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941)**, añade soporte para los scripts "npm" del fichero "package.json" en el "Task Runner Explorer" (explorador del ejecutador de tareas).  
 
- ![npm_task_runner_json.png](./images/npm_task_runner_json.png "NPM Task Runner")  
+ ![npm_task_runner_json.png](./images/npm_task_runner_json.PNG "NPM Task Runner")  
 
 >Por lo que además de detectar nuestro fichero **"gulpfile.js"** y sus tareas, también puede mostrar las tareas que trae aparecen en nuestro fichero **"package.json"** (creado mediante el "cliente npm").
 
 
 + **[Markdown Mode](https://visualstudiogallery.msdn.microsoft.com/0855e23e-4c4c-4c82-8b39-24ab5c5a7f79)**, para editar código en Markdown, nos descargaríamos la extensión y la instalaríamos en nuestro Visual Studio 2015. Podemos abrir directamente un archivo con extensión **md** ("markdown").
 
-![markdown_visual_Studio_new.png](./images/markdown_visual_studio_new.png)  
+![markdown_visual_Studio_new.png](./images/markdown_visual_studio_new.PNG)  
 
 > El problema que presenta, son los acentos, por lo que tendríamos que utilizar carácteres especiales para mostrar: acentos, "ñ", "ç", signos de puntuación, etc.  
 
