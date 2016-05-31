@@ -113,17 +113,28 @@ Desde la página oficial nos indican utilizar `BABEL REPL` para probar JSX y ver
 
 >Las expresiones en JSX siempre evalúan a un elemento React.
 
-##Estados (State)
+##[Estados (State)](https://facebook.github.io/react/docs/component-api.html)
 Es la representación del componente en cualquier momento dentro de su ciclo de vida. El `state` del componente tendrá un valor por defecto pero modificable cuando lo indiquemos. La definición del `state` siempre es opcional ya que el mismo componente puede definir su propio `state`. El uso del `state` aumenta la complejidad y reduce la previsibilidad del componente por tanto debemos evitar disponer de muchos componentes con estados y más en aplicaciones de gran tamaño.
 
 Los métodos utilizados para informar al componente que sus datos han cambiado:
-+ `setState()` recibe un objeto JavaScript combinando los nuevos datos y renderizará el componente.
-+ `replaceState` elimina los datos existentes
++ `setState()` recibe un objeto JavaScript combinando los nuevos datos y renderizará el componente.  
+
++ `replaceState` elimina algunas claves de los estados preexistentes que no estan en `nextState`.  
+
++ `forceUpdate` por defecto cuando el `state` o `props` de nuestro componente cambia, se renderizará. Llamando a `forceUpdate()` causará el renderizado que será llamado sobre el componente saltando el método `shouldComponentUpdate()`. Afectará a los métodos del ciclo de vida de cada componente hijo. React sólo actualiza el DOM si hay cambios en el marcado. Recomendamos evitar el uso de `forceUpdate()` y realizar la lectura desde `this.props` y `this.state` en el método `render()` con lo que logramos que el componente sea puro y nuestra aplicación sea más simple y eficiente.  
+
++ `isMounted` devolverá un booleano con valor por defecto `true` si el componente es renderizado en en DOM y `falso` en caso contrario. Podemos utilizar este méotod para guardar llamadas asíncronas a `setState()` o `forceUpdate()`.  
+
++ `setProps` cuando estemos integrando con una aplicación externa de JavaScript debemos buscar signos de cambio en el componente React renderizado con `ReactDOM.render`. Al llamar al método `setProps()` desde un componente de nivel superior podemos cambiar las propiedades y renderizarlo. Además podemos suministrar una función de llamada opcional siendo ejecutada una vez, con esto `setProps` es completado y el componente renderizado.  
+
++ `replaceProps` se parece a `setProps` pero elimina las propiedades preexistentes cuando fusionamos dos objetos.
+
+>Podemos tener problemas con ECMAScript 6 ya que los siguientes métodos no están disponibles para los componentes que son resultantes de extender desde `React.Component`:  `setState`, `replaceState`, `getDomNode`, `isMounted`, `setProps`, `replaceProps`. Por lo que serán retirados de versiones posteriores de React.
 
 ##[Diferencias entre `props` y `state`][enlaceDiferencias]
 Entender ambos de forma conceptual es complicado ya que tienen los mismos términos abstractos así como mismos valores.
 ####Contexto
-Cada componente traduce los datos en HTML los cuales son los `props` y `state` que en conjunto que conformarán el HTML resultante después de la comparación de diferencias entre el DOM real y el virtual. Además de ser la entrada de datos para el renderizado (`render()`) de cualquier componente.
+Cada componente traduce los datos en HTML los cuales son los `props` y `state` que en conjunto que conformarán el HTML resultante después de la comparación de diferencias entre el DOM real y el virtual. Además de ser la entrada de datos para el renderizado `render()` de cualquier componente.
 
 ####Puntos en común
 ¿Dónde se superponen `props` y `state`?
