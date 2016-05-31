@@ -1,5 +1,6 @@
 ##URL Rewrite 2.0 (para Internet Information Services)
-![web_install_url.png](../npm/images/web_install_url_rewrite.png "Instalación desde la plataforma web")
+![web_install_url.png](../npm/images/web_install_url_rewrite.png "Instalación desde la plataforma web")  
+
 Esta extensión habilita a los administradores web a crear reglas para implementar URL's que sean más fáciles para los usuarios recordar y facilitar a los motores de búsqueda para encontrar.
 Nos descargaremos el paquete instalador para MS Windows dependiendo de la arquitectura:
 - Instalador Plataforma Web.

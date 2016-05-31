@@ -20,3 +20,7 @@ Descargado el repositorio "react", nos situaremos dentro de la carpeta `visualSt
 Utilizando el **cliente npm** y desde el "prompt de Node.js" instalaremos los módulos de Node.js con `> npm install`.  
 
 Después desde el propio Visual Studio sólo tendremos que cargar el fichero con extensión `.sln` (Microsoft Visual Studio Solution) encontrado en el `[NombreProyecto]/` para ejecutarlo.
+
+##Referencias
++ [Intergración de "npm" en Visual Studio Web](http://webtooling.visualstudio.com/package-managers/npm/).
++ [Soporte para "gulp" en Visual Studio Web](http://webtooling.visualstudio.com/task-runners/gulp/).
