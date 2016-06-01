@@ -27,7 +27,15 @@ Recordemos que Node.js está contruido sobre la versión del motor de renderizac
 >**ECMAScript:** es una especificación de lenguaje de programación. Define un lenguaje de tipos dinámicos inspirado en Java y otros lenguajes del estilo de "C". Soporta algunas características de la programación orientada a objetos mediante objetos basados en prototipos y pseudoclases. Los navegadores web incluyen una implementación del ECMAScript.  
 
 ###Uso que le daremos a Node.js
-Lo utilizaremos como entorno de desarrollo de nuestra aplicación 
+En un primer momento lo utilizaremos como entorno de desarrollo de nuestra aplicación, es decir, lo utilizaremos como runtime para “lanzar” las diferentes tareas que necesitaremos ejecutar en nuestro proyecto desarrollado en “Visual Studio Community 2015”, siendo éstas:
+
++ **Servidor web**, aparte del IIS Expres (Internet Information Services v10) es posible lanzar nuestro servidor para que a medida que vamos realizando cambios tanto en los ficheros JavaScript como en el "html".  
+
++ **Minificador de código**, todos los ficheros “.jsx”, “.js”, “.json” podremos convertirlos a JavaScript nativo mediante un único fichero js, comprensible por el navegador, ofreciendo la posibilidad de que durante el proceso de desarrollo / producción sea posible la modificación de cualquier fichero mientras se encuentre dando servicio a los usuarios.  
+
++ **Notificador de cambios**,esto implica que cualquier cambio que se realice en el código de los ficheros indicados en el “gulpfile.js” (tareas que se ejecutarán) a su vez serán notificadas al “minificador” para que se actualice el fichero único “index.js”.
+
+Por tanto será utilizado como servidor de aplicaciones.
 
 Para producción dispondremos de un servidor con Internet Information Services (IIS) donde alojaremos la página, usaremos Reactjs como framework para el front-end y mediante los paquetes de Node que tendremos instalados previamente
 
