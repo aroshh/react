@@ -267,7 +267,7 @@ Para lograr "minificar" dicho código y con ello ocupe menos tamaño, favorecien
 >#####Explicamos: 
 Inicialmente utilizábamos **browserify.bundle()** el cual devuelve un stream de texto que no se podrá concatenar con otros plugins de **gulp** por lo que necesitaremos utilizar **vinyl-source-stream** el cual convertirá dichos streams de texto devueltos por **browserify** a streams de objetos vinyl pudiendo concatenar con otros plugins que soporten streaming. Podríamos utilizar el método `gulp.dest` para escribir la salida del fichero pero al concatenar con `gulp-uglify` obtendremos un error de: **`Streaming not sopported`** debido a que "gulp-uglify" no soporta streaming de objetos vinyl, etonces concatenaremos con `vinyl-buffered` para que los convierta a buffer para así posteriormente con `gulp-uglify` pueda trabajar con objetos tipo buffer. 
 
-Para finalmente obtener como resultado el fichero "gulpfile.js" minificado:
+Para finalmente obtener como resultado el fichero "main.js" minificado:
 ![main_without_minify.png](../images/main_with_minify.png "Código minificado")  
 
 ### \...CSS (hojas de estilo) 
