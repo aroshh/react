@@ -217,8 +217,8 @@ Para la utilización de estas clases básicas tendremos que tener en cuenta cuá
 
 #####_Vistas_
 1. Son los componentes React los que son controlados por un `container`.
-2. Lo tiene todo de la UI y la rederización lógica.
-3. Recibir toda la información así como llamadas como `props`.
+2. Lo obtienen todo de la UI y la renderización lógica.
+3. Reciben toda la información así como llamadas a las `props`.
 
 ##Referencias
 + [Gestor de paquetes "npm"](https://www.npmjs.com/).
