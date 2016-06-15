@@ -1,4 +1,4 @@
-##Instalar Node.js Tools 1.1 en Visutal Studio 2015
+#1.1. Instalar Node.js Tools 1.1 en Visutal Studio 2015
 
 Desde la página de Microsoft nos habremos descargado e instalado previamente la **versión Community 2015** de Visual Studio Express, procederemos a descargarnos e instalarnos el **[plugin][enlacePlugin]** en nuestra máquina local.
 
@@ -10,7 +10,7 @@ Al finalizar la instalación, ejecutaremos Visual Studio, tanto si queremos crea
 
 ![nodejsTool.png](images/nodejsTool.png)
 
-# Ventajas que ofrece dicho plugin
+##1.2. Ventajas que ofrece dicho plugin
 
 Las ventajas de que dispondremos serán:
 + Dispone de plantillas de proyecto integradas, pudiendo importar código en Node.js o bien empezar de cero.  
@@ -31,7 +31,7 @@ Las ventajas de que dispondremos serán:
 
 ***
 
-**Referencias:**  
+##1.3. Referencias
 + Obtener [NodeJS Tool for VS](https://www.visualstudio.com/es-es/features/node-js-vs.aspx) .  
 + Código fuente y documentación en [Microsoft GitHub Node.js](https://github.com/Microsoft/nodejstools) .
 + Página web de [TypeScript ](http://www.typescriptlang.org/) .
