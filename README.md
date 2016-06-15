@@ -1,7 +1,7 @@
 ![logo_aitex.png](nodejs/images/logo_aitex_min.png "Logotipo de Aitex")
 #Proyecto: Node.js + npm + .NET + React.js
 
-##Introducción
+##0. Introducción
 Tengamos en cuenta que el mundo web va evolucionando constantemente. Antes disponíamos de tres lenguajes de desarrollo en el servidor web: **[PHP][enlacePHP]**, **[J2EE][enlaceJ2EE]** o **[ASPx][enlaceASPNET]**. Todos ellos comparten HTML + JavaScript (librerías importantes **[jQuery][enlaceJQUERY]** y **[Knockout][enlaceKNOCKOUT]**).
 > **Php:** es un lenguaje de programación para el lado der servidor utilizado para el desarrollo web de contenido dinámico *(fuente: Wikipedia)*.
   
@@ -17,7 +17,7 @@ Existen múltiples frameworks que facilitan obtener nuestas SPA, pero ninguna de
 
 La elección del back-end la tenemos clara (al trabajar con ***.NET antes del 2004***), nos faltaría elegir con qué framework o librerías deberemos utilizar en el front-end para obtener nuesta SPA.  
 
-###¿Qué front-end elegir? React.js.
+##1. ¿Qué front-end elegir? React.js.
 En nuestro caso hemos visto [Angular.js][enlaceANGULAR] (con [Pedro Hurtado][enlacePEDROHURTADO]) y [React.js][enlaceREACT] (con [Eduard Tomás][enlaceEDUARD]), seleccionando finalmente **React.js**. ¿Qué ha motivado dicha elección? 
 
 1. [Desconfianza][enlaceDESCONF] ya que la versión 2.0 de Angular.js:  
@@ -38,10 +38,10 @@ En nuestro caso hemos visto [Angular.js][enlaceANGULAR] (con [Pedro Hurtado][enl
 >
 > **JSX:** Es una extensión de la sintaxis de XML similar a ECMAScript. Tanto la sintaxis de JSX y HTML son similares pero difieren: en el uso de atributos de clase en HTML es "class" mientras que en JSX es "className" *(fuente: Wikipedia)*. 
 
-####Uso de Visuatl Studio + React.js
+##3. Uso de Visual Studio + React.js
 En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero queríamos aprovechar las sinergias del opensource y no tener ataduras en el front-end.  
 
-##Tecnologías utilizadas
+##4. Tecnologías utilizadas
 + Node.js versión 4.4.0 LTS
 + "npm" versión 2.14.20
 + Paquetes relevantes "npm": browserify, gulp, watchify, react-router, react, flux.
@@ -52,7 +52,7 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
 
 > NOTA: Markdown dejará de utilizarse en las páginas que se exporten a GitHub a partir del 01/05/2016, utilizándose [**Kramdown**][enlaceKRAMDOWN]. Aqui puede acceder al [enlace a la noticia](https://help.github.com/articles/updating-your-markdown-processor-to-kramdown/). **Recordemos que GitHub tiene su propio Markdown.**
 
-##Indice del proyecto
+##5. Indice del proyecto
 1. [**Node.js.**](/nodejs/README.md).
 
 2. [**Modulos de Node.js utilizados**](/npm/nodejs_packages/README.md). 
@@ -66,7 +66,7 @@ En un principio podríamos haber utilizado [Reactjs.Net][enlaceREACTJSNET], pero
     + ["bind()" en JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/bind).
     + [Diferencias entre: "call()" - "apply()" - "bind()" en JavaScript](http://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind).
 
-##Referencias
+##6. Referencias
 + [Documentación de Node.js](https://nodejs.org/dist/latest-v4.x/docs/api/).
 + [Obtener Visual Studio Express](https://www.visualstudio.com/es-es/features/node-js-vs.aspx).
 + [Conceptos básicos de React.js](https://platzi.com/blog/conceptos-basicos-reactjs/).
