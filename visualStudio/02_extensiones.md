@@ -1,4 +1,4 @@
-##Extensiones / plugins para Visual Studio 2015
+##2.1. Extensiones / plugins para Visual Studio 2015
 Disponiendo de la versión "Community" necesitaremos las siguientes extensiones:
 + **[ASP.NET and Web Tools 2015](https://visualstudiogallery.msdn.microsoft.com/c94a02e9-f2e9-4bad-a952-a63a967e3935)**, nos proporcionará herramientas de soporte para ASP.NET, ASP.NET 5, ASP.NET Core. Despliegue de nuestras aplicaciones  ASP.NET sobre servidores IIS o Microsoft Azure. Actualizar editores de código, soporte para los gestores de paquetes "npm" y "bower", etc.
 
@@ -6,7 +6,7 @@ Disponiendo de la versión "Community" necesitaremos las siguientes extensiones:
 
 + **[ASP.NET 5 RC1 Update 1](https://www.nuget.org/packages/Microsoft.AspNet.Mvc/5.1.0-rc1)**, necesario para construir sitios web dinámicos de forma eficiente.
 
-##Otras extensiones
+##2.2. Otras extensiones
 + **[NPM Task Runner](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941)**, añade soporte para los scripts "npm" del fichero "package.json" en el "Task Runner Explorer" (explorador del ejecutador de tareas).  
 
  ![npm_task_runner_json.png](./images/npm_task_runner_json.PNG "NPM Task Runner")  
@@ -27,6 +27,6 @@ Disponiendo de la versión "Community" necesitaremos las siguientes extensiones:
 | ñ | `&ntilde;` |
 | Ñ | `&Ntilde;` |
 
-##Referencias
+##2.3. Referencias
 + [Otros Task Runner disponibles en Visual Studio para desarrollo web](https://blogs.msdn.microsoft.com/webdev/2016/01/06/task-runners-in-visual-studio-2015/).
 + [Codificación de caracteres en HTML](http://librosweb.es/libro/xhtml/capitulo_3/codificacion_de_caracteres.html).
