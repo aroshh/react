@@ -1,4 +1,4 @@
-## web.config
+##4.1. web.config
 Primeramente establecemos las rutas entre el componente padre y sus respectivos hijos indicado en el fichero **"routes.jsx"** para poder navegar entre componentes react. Por otra parte, al ejecutar nuestra **SPA** utilizando **IIS Express 10.0** también establecemos unas reglas de navegación en nuestro fichero de configuración `web.config` dentro del propio proyecto de Visual Studio Community 2015 siendo el siguiente:
 
 ```xml
@@ -60,7 +60,7 @@ Explicamos el código anterior:
 	+ **"negate"**, atributo utilizado para el elemento `match`, entonces la acción de la regla se llevará a cabo sólo si la URL actual no coincide con lo que hemos especificado.
 	+ **[Más información sobre condiciones](http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference#Rule_conditions).**
 
-##Referencias
+##4.2. Referencias
 + **[Url rewrite module configuration reference (Tabla de contenidos)](http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference).**
 + **[Configuración por defecto Web.config IIS](http://www.dantor.com/support/misc/web-config-default-website-document.aspx).**
 + **[ISS mejora rendimiento y SEO en .NET](http://www.humanlevel.com/articulos/desarrollo-web/como-configurar-internet-information-server-iis-para-mejorar-el-rendimiento-y-el-seo-de-tu-web.html).**
