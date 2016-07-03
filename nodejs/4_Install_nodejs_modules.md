@@ -40,7 +40,7 @@ La sintaxis de instalación es la siguiente:
 
 **Ejemplo usando GitHub:**
 
->La sintaxis sería la siguiente `> npm install https://github.com/../aitex-js.git` deberemos tener instalado en nuestro sistema "GitHub Desktop" para poder utilizar el shell de Git y poder descargarnos localmente el paquete dentro de nuestro proyecto de ejemplo.
+>La sintaxis sería la siguiente `> npm install git://github.com/../aitex-js.git` deberemos tener instalado en nuestro sistema "GitHub Desktop" para poder utilizar el shell de Git y poder descargarnos localmente el paquete dentro de nuestro proyecto de ejemplo.
 
 **Ejemplo en Visual Studio:**  
 
