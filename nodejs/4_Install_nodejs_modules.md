@@ -11,7 +11,8 @@ Ejemplos de uso según el tipo de módulos:
 + Tiempo de Compilación, para aquellos que ayuden a:
     + Realizar tareas de factorizar.
     + Mover archivos.
-    + Desplegar la aplicación.
+    + Desplegar la aplicación (en los proceso de desarrollo).
+    + A generar un budle
 + Tiempo de Ejecución, por ejemplo:
     + Las librerías de JavaScript de uso en la misma aplicación.
 
@@ -19,11 +20,13 @@ Ejemplos de uso según el tipo de módulos:
 
 La sintaxis de instalación es la siguiente:
 
-- Módulos para Tiempo de Compilación:`> npm install --save -dev [nombreDelModulo]`
+- Módulos para Tiempo de Compilación:`> npm install --save-dev [nombreDelModulo]` o `> npm install -D [nombreDelModulo]`
 
-- Módulos para Tiempo de Ejecución: `> npm install --save [nombreDelModulo]`
+- Módulos para Tiempo de Ejecución: `> npm install --save [nombreDelModulo]` o `> npm install -S [nombreDelModulo]`
 
 - Módulos como herramienta global: `> npm install -g [nombreDelModulo]`
+
+> En lugar de poner `> npm install` se puede contraer por `>npm i`
 
 > **Por lo que se refiere a [nombreDelModulo]**, si el módulo está en...
 > - nuestro sistema de archivos, deberemos poner la ubicación del mismo.
