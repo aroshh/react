@@ -10,7 +10,11 @@
 
 ![npm_init_sample_node.png](images/npm_init_sample_node.png "detalle")
 
+> Si se quiere evitar tener que contestar todas las preguntas se puede poner el parametro "-y", para poner los parametros por defecto según la estructura de carpetas `> npm init -y`.
+
 Al ejecutar dicho comando se generará el archivo **package.json** con los datos que hemos introducido a las respuestas que se nos han planteado. A parte de los datos del proyecto, dispondrá también el árbol de módulos que se han instalado para el proyecto y así poder recrearlo en caso necesario.  
+
+> Si estás trabajando con la consola de comando de windows y quieres ver el archivo de texto, puedes usar el comando `> more`. Por ejemplo: `> more package.json`.
 
 La estructura del fichero JSON generado es el siguiente:
 ```json
@@ -28,20 +32,21 @@ La estructura del fichero JSON generado es el siguiente:
 ```
 > Partimos del fichero sin dependencias hacia módulos **"npm"** ni otros módulos guardados localmente dentro de nuestro proyecto (devDependencies).
  
-**B. Instalación de los módulos.**
+**B. Instalación de los módulos o dependencias.**
 
 El siguiente paso es descargarse los módulos necesarios para nuestro proyecto. Veremos lo que ocurre cuando se bajan los módulos y cómo responde el archivo package.json.  
 Cada vez que se instala un módulo se descarga en el directorio **"node_modules"** ubicado en el mismo directorio que esta el **package.json**. Este directorio se crea junto a la primera instalación de un módulo.
 
 >ATENCIÓN: En el caso de utilizar un repositorio de código, dicha carpeta nunca se debe de incorporar. Hay que tener en cuenta que al disponer package.json al ejecutar nuevamente **"npm init"**, se procederá a volver a bajar todos los módulos que nos descargamos en su día.  
 
-La sintaxis general para la instalación de módulos es:
-`> npm install --save-dev -g <nombreDelModulo>`
+La sintaxis general para la instalación de:
+- un módulo es `> npm install --save-dev -g <nombreDelModulo>` o `> npm install -S-dev -g <nombreDelModulo>` 
+- varios módulos a la vez es `> npm install --save-dev -g <nombreDelModulo1> <nombreDelModulo2>` o `> npm install -S-dev -g <nombreDelModulo1> <nombreDelModulo>` 
 
 |Parámetro   	|Descripción   	|
 |---	|---	|
-|- -save   	|Para que se quede registrado en el archivo package.json y así poder regenerarlo posteriormente. Es decir, si copiamos el fichero "package.json" y lo ponemos en otra carpeta distintay ejecutamos `> npm install` los paquetes que figuran nos los descargamos localmente sin comprobar dependencias.  	|
-| | **Ejemplo:** `npm install --save <nombreDelMódulo>`|
+|--save  o -S 	|Para que se quede registrado en el archivo package.json y así poder regenerarlo posteriormente. Es decir, si copiamos el fichero "package.json" y lo ponemos en otra carpeta distintay ejecutamos `> npm install` los paquetes que figuran nos los descargamos localmente sin comprobar dependencias.  	|
+| | **Ejemplo:** `npm install --save <nombreDelMódulo>` o `npm install --S <nombreDelMódulo1> <nombreDelMódulo2>`|
 |-dev   	|Es opcional. Obtenemos los paquetes necesarios en tiempo de compilación. Los registra en el archivo package.json en la propiedad "devDependencies", en caso de no poner esta opción lo registra en la propiedad "dependencies". El no poner la opción, evita bajar paquetes inncesarios que cargan el proyecto y ralentizan los procesos. Con la opción "-dev" baja al sistema de archivo todas sus dependencias (pudiendo ser muchas).   	|
 | | **Ejemplo:** `> npm install --save-dev <nombreDelMódulo>` |
 |-g   	|Instalación global. El módulo se instala en la carpeta destinada a la configuración global del usuario.   	|
